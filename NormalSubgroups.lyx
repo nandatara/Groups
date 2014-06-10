@@ -563,6 +563,1128 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Chapter
+Groups
+\end_layout
+
+\begin_layout Example
+If 
+\begin_inset Formula $G$
+\end_inset
+
+ is a group in which 
+\begin_inset Formula $\left(ab\right)^{k}=a^{k}b^{k}$
+\end_inset
+
+ for three consecutive integers 
+\begin_inset Formula $n,n+1,n+2$
+\end_inset
+
+ for all 
+\begin_inset Formula $a,b\in G$
+\end_inset
+
+, show that 
+\begin_inset Formula $G$
+\end_inset
+
+ is abelian.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Note that we have
+\begin_inset Formula 
+\begin{equation}
+(ba)^{n-1}=a^{-1}(ab)^{n}b^{-1}=a^{-1}(a^{n}b^{n})b^{-1}=a^{n-1}b^{n-1}.
+\end{equation}
+
+\end_inset
+
+Therefore
+\begin_inset Formula 
+\begin{equation}
+b^{n}a^{n}=(ba)^{n}=(ba)^{n-1}ba=a^{n-1}b^{n-1}ba=a^{n-1}b^{n}a.\label{eq:1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analogously, we also have
+\begin_inset Formula 
+\begin{equation}
+(ba)^{n}=a^{n}b^{n}.
+\end{equation}
+
+\end_inset
+
+ Therefore 
+\begin_inset Formula 
+\begin{equation}
+b^{n}a^{n}=a^{n}b^{n}.\label{eq:2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From eqn.
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:1"
+
+\end_inset
+
+ and eqn.
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:2"
+
+\end_inset
+
+, we get
+\begin_inset Formula 
+\[
+a^{n}b^{n}=a^{n-1}b^{n}a.
+\]
+
+\end_inset
+
+Thus
+\begin_inset Formula 
+\begin{equation}
+ab^{n}=b^{n}a\label{eq:3}
+\end{equation}
+
+\end_inset
+
+By the same way, we also have 
+\begin_inset Formula 
+\[
+ab^{n+1}=b^{n+1}a.
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula 
+\begin{eqnarray*}
+b^{n+1}a & = & ab^{n+1}\\
+ & = & ab^{n}b\\
+ & = & b^{n}ab\qquad\mbox{(using eqn.\eqref{eq:3})}
+\end{eqnarray*}
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+which gives 
+\begin_inset Formula $ab=ba$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $G$
+\end_inset
+
+ is abelian.
+\end_layout
+
+\begin_layout Example
+Let G be a finite group whose order is not divisible by 3.
+ Suppose that 
+\begin_inset Formula $(ab)^{3}=a^{3}b^{3}$
+\end_inset
+
+ for all 
+\begin_inset Formula $a,b\in G$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $G$
+\end_inset
+
+ must be abelian.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ The condition can be written as 
+\begin_inset Formula $ababab=aaabbb$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $baba=aabb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+step 1:
+\series default
+ 
+\begin_inset Formula $a^{3}b^{2}=b^{2}a^{3}$
+\end_inset
+
+ for all 
+\begin_inset Formula $a,b\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that
+\begin_inset Formula 
+\[
+ababa=(abab)a=(bbaa)a=b^{2}a^{3}
+\]
+
+\end_inset
+
+ .
+ On the other hand 
+\begin_inset Formula 
+\[
+ababa=a(baba)=a(aabb)=a^{3}b^{2}
+\]
+
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $a^{3}b^{2}=b^{2}a^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+step 2:
+\series default
+ 
+\begin_inset Formula $ab^{2}a=ba^{2}b$
+\end_inset
+
+ for all 
+\begin_inset Formula $a,b\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that
+\begin_inset Formula 
+\[
+abbabb=a(bb)a(bb)=(bb)(bb)aa=b(b^{3}a^{2})=b(a^{2}b^{3}).
+\]
+
+\end_inset
+
+ Cancelling 
+\begin_inset Formula $b^{2}$
+\end_inset
+
+ on the right, we get 
+\begin_inset Formula $abba=ba^{2}b$
+\end_inset
+
+, as desired.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+step 3:
+\series default
+ 
+\begin_inset Formula $(ab)^{3}=(ba)^{3}$
+\end_inset
+
+ for all 
+\begin_inset Formula $a,b\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We have
+\begin_inset Formula 
+\[
+aabbaabb=(aabb)(aabb)=(baba)(baba)=babababa.
+\]
+
+\end_inset
+
+ On the other hand, 
+\begin_inset Formula 
+\[
+aabbaabb=(aa)(bb)(aa)(bb)=(bb)(bb)(aa)(aa)=bbbbaaaa.
+\]
+
+\end_inset
+
+ Therefore 
+\begin_inset Formula $babababa=bbbbaaaa$
+\end_inset
+
+, and hence 
+\begin_inset Formula $ababab=bbbaaa$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $ababab=(ab)^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $bbbaaa=b^{3}a^{3}=(ba)^{3}$
+\end_inset
+
+, we get 
+\begin_inset Formula $(ab)^{3}=(ba)^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finally, we have
+\begin_inset Formula 
+\[
+(aba^{-1}b^{-1})^{3}=(ab)^{3}(a^{-1}b^{-1})^{3}=(ab)^{3}(b^{-1}a^{-1})^{3}=(abb^{-1}a^{-1})^{3}=e.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the order of 
+\begin_inset Formula $G$
+\end_inset
+
+ is not divisible by 3, then 
+\begin_inset Formula $aba^{-1}b^{-1}=e$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $ab=ba$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $G$
+\end_inset
+
+ is abelian.
+\end_layout
+
+\begin_layout Chapter
+The Order of an element
+\end_layout
+
+\begin_layout Section
+Basic Properties.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "orderofelement"
+
+\end_inset
+
+In a group 
+\begin_inset Formula $G$
+\end_inset
+
+ the 
+\emph on
+order
+\emph default
+ of 
+\begin_inset Formula $g\in G,$
+\end_inset
+
+ denoted 
+\begin_inset Formula $o\left(g\right),$
+\end_inset
+
+ is defined to be
+\end_layout
+
+\begin_layout Definition
+(i) the least element in the set 
+\begin_inset Formula $\left\{ n\in\mathbf{N}\,\colon\: g^{n}=e\right\} ;$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(ii) 
+\begin_inset Formula $\infty,$
+\end_inset
+
+ if the set in (i) is empty.
+\end_layout
+
+\begin_layout Definition
+In the first case, 
+\begin_inset Formula $g$
+\end_inset
+
+ is said to be of 
+\emph on
+finite order
+\emph default
+, and in the second, of 
+\emph on
+infinite
+\emph default
+ 
+\emph on
+order
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+The order of an element 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ has several general properties.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "propertiesoforder"
+
+\end_inset
+
+Let 
+\begin_inset Formula $g$
+\end_inset
+
+ be an element of a group 
+\begin_inset Formula $G.$
+\end_inset
+
+ Then
+\end_layout
+
+\begin_layout Lemma
+(i) 
+\begin_inset Formula $o\left(g\right)=1$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $g=e.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(ii) 
+\begin_inset Formula $o\left(g\right)=o\left(aga^{-1}\right)\qquad\textrm{for all }a\in G.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(iii) 
+\begin_inset Formula $o\left(g\right)=o\left(g^{-1}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(iv) 
+\begin_inset Formula $o\left(g\right)=m,\, g^{n}=e\,\implies m\mid n.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(i) is obvious.
+\end_layout
+
+\begin_layout Proof
+(ii) 
+\begin_inset Formula $g^{n}=e\,\iff\left(aga^{-1}\right)^{n}=e.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(iii) 
+\begin_inset Formula $g^{n}=e\,\iff\left(g^{-1}\right)^{n}=e.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(iv) Writing 
+\begin_inset Formula $n=qm+r,$
+\end_inset
+
+ where 
+\begin_inset Formula $0\leq r<m$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+e=g^{n}=g^{qm+r}=\left(g^{m}\right)^{q}g^{r}=e^{q}g^{r}=g^{r}.
+\]
+
+\end_inset
+
+Since by definition 
+\begin_inset Formula $m$
+\end_inset
+
+ is the least positive integer 
+\begin_inset Formula $k$
+\end_inset
+
+ such that 
+\begin_inset Formula $g^{k}=e,\ r<h$
+\end_inset
+
+ is necessarily zero.
+ But that is to say 
+\begin_inset Formula $m\mid n.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Show that in a group 
+\begin_inset Formula $G$
+\end_inset
+
+ 
+\begin_inset Formula $ab$
+\end_inset
+
+ and 
+\begin_inset Formula $ba$
+\end_inset
+
+ have the same order.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ 
+\begin_inset Formula $ba=a^{-1}\left(ab\right)a$
+\end_inset
+
+ so the result follows from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "propertiesoforder"
+
+\end_inset
+
+(ii).
+\end_layout
+
+\begin_layout Example
+If every element of a group 
+\begin_inset Formula $G$
+\end_inset
+
+ has order 2 then the group is abelian.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Let 
+\begin_inset Formula $a,b\in G.$
+\end_inset
+
+ Then 
+\begin_inset Formula 
+\begin{eqnarray*}
+e=\left(ab\right)^{2} & = & abab\\
+\implies ab & = & a\left(abab\right)b\\
+ & = & a^{2}bab^{2}\\
+ & = & ba\qquad(\because\ a^{2}=e=b^{2}).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Suppose that 
+\begin_inset Formula $G$
+\end_inset
+
+ is a group and 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ is the unique element of order 2.
+ Then 
+\begin_inset Formula $ax=xa$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ 
+\begin_inset Formula $o\left(xax^{-1}\right)=o\left(a\right)$
+\end_inset
+
+implies by uniqueness of 
+\begin_inset Formula $a$
+\end_inset
+
+ that 
+\begin_inset Formula $xax^{-1}=a$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in G.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "orderofg^s"
+
+\end_inset
+
+For any element 
+\begin_inset Formula $g$
+\end_inset
+
+ of finite order in 
+\begin_inset Formula $G$
+\end_inset
+
+, and any integer 
+\begin_inset Formula $m,$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+o\left(g^{m}\right)\mid o\left(g\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Consider 
+\begin_inset Formula $g$
+\end_inset
+
+ of finite order 
+\begin_inset Formula $n.$
+\end_inset
+
+ For any integer 
+\begin_inset Formula $m,$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(g^{m}\right)^{n}=g^{mn}=\left(g^{n}\right)^{m}=e^{m}=e.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "propertiesoforder"
+
+\end_inset
+
+(iv) we conclude that 
+\begin_inset Formula $o\left(g^{m}\right)\mid n=o\left(g\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "orderofg^s-1"
+
+\end_inset
+
+ strengthens Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "orderofg^s"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "orderofg^s-1"
+
+\end_inset
+
+For 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ of finite order and any integer 
+\begin_inset Formula $m,\,0<m<o\left(g\right),$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+o\left(g^{m}\right)=\frac{o\left(g\right)}{\gcd\left(m,o\left(g\right)\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $k=o\left(g^{m}\right),\, n=o\left(g\right),$
+\end_inset
+
+ and 
+\begin_inset Formula $d=\gcd\left(m,n\right).$
+\end_inset
+
+ Then write
+\begin_inset Formula 
+\[
+n=pd\quad\textrm{and }\quad m=qd.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We wish to prove that 
+\begin_inset Formula $k=p,$
+\end_inset
+
+ or in other notation, 
+\begin_inset Formula $n=kd=o\left(g^{m}\right)\gcd\left(m,n\right).$
+\end_inset
+
+ This we do by showing that 
+\begin_inset Formula $k\mid p$
+\end_inset
+
+ and 
+\begin_inset Formula $p\mid k.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+First, 
+\begin_inset Formula $\left(g^{m}\right)^{p}=g^{qdp}=\left(g^{n}\right)^{q}=e;$
+\end_inset
+
+ so 
+\begin_inset Formula $k\mid p.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Second 
+\begin_inset Formula $e=\left(g^{m}\right)^{k}=g^{mk}$
+\end_inset
+
+ implies 
+\begin_inset Formula $n\mid mk.$
+\end_inset
+
+ Now write 
+\begin_inset Formula $mk=un.$
+\end_inset
+
+ Substituting 
+\begin_inset Formula $m=qd,\, n=pd,$
+\end_inset
+
+ we obtain 
+\begin_inset Formula $qdk=upd$
+\end_inset
+
+ or 
+\begin_inset Formula $qk=up.$
+\end_inset
+
+ Since 
+\begin_inset Formula $\left(p,q\right)=1$
+\end_inset
+
+ by definition of 
+\begin_inset Formula $d$
+\end_inset
+
+ as the 
+\begin_inset Formula $\gcd\left(m,n\right),$
+\end_inset
+
+ we conclude that 
+\begin_inset Formula $p\mid k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A corollary of Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "orderofg^s-1"
+
+\end_inset
+
+ is 
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $o\left(g^{m}\right)=o\left(g\right)\ \iff\,\gcd\left(m,o\left(g\right)\right)=1.$
+\end_inset
+
+ In particular there are exactly 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+ elements in the set 
+\begin_inset Formula $\left\{ e,g,g^{2},\ldots,g^{n-1}\right\} $
+\end_inset
+
+ whose order is 
+\begin_inset Formula $n$
+\end_inset
+
+ if 
+\begin_inset Formula $o\left(g\right)=n.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be an abelian group and suppose that 
+\begin_inset Formula $G$
+\end_inset
+
+ has elements of orders 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+, respectively.
+ Prove that 
+\begin_inset Formula $G$
+\end_inset
+
+ has an element whose order is the least common multiple of 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Let 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ be the elements of orders 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+, respectively.
+ Suppose 
+\begin_inset Formula 
+\[
+m=\prod_{i=1}^{k}p_{i}^{m_{i}},\qquad n=\prod_{i=1}^{k}p_{i}^{n_{i}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+s are prime divisors of 
+\begin_inset Formula $mn$
+\end_inset
+
+.
+ Denote 
+\begin_inset Formula $M=\{i\,\colon\, m_{i}\ge n_{i}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $N=\{i\,\colon\, m_{i}<n_{i}\}$
+\end_inset
+
+.
+ Thus, if 
+\begin_inset Formula 
+\[
+m'=\prod_{i\in M}p_{i},\qquad n'=\prod_{i\in N}p_{i},
+\]
+
+\end_inset
+
+ then 
+\begin_inset Formula 
+\[
+\text{lcm}(m,n)=m'n',\qquad\gcd(m',n')=1.
+\]
+
+\end_inset
+
+ Also note that 
+\begin_inset Formula $a'=a^{m/m'}$
+\end_inset
+
+ and 
+\begin_inset Formula $b'=b^{n/n'}$
+\end_inset
+
+ are elements of orders 
+\begin_inset Formula $m'$
+\end_inset
+
+ and 
+\begin_inset Formula $n'$
+\end_inset
+
+, respectively.
+\end_layout
+
+\begin_layout Standard
+We will prove that 
+\begin_inset Formula $a'b'$
+\end_inset
+
+ is of order 
+\begin_inset Formula $m'n'$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula $(a'b')^{m'n'}=a^{mn'}b^{nm'}=e$
+\end_inset
+
+.
+ Now suppose 
+\begin_inset Formula $(a'b')^{k}=e$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $a'^{k}=b'^{-k}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $a'^{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $b'^{k}$
+\end_inset
+
+ have the same orders.
+ We know that 
+\begin_inset Formula 
+\[
+o(a'^{k})=\frac{m'}{\gcd(m',k)},\qquad o(b'^{k})=\frac{n'}{\gcd(n',k)}.
+\]
+
+\end_inset
+
+ Therefore 
+\begin_inset Formula 
+\[
+\frac{m'}{\gcd(m',k)}=\frac{n}{\gcd(n',k)}
+\]
+
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $m'$
+\end_inset
+
+ and 
+\begin_inset Formula $n'$
+\end_inset
+
+ are relatively prime, both sides must be equal to 1.
+ Hence 
+\begin_inset Formula $\gcd(m',k)=m'$
+\end_inset
+
+ and 
+\begin_inset Formula $\gcd(n',k)=n'$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $k$
+\end_inset
+
+ is divisible by 
+\begin_inset Formula $m'n'$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $k\ge m'n'$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $m'n'$
+\end_inset
+
+ is indeed the order of 
+\begin_inset Formula $a'b'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Therefore we have proved that there is an element of order 
+\begin_inset Formula $m'n'=\text{lcm}(m,n)$
+\end_inset
+
+, so our proof is finished.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Chapter
 Permutation Groups
 \end_layout
 
@@ -3044,6 +4166,22 @@ so
 .
 \end_layout
 
+\begin_layout Example
+Find a shufflee of a deck of 13 cards that requires 42 repeats to return
+ the cards to the original order.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Consider the shuffle which is made up of 2 cycles, the first reorders the
+ first 7 cards (moving each card one over), the second (disjoint) cycle
+ does the same to the final 6 cards.
+\end_layout
+
 \begin_layout Subsection
 Partitions by cycles
 \end_layout
@@ -4027,8 +5165,769 @@ Obvious.
 \end_layout
 
 \begin_layout Chapter
+Cyclic Groups
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "cyclic-1"
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a cyclic group of order 
+\begin_inset Formula $n$
+\end_inset
+
+ and suppose that 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $g^{d}=e$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $g^{d'}=e$
+\end_inset
+
+ where 
+\begin_inset Formula $d'=\gcd(d,n$
+\end_inset
+
+) .
+ 
+\end_layout
+
+\begin_layout Proof
+Write 
+\begin_inset Formula $d=d'c$
+\end_inset
+
+ and 
+\begin_inset Formula $n=d'm$
+\end_inset
+
+.
+ Clearly 
+\begin_inset Formula $g^{d'}=e$
+\end_inset
+
+ implies 
+\begin_inset Formula $g^{d}=\left(g^{d'}\right)^{c}=e$
+\end_inset
+
+.
+ Moreover, since there exist integers (Euclid's algorithm) 
+\begin_inset Formula $x,\, y$
+\end_inset
+
+ such that 
+\begin_inset Formula $d'=xd+yn$
+\end_inset
+
+ and 
+\begin_inset Formula $g^{n}=e,$
+\end_inset
+
+ 
+\begin_inset Formula $g^{d'}=g^{xd}$
+\end_inset
+
+ so 
+\begin_inset Formula $g^{d}=e$
+\end_inset
+
+ implies also that 
+\begin_inset Formula $g^{d'}=e.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "cyclic-2"
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a cyclic group of order 
+\begin_inset Formula $n$
+\end_inset
+
+ and let 
+\begin_inset Formula $m$
+\end_inset
+
+ be a divisor of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Then the set of all elements 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ such that 
+\begin_inset Formula $g^{m}=e$
+\end_inset
+
+ has 
+\begin_inset Formula $m$
+\end_inset
+
+ elements.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula 
+\[
+H=\left\{ g\in G\,\colon\: g^{m}=e\right\} .
+\]
+
+\end_inset
+
+This is clearly a subgroup of 
+\begin_inset Formula $G,$
+\end_inset
+
+ since 
+\begin_inset Formula $G$
+\end_inset
+
+ is commutative.
+ But every subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ is cyclic, and if 
+\begin_inset Formula $a$
+\end_inset
+
+ generates 
+\begin_inset Formula $G,\ H=\left\langle a^{d}\right\rangle $
+\end_inset
+
+ for some divisor 
+\begin_inset Formula $d$
+\end_inset
+
+ of 
+\begin_inset Formula $n.$
+\end_inset
+
+ Since 
+\begin_inset Formula $a^{d}\in H,\ a^{dm}=e,$
+\end_inset
+
+ and hence 
+\begin_inset Formula $n$
+\end_inset
+
+ divides 
+\begin_inset Formula $dm$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $m$
+\end_inset
+
+ is a divisor of 
+\begin_inset Formula $n$
+\end_inset
+
+ we may define an integer 
+\begin_inset Formula $p=n/m.$
+\end_inset
+
+ Then 
+\begin_inset Formula $a^{p}\in H$
+\end_inset
+
+ so 
+\begin_inset Formula $d$
+\end_inset
+
+ divides 
+\begin_inset Formula $p.$
+\end_inset
+
+ Write 
+\begin_inset Formula $dm=kn$
+\end_inset
+
+ and 
+\begin_inset Formula $p=bd.$
+\end_inset
+
+ Then 
+\begin_inset Formula $n=mp=mbd=bkn,$
+\end_inset
+
+ so 
+\begin_inset Formula $b=k=1.$
+\end_inset
+
+ This implies 
+\begin_inset Formula $d=p,$
+\end_inset
+
+ so 
+\begin_inset Formula $H$
+\end_inset
+
+ has 
+\begin_inset Formula $m$
+\end_inset
+
+ elements viz., 
+\begin_inset Formula $e,a^{p},a^{2p},\ldots,a^{\left(m-1\right)p}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "cyclicequivcond"
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite group.
+ Then the following conditions are equivalent:
+\end_layout
+
+\begin_layout Theorem
+(i) 
+\begin_inset Formula $G$
+\end_inset
+
+ is cyclic.
+\end_layout
+
+\begin_layout Theorem
+(ii) For each 
+\begin_inset Formula $d\in\mathbf{Z^{+}}$
+\end_inset
+
+, the number of 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ such that 
+\begin_inset Formula $g^{d}=e$
+\end_inset
+
+ is less than or equal to 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(iii) For each 
+\begin_inset Formula $d\in\mathbf{Z^{+}}$
+\end_inset
+
+, 
+\begin_inset Formula $G$
+\end_inset
+
+ has at most one subgroup of order 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(iv) For each 
+\begin_inset Formula $d\in\mathbf{Z^{+}}$
+\end_inset
+
+, 
+\begin_inset Formula $G$
+\end_inset
+
+ has at most 
+\begin_inset Formula $\varphi(d)$
+\end_inset
+
+ elements of order 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Suppose that 
+\begin_inset Formula $G$
+\end_inset
+
+ is cyclic of order 
+\begin_inset Formula $n$
+\end_inset
+
+ generated by 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $d\in\mathbf{Z^{+}},$
+\end_inset
+
+ let 
+\begin_inset Formula $d'=\gcd(d,n$
+\end_inset
+
+) and write 
+\begin_inset Formula $d=d'c$
+\end_inset
+
+ and 
+\begin_inset Formula $n=d'm$
+\end_inset
+
+.
+ Let
+\begin_inset Formula 
+\[
+H=\left\{ g\in G\,\colon\: g^{d}=e\right\} .
+\]
+
+\end_inset
+
+By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cyclic-1"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H=\left\{ g\in G\,\colon\: g^{d'}=e\right\} .
+\]
+
+\end_inset
+
+By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cyclic-2"
+
+\end_inset
+
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ has exactly 
+\begin_inset Formula $d'\leq d$
+\end_inset
+
+ elements.
+ Thus (i) implies (ii).
+\end_layout
+
+\begin_layout Proof
+Suppose that (ii) holds and 
+\begin_inset Formula $d\in\mathbf{Z^{+}}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $H$
+\end_inset
+
+ be a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ of order 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $g^{d}=e$
+\end_inset
+
+ for every 
+\begin_inset Formula $g\in H.$
+\end_inset
+
+ According to (ii), there are at most 
+\begin_inset Formula $d$
+\end_inset
+
+ such elements.
+ But then 
+\begin_inset Formula 
+\[
+H=\left\{ g\in G\,\colon\: g^{d}=e\right\} ,
+\]
+
+\end_inset
+
+ and hence 
+\begin_inset Formula $H$
+\end_inset
+
+ is unique.
+\end_layout
+
+\begin_layout Proof
+Suppose (iii) holds.
+ If there are no elements of order 
+\begin_inset Formula $d$
+\end_inset
+
+, then there is nothing to check.
+ If 
+\begin_inset Formula $g$
+\end_inset
+
+ is an element of order 
+\begin_inset Formula $d$
+\end_inset
+
+, then 
+\begin_inset Formula $\left\langle g\right\rangle $
+\end_inset
+
+ is a subgroup of order 
+\begin_inset Formula $d$
+\end_inset
+
+, and by (iii), it is the unique such subgroup.
+ Hence if 
+\begin_inset Formula $g_{0}$
+\end_inset
+
+ is any element of order 
+\begin_inset Formula $d$
+\end_inset
+
+, 
+\begin_inset Formula $g_{0}\in\left\langle g\right\rangle $
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\left\langle g\right\rangle $
+\end_inset
+
+ contains exactly 
+\begin_inset Formula $\varphi(d)$
+\end_inset
+
+ elements of order 
+\begin_inset Formula $d$
+\end_inset
+
+, we see that 
+\begin_inset Formula $G$
+\end_inset
+
+ has exactly 
+\begin_inset Formula $\varphi(d)$
+\end_inset
+
+ elements of order 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite abelian group in which the number of solutions in 
+\begin_inset Formula $G$
+\end_inset
+
+ of the equation 
+\begin_inset Formula $x^{n}=e$
+\end_inset
+
+ is at most 
+\begin_inset Formula $n$
+\end_inset
+
+ for every positive integer 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $G$
+\end_inset
+
+ must be a cyclic group.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ For any positive integer 
+\begin_inset Formula $k$
+\end_inset
+
+, let 
+\begin_inset Formula $r_{k}$
+\end_inset
+
+ be the number of elements of order 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $r_{k}=0$
+\end_inset
+
+ if 
+\begin_inset Formula $k\nmid o\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $l$
+\end_inset
+
+ is of order 
+\begin_inset Formula $k$
+\end_inset
+
+, then 
+\begin_inset Formula $l,l^{2},\ldots,l^{k}$
+\end_inset
+
+ are solutions of 
+\begin_inset Formula $x^{k}=e$
+\end_inset
+
+.
+ Since there are at most 
+\begin_inset Formula $k$
+\end_inset
+
+ solutions, these are all the solutions.
+ However, there are only 
+\begin_inset Formula $\varphi(k)$
+\end_inset
+
+ among them whose order is 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $r_{k}\le\varphi(k)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Therefore we have
+\begin_inset Formula 
+\[
+o(G)=\sum_{i|o(G)}r_{i}\le\sum_{i|o(G)}\varphi(i)=o(G).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So equality must hold, which gives 
+\begin_inset Formula $r_{i}=\varphi(i)$
+\end_inset
+
+ for every 
+\begin_inset Formula $i$
+\end_inset
+
+ divisor of 
+\begin_inset Formula $o(G)$
+\end_inset
+
+.
+ In particular, 
+\begin_inset Formula $r_{o(G)}=\varphi(o(G))\ge1$
+\end_inset
+
+.
+ So there is an element of order 
+\begin_inset Formula $o(G)$
+\end_inset
+
+, which means that 
+\begin_inset Formula $G$
+\end_inset
+
+ is cyclic.
+\end_layout
+
+\begin_layout Chapter
 The Alternating Group 
 \begin_inset Formula $A_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+A4 has no subgroup of order 6
+\end_layout
+
+\begin_layout Plain Layout
+Suppose there exists a subgroup H of order 6.
+ Then H has index 2 in A4, and is therefore normal.
+ Then A4/H is a group of order 2; the only group of order 2 is the cyclic
+ group C2; in particular every element in A4/H has order at most 2.
+ A4/H={H,Hg} for some g in A4.
+ We have that (Hg)^2=H, but (Hg)^2=Hg^2.
+ Then g^2 is in H.
+ But the coset Hg is the same as Hg' for any g', as long as it is not in
+ H (remember cosets partition the group, and we know there are only two
+ cosets, one of which is just H itself).
+ Then g^2 is in H for all g in A4 (obviously Hh^2=H for all h in H).
+ Now, if you calculate all the g^2 in A4 (it's not hard for permutation
+ elements), then you will find that there are 9 distinct squares.
+ This means H has order at least 9: a contradiction.
+\end_layout
+
+\begin_layout Plain Layout
+You could also just look at the conjugacy classes of A4.
+ There are 4: {1} {(12)(34), (13)(24), (14)(23)} {(123), (134), (124), (234)}
+ {(132), (142), (143), (243)}
+\end_layout
+
+\begin_layout Plain Layout
+Since H is normal in A4 it must be a union of conjugacy classes.
+ But H has order 6 and from the classes it's clear we cannot form a set
+ of order 6.
+ Then such a subgroup does not exist.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+How to show that Klein four-group is a normal subgroup of the alternating
+ group A4
+\end_layout
+
+\begin_layout Plain Layout
+The elements of the Klein 4-group sitting inside A4 are precisely the identity,
+ and all elements of A4 of the form (ij)(kℓ) (the product of two disjoint
+ transpositions).
+\end_layout
+
+\begin_layout Plain Layout
+Since conjugation in Sn (and therefore in An) does not change the cycle
+ structure, it follows that this subgroup is a union of conjugacy classes,
+ and therefore is normal.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+__________________________________________________________________
+\end_layout
+
+\begin_layout Plain Layout
+You do not have to compute the entire Cayley table of a group to get an
+ isomorphism.
+ I think that this is what you are struggling with so I'll put a little
+ of detail.
+\end_layout
+
+\begin_layout Plain Layout
+First of all, there are only two groups of order 4 : the cyclic group of
+ order 4 and the Klein group, it is quite easy to see it.
+ Let G be a group of order 4 : by Cauchy's theorem, since 2 divides 4 and
+ 2 is prime, there exists an element of order 2 in G.
+ Let a be this element and H=⟨a⟩.
+ Since [G:H]=2, H◃G, hence for all g∈G, gag−1∈H, but since a≠1, we must
+ have gag−1=a, that is, a commutes with every element of G.
+\end_layout
+
+\begin_layout Plain Layout
+Consider an element outside H, call it b.
+ If it has order 4, then G=⟨b⟩≅C4, the cyclic group of order 4.
+ If not, then since the order of an element divides the order of the group,
+ and b≠1, then b must have order 2.
+ But then the fourth element cannot have order neither 1 or 4, hence it
+ must have order 2 too.
+ Hence every non-trivial element of G has order two, and using the argument
+ above, they commute with each other ; this gives you the group C2×C2, which
+ is precisely the Klein group, because we must have ab=c, ac=b and bc=a
+ (for obvious reasons, because other possibilities lead to contradictions).
+\end_layout
+
+\begin_layout Plain Layout
+Now the subgroup of A4, namely K={(1),(12)(34),(13)(24),(14)(23)} is a subgroup
+ of order 4.
+ Since it is not cyclic, it is isomorphic to the Klein group.
+ Conjugation in Sn does not change cycle structure, so that in particular
+ it does not do that in An.
+ This means that this subgroup is normal, because gKg−1⊆K, which is an equivalen
+t condition for normality of a subgroup.
+\end_layout
+
 \end_inset
 
 
@@ -4247,7 +6146,7 @@ reference "eq:3cycledecomposition"
 \end_layout
 
 \begin_layout Chapter
-Normal subgroups and quotient groups
+Normal Subgroups and Quotient Groups
 \end_layout
 
 \begin_layout Section*
@@ -4405,7 +6304,7 @@ th place in
 \end_inset
 
  is a bijection 
-\begin_inset Formula $\phi:G\to H$
+\begin_inset Formula $\phi\,:\, G\longrightarrow H$
 \end_inset
 
  such that 
@@ -4466,7 +6365,7 @@ homomorphisms
 
 \begin_layout Definition
 A map 
-\begin_inset Formula $\phi:G\longrightarrow H$
+\begin_inset Formula $\phi\,:\, G\longrightarrow H$
 \end_inset
 
  between two groups is a 
@@ -4496,6 +6395,10 @@ homorphism
 
 \end_layout
 
+\begin_layout Subsection
+Basic properties of homomorphisms
+\end_layout
+
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
@@ -4504,7 +6407,7 @@ name "homo"
 \end_inset
 
 Let 
-\begin_inset Formula $\phi\colon G\longrightarrow H$
+\begin_inset Formula $\phi\,\colon\, G\longrightarrow H$
 \end_inset
 
  be a homomorphism.
@@ -4532,7 +6435,7 @@ Let
 
 \begin_layout Lemma
 (ii) 
-\begin_inset Formula $\phi\left(a^{-1}\right)=\phi\left(a\right)^{-1}$
+\begin_inset Formula $\phi\left(a^{-1}\right)=\left(\phi\left(a\right)\right)^{-1}$
 \end_inset
 
 , that is, 
@@ -4560,6 +6463,26 @@ Let
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Lemma
+(iv) If 
+\begin_inset Formula $L$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $H$
+\end_inset
+
+ then 
+\begin_inset Formula $\phi^{-1}\left(L\right)=\left\{ g\in G\,\colon\:\phi\left(g\right)\in L\right\} $
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $G.$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -4633,7 +6556,7 @@ But then
 \end_inset
 
  so that 
-\begin_inset Formula $\phi\left(a^{-1}\right)=\phi\left(a\right)^{-1}$
+\begin_inset Formula $\phi\left(a^{-1}\right)=\left(\phi\left(a\right)\right)^{-1}$
 \end_inset
 
 .
@@ -4675,11 +6598,122 @@ Let
 \end_inset
 
  is a subgroup.
+ This proves (iii).
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\phi^{-1}\left(L\right)$
+\end_inset
+
+ is non-empty because 
+\begin_inset Formula $L$
+\end_inset
+
+ is non-empty and contains the identity 
+\begin_inset Formula $f$
+\end_inset
+
+ of 
+\begin_inset Formula $H$
+\end_inset
+
+ so by (i) 
+\begin_inset Formula $e\in\phi^{-1}\left(L\right).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $a,b\in\phi^{-1}\left(L\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\phi\left(a\right),\phi\left(b\right)\in L.$
+\end_inset
+
+ Hence 
+\begin_inset Formula $\phi\left(a\right)\phi\left(b\right)=\phi\left(ab\right)\in L.$
+\end_inset
+
+ i.e., 
+\begin_inset Formula $ab\in\phi^{-1}\left(L\right).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Finally 
+\begin_inset Formula $a\in\phi^{-1}\left(L\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\phi\left(a\right)$
+\end_inset
+
+ and hence 
+\begin_inset Formula $\left(\phi\left(a\right)\right)^{-1}=\phi\left(a^{-1}\right)\in L$
+\end_inset
+
+ and hence 
+\begin_inset Formula $a^{-1}\in\phi^{-1}\left(L\right)$
+\end_inset
+
+.
+ This proves (iv).
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "compositionhomo"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\phi\,\colon\, G\longrightarrow H$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi\,\colon\, H\longrightarrow K$
+\end_inset
+
+ be a group homomorphism.
+ Then 
+\begin_inset Formula $\psi\circ\phi\colon G\longrightarrow K$
+\end_inset
+
+ is also a group homomorphism.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $a,b\in G.$
+\end_inset
+
+Then
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\psi\circ\phi\right)\left(ab\right) & = & \psi\left(\phi\left(ab\right)\right)\\
+ & = & \psi\left(\phi\left(a\right)\phi\left(b\right)\right)\\
+ & = & \psi\left(\phi\left(a\right)\right)\psi\left(\phi\left(b\right)\right)\\
+ & = & \left(\psi\circ\phi\right)\left(a\right)\left(\psi\circ\phi\right)\left(b\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Kernel of a homomorphism.
 \end_layout
 
 \begin_layout Standard
 If 
-\begin_inset Formula $\phi:G\to H$
+\begin_inset Formula $\phi\,:\, G\longrightarrow H$
 \end_inset
 
  is a multiplicative function, or homomorphism, then the set of 
@@ -4745,7 +6779,7 @@ name "kernel"
 \end_inset
 
 Let 
-\begin_inset Formula $\phi\colon G\longrightarrow H$
+\begin_inset Formula $\phi\,\colon\, G\longrightarrow H$
 \end_inset
 
  be a group homomorphism.
@@ -4780,7 +6814,7 @@ name "kernelsubgrp"
 \end_inset
 
 Let 
-\begin_inset Formula $\phi\colon G\longrightarrow H$
+\begin_inset Formula $\phi\,\colon\, G\longrightarrow H$
 \end_inset
 
  be a group homomorphism.
@@ -4812,161 +6846,30 @@ is a subgroup of
 \end_layout
 
 \begin_layout Proof
-(i) We have to show that the kernel is non-empty and closed under products
- and inverses.
-\end_layout
-
-\begin_layout Proof
-Note that 
-\begin_inset Formula $\phi\left(e\right)=f$
-\end_inset
-
- by Lemma
+(i) This is a special case of Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "homo"
 
 \end_inset
 
-(i).
- Thus 
-\begin_inset Formula $\mathrm{\textrm{ker }\phi}$
+(iv) with 
+\begin_inset Formula $L=\left\{ f\right\} .$
 \end_inset
 
- is certainly non-empty.
- Now suppose that 
-\begin_inset Formula $a$
-\end_inset
 
- and 
-\begin_inset Formula $b$
-\end_inset
+\end_layout
 
- are in the kernel, so that 
-\begin_inset Formula $\phi(a)=\phi(b)=f$
-\end_inset
-
-.
-\begin_inset Formula 
-\begin{eqnarray*}
-\phi\left(ab\right) & = & \phi\left(a\right)\phi\left(b\right)\\
- & = & f^{2}\\
- & = & f.
-\end{eqnarray*}
-
-\end_inset
-
-Thus 
-\begin_inset Formula $ab\in\textrm{ker \phi\ }$
-\end_inset
-
-and so the kernel is closed under products.
- Finally suppose that 
-\begin_inset Formula $\phi\left(a\right)=f$
-\end_inset
-
-.
- Then 
-\begin_inset Formula $\phi\left(a^{-1}\right)=\phi\left(a\right)^{-1}=f$
-\end_inset
-
-, where we used Lemma 
+\begin_layout Proof
+(ii) This is also a special case of Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "homo"
 
 \end_inset
 
-(ii).
- Thus the kernel is closed under inverses, and the kernel is a subgroup.
-\end_layout
-
-\begin_layout Proof
-(ii) 
-\begin_inset Formula $f\in\textrm{Im\ensuremath{\left(\phi\right)}}$
-\end_inset
-
- so 
-\begin_inset Formula $\phi\left(G\right)$
-\end_inset
-
- is non-empty.
-\end_layout
-
-\begin_layout Proof
-Now suppose that 
-\begin_inset Formula $h$
-\end_inset
-
- and 
-\begin_inset Formula $k$
-\end_inset
-
- are in 
-\begin_inset Formula $\phi\left(G\right)$
-\end_inset
-
-, and let
-\begin_inset Formula $\phi(a)=h,\phi(b)=k$
-\end_inset
-
- with 
-\begin_inset Formula $a,b\in G$
-\end_inset
-
- .
- Then 
-\begin_inset Formula $\phi\left(ab\right)=hk$
-\end_inset
-
- and 
-\begin_inset Formula $\phi\left(a^{-1}\right)=h^{-1}$
-\end_inset
-
- showing that 
-\begin_inset Formula $\textrm{Im \phi}$
-\end_inset
-
- is a subgroup.
-\end_layout
-
-\begin_layout Lemma
-\begin_inset CommandInset label
-LatexCommand label
-name "compositionhomo"
-
-\end_inset
-
-Let 
-\begin_inset Formula $\phi\colon G\longrightarrow H$
-\end_inset
-
- and 
-\begin_inset Formula $\psi\colon H\longrightarrow K$
-\end_inset
-
- be a group homomorphism.
- Then 
-\begin_inset Formula $\psi\circ\phi\colon G\longrightarrow K$
-\end_inset
-
- is also a group homomorphism.
-\end_layout
-
-\begin_layout Proof
-Let 
-\begin_inset Formula $a,b\in G.$
-\end_inset
-
-Then
-\begin_inset Formula 
-\begin{eqnarray*}
-\left(\psi\circ\phi\right)\left(ab\right) & = & \psi\left(\phi\left(ab\right)\right)\\
- & = & \psi\left(\phi\left(a\right)\phi\left(b\right)\right)\\
- & = & \psi\left(\phi\left(a\right)\right)\psi\left(\phi\left(b\right)\right)\\
- & = & \left(\psi\circ\phi\right)\left(a\right)\left(\psi\circ\phi\right)\left(b\right).
-\end{eqnarray*}
-
+(iii) with 
+\begin_inset Formula $K=G.$
 \end_inset
 
 
@@ -4984,7 +6887,7 @@ name "injectivehomo"
 \end_inset
 
 Let 
-\begin_inset Formula $\phi\colon G\longrightarrow H$
+\begin_inset Formula $\phi\,\colon\, G\longrightarrow H$
 \end_inset
 
  be a group homomorphism.
@@ -5230,7 +7133,17 @@ Soon this observation was turned into a formal definition.
  
 \end_layout
 
+\begin_layout Section
+Normal Subgroups.
+\end_layout
+
 \begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "normal"
+
+\end_inset
+
 A subgroup 
 \begin_inset Formula $H$
 \end_inset
@@ -5273,6 +7186,57 @@ Note that the normality condition can be written as
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a group and 
+\begin_inset Formula $H$
+\end_inset
+
+ a subgroup.
+ Suppose that 
+\begin_inset Formula $H$
+\end_inset
+
+ is the only subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ of some given order 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Then H is normal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+ 
+\begin_inset Formula $gHg^{-1}$
+\end_inset
+
+
+\series default
+ is a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ with the same order 
+\begin_inset Formula $m$
+\end_inset
+
+ hence 
+\begin_inset Formula $gHg^{-1}=H.$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5427,6 +7391,127 @@ For every
 ghg^{-1}=gg^{-1}h=h\in H.
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "prodNH"
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a group, 
+\begin_inset Formula $N$
+\end_inset
+
+ a normal subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+, and let 
+\begin_inset Formula $H$
+\end_inset
+
+ be any subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Then
+\end_layout
+
+\begin_layout Lemma
+(i) 
+\begin_inset Formula $HN=NH.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(ii) 
+\begin_inset Formula $HN$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+(iii) 
+\begin_inset Formula $N\vartriangleleft HN.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(i) Since 
+\begin_inset Formula $N$
+\end_inset
+
+ is normal,
+\begin_inset Formula 
+\[
+HN=\left\{ hN\,\colon\, h\in H\right\} =\left\{ Nh\,\colon\, h\in H\right\} =NH.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(ii) 
+\begin_inset Formula $HN$
+\end_inset
+
+ is non-empty because it contains the identity.
+ Let 
+\begin_inset Formula $h_{1}n_{1},h_{2}n_{2}\in HN.$
+\end_inset
+
+ Then
+\begin_inset Formula 
+\begin{eqnarray*}
+h_{1}n_{1}h_{2}n_{2} & = & h_{1}\left(n_{1}h_{2}\right)n_{2}=h_{1}h_{3}n_{3}n_{2}\in HN,\\
+\left(h_{1}n_{1}\right)^{-1} & =n_{1}^{-1}h_{1}^{-1} & =hn\in HN.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(iii) Clearly 
+\begin_inset Formula $N$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $HN$
+\end_inset
+
+ and 
+\begin_inset Formula $gN=Ng$
+\end_inset
+
+ for all 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ implies 
+\begin_inset Formula $N\vartriangleleft HN.$
 \end_inset
 
 
@@ -5603,6 +7688,10 @@ This problem was found quite hard at the time, though the technique used
 If you are trying to find something complicated but have no idea where to
  start, then pretend you’ve found what you are looking for and see what
  you can say about it.
+\end_layout
+
+\begin_layout Subsection
+Cosets
 \end_layout
 
 \begin_layout Standard
@@ -6305,6 +8394,10 @@ In a sense it doesn’t actually matter what set we define the group operation
 .
 \end_layout
 
+\begin_layout Subsection
+Quotient Group.
+\end_layout
+
 \begin_layout Standard
 So now we’ve managed to cut things down further.
  We want to define a binary operation on the set of all cosets of 
@@ -6693,7 +8786,7 @@ exactly
 Application
 \series default
  The determinant map 
-\begin_inset Formula $\det:GL(n,\boldsymbol{\mathbf{R}})→\boldsymbol{\mathbf{\mathbf{R^{\star}}}}$
+\begin_inset Formula $\det\,:\,\mathbf{GL}_{n}(\boldsymbol{\mathbf{R}})→\boldsymbol{\mathbf{\mathbf{R}}}^{\times}$
 \end_inset
 
  is a group homomorphism.
@@ -6714,14 +8807,419 @@ Application
 \noun off
 \color none
 
-\begin_inset Formula $GL(n,\boldsymbol{\mathbf{R}})$
+\begin_inset Formula $\mathbf{GL}_{n}(\boldsymbol{\mathbf{R}})$
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Example
+Prove that if 
+\begin_inset Formula $N$
+\end_inset
+
+ is a subgroup of an abelian group 
+\begin_inset Formula $G$
+\end_inset
+
+, then 
+\begin_inset Formula $G/N$
+\end_inset
+
+ is abelian.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ 
+\begin_inset Formula $\left(aN\right)\left(bN\right)=abN=baN=\left(bN\right)\left(aN\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+If 
+\begin_inset Formula $G$
+\end_inset
+
+ is a cyclic group and 
+\begin_inset Formula $N$
+\end_inset
+
+ is any subgroup, prove that 
+\begin_inset Formula $G/N$
+\end_inset
+
+ is cyclic.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ First note that 
+\begin_inset Formula $N$
+\end_inset
+
+ is normal since 
+\begin_inset Formula $G$
+\end_inset
+
+ being cyclic implies that 
+\begin_inset Formula $G$
+\end_inset
+
+ is abelian.
+ Suppose that 
+\begin_inset Formula $G=\left\langle a\right\rangle .$
+\end_inset
+
+ Now any element of 
+\begin_inset Formula $G/N$
+\end_inset
+
+ is of the form 
+\begin_inset Formula $gN=a^{k}N=\left(aN\right)^{k}$
+\end_inset
+
+ so 
+\begin_inset Formula $G/N$
+\end_inset
+
+ is generated by 
+\begin_inset Formula $aN.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "orderofaH"
+
+\end_inset
+
+Let 
+\begin_inset Formula $H\vartriangleleft G$
+\end_inset
+
+ and suppose that 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ has finite order 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $o\left(aH\right)\mid o\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+ 
+\begin_inset Formula $\left(aH\right)^{m}=a^{m}H=H$
+\end_inset
+
+ 
+\series default
+which is the identity element of 
+\begin_inset Formula $G/H$
+\end_inset
+
+ hence 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $o\left(aH\right)\mid m$
+\end_inset
+
+ by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "propertiesoforder"
+
+\end_inset
+
+(iv).
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $H\vartriangleleft G$
+\end_inset
+
+ with 
+\begin_inset Formula $\left|H\right|=11$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[G\,\colon\, H\right]=24$
+\end_inset
+
+.
+ If there is an element 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ such that 
+\begin_inset Formula $a^{11}=e$
+\end_inset
+
+ then prove that 
+\begin_inset Formula $a\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ If 
+\begin_inset Formula $a=e$
+\end_inset
+
+ there is nothing to prove.
+ Otherwise 
+\begin_inset Formula $o\left(a\right)=11$
+\end_inset
+
+ so order of the coset 
+\begin_inset Formula $aH$
+\end_inset
+
+ must be either 1 or 11.
+ Since 
+\begin_inset Formula $11\nmid24$
+\end_inset
+
+ the order of 
+\begin_inset Formula $aH$
+\end_inset
+
+ is 1 but then 
+\begin_inset Formula $aH=H$
+\end_inset
+
+ so 
+\begin_inset Formula $a\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+Later on it will be shown that (Lagrange's Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lagrange"
+
+\end_inset
+
+) 
+\begin_inset Formula $\left|G\right|=11\times24$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $H$
+\end_inset
+
+ is normal, it is the unique 11-Sylow subgroup.
+ But that means 
+\begin_inset Formula $H$
+\end_inset
+
+ must contain all elements of order 11 (or 1).
+\end_layout
+
 \begin_layout Chapter
-Cosets
+Cosets and Lagrange's Theorem
+\end_layout
+
+\begin_layout Section*
+Equivalence Relations and Counting.
+\end_layout
+
+\begin_layout Standard
+In this chapter we shall exploit a simple but very profound idea from set
+ theory viz., that of an equivalence relation.
+ We shall derive some very important results in group theory.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Fact 1.
+
+\series default
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be any finite set and 
+\begin_inset Formula $\sim$
+\end_inset
+
+be an equivalence relation.
+ If 
+\begin_inset Formula $A_{1},A_{2},\ldots,A_{n}$
+\end_inset
+
+ are 
+\begin_inset Formula $n$
+\end_inset
+
+ distinct equivalence classes of 
+\begin_inset Formula $\sim$
+\end_inset
+
+so that
+\begin_inset Formula 
+\[
+X=\bigcup_{i=i}^{n}A_{i}
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\left|X\right|={\displaystyle \sum_{i=1}^{n}\left|A_{i}\right|}.
+\]
+
+\end_inset
+
+In particular if 
+\begin_inset Formula $\left|A_{i}\right|=m$
+\end_inset
+
+ for each 
+\begin_inset Formula $i$
+\end_inset
+
+ then 
+\begin_inset Formula $\left|X\right|=m\cdot n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Thus an equivalence relation can be used to count the elements of a set
+ or if the count is known then it allows us to determine the number of equivalen
+ce classes if each class has the same number of elements.
+ In the latter case 
+\begin_inset Formula $m$
+\end_inset
+
+ must be a divisor of 
+\begin_inset Formula $\left|X\right|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The counting result above is very useful.
+ For it gives us the possible cardinality of the subgroups of any finite
+ group.
+ This is the content of the celebrated 
+\emph on
+Lagrange's Theorem
+\emph default
+ one of the most important theorems in Group Theory.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Fact 2.
+
+\series default
+ Let 
+\begin_inset Formula $f\,\colon\, X\longrightarrow Y$
+\end_inset
+
+ be any map.
+ We can partition 
+\begin_inset Formula $X$
+\end_inset
+
+ by an equivalence relation 
+\begin_inset Formula $\sim$
+\end_inset
+
+ by declaring 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+ iff 
+\begin_inset Formula $f\left(x\right)=f\left(y\right)$
+\end_inset
+
+.
+ Then the map 
+\begin_inset Formula $F\,\colon\, X/\sim\longrightarrow Y$
+\end_inset
+
+ defined by 
+\begin_inset Formula 
+\[
+F\left(\left[x\right]\right)=f\left(x\right)
+\]
+
+\end_inset
+
+is well defined and injective.
+ If 
+\begin_inset Formula $f$
+\end_inset
+
+ is surjective then 
+\begin_inset Formula $F$
+\end_inset
+
+ is a bijection.
+ Thus 
+\begin_inset Formula $\mbox{card }X/\sim\leq\mbox{card }Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Definitions and properties.
 \end_layout
 
 \begin_layout Standard
@@ -6758,10 +9256,15 @@ reference "homoconstcosets"
 \end_inset
 
  of 
-\begin_inset Formula $G.$
+\begin_inset Formula $G$
 \end_inset
 
+ not necessarily normal.
+ In fact it will be useful in some cases when 
+\begin_inset Formula $H$
+\end_inset
 
+ is not a subgroup.
 \end_layout
 
 \begin_layout Definition
@@ -6824,6 +9327,179 @@ right coset
 \end_inset
 
 
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "cardofcoset"
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a group, let 
+\begin_inset Formula $H$
+\end_inset
+
+ be a subgroup and let 
+\begin_inset Formula $g\in G.$
+\end_inset
+
+ Then 
+\begin_inset Formula 
+\[
+\left|gH\right|=\left|H\right|=\left|Hg\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Fix any 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Suppose that 
+\begin_inset Formula $gH$
+\end_inset
+
+ is a left coset of 
+\begin_inset Formula $H$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Define a map
+\begin_inset Formula 
+\[
+A\,\colon\, H\longrightarrow gH,
+\]
+
+\end_inset
+
+by sending 
+\begin_inset Formula $h\in H$
+\end_inset
+
+ to 
+\begin_inset Formula $A(h)=gh$
+\end_inset
+
+.
+ Define a map
+\begin_inset Formula 
+\[
+B\,\colon\, gH\longrightarrow H,
+\]
+
+\end_inset
+
+by sending 
+\begin_inset Formula $k\in gH$
+\end_inset
+
+ to 
+\begin_inset Formula $B(k)=g^{-1}k$
+\end_inset
+
+.
+ These maps are both clearly well-defined.
+\end_layout
+
+\begin_layout Proof
+We show that 
+\begin_inset Formula $B$
+\end_inset
+
+ is the inverse of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ We first compute
+\begin_inset Formula 
+\[
+B\circ A\,\colon\, H\longrightarrow H.
+\]
+
+\end_inset
+
+Suppose that 
+\begin_inset Formula $h\in H$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(B\circ A\right)\left(h\right) & = & B\left(A\left(h\right)\right)\\
+ & = & B\left(gh\right)\\
+ & = & g^{-1}\left(gh\right)\\
+ & = & h.
+\end{eqnarray*}
+
+\end_inset
+
+Now consider
+\begin_inset Formula 
+\[
+A\circ B\colon\, gH\longrightarrow gH.
+\]
+
+\end_inset
+
+Suppose that 
+\begin_inset Formula $k\in gH$
+\end_inset
+
+ , then
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(A\circ B\right)\left(k\right) & = & A\left(B\left(k\right)\right)\\
+ & = & A\left(g^{-1}k\right)\\
+ & = & g\left(g^{-1}k\right)\\
+ & = & k.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $A$
+\end_inset
+
+ must be a bijection and so 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $gH$
+\end_inset
+
+ must have the same cardinality.
+ 
+\end_layout
+
+\begin_layout Proof
+Similarly 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $Hg$
+\end_inset
+
+ have the same cardinality.
 \end_layout
 
 \begin_layout Lemma
@@ -6976,6 +9652,267 @@ Suppose now that
 
 \end_layout
 
+\begin_layout Example
+Let 
+\begin_inset Formula $H$
+\end_inset
+
+ be a subgroup of a group 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $H$
+\end_inset
+
+ is normal if and only if 
+\begin_inset Formula $aH=bH$
+\end_inset
+
+ implies 
+\begin_inset Formula $Ha=Hb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Clearly the statement 
+\begin_inset Formula $aH=bH$
+\end_inset
+
+ implies 
+\begin_inset Formula $Ha=Hb$
+\end_inset
+
+ is true if 
+\begin_inset Formula $H$
+\end_inset
+
+ is normal.
+ To prove the converse we note that by assumption 
+\begin_inset Formula 
+\[
+b^{-1}a\in H\ \implies\ ab^{-1}\in H.
+\]
+
+\end_inset
+
+From this we conclude that whenever 
+\begin_inset Formula $ba=\left(b^{-1}\right)^{-1}a\in H$
+\end_inset
+
+ then 
+\begin_inset Formula $ab\in H$
+\end_inset
+
+.
+ Now let 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+
+\begin_inset Formula $\left(gh\right)=h\in H$
+\end_inset
+
+, therefore 
+\begin_inset Formula $\left(gh\right)g^{-1}\in H$
+\end_inset
+
+ so 
+\begin_inset Formula $H$
+\end_inset
+
+ is normal.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $H=\left\{ \pm1,\pm i\right\} $
+\end_inset
+
+ be the subgroup of 
+\begin_inset Formula $G=\mathbf{C}^{\times}$
+\end_inset
+
+ consisting of fourth roots of unity.
+ Describe the cosets of 
+\begin_inset Formula $H$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ explicitly, and prove that 
+\begin_inset Formula $G/H$
+\end_inset
+
+ is isomorphic to 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ The cosets are 
+\begin_inset Formula $zH,\ z\neq0$
+\end_inset
+
+.
+ Now 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ are in the same coset if and only if 
+\begin_inset Formula $z_{1}/z_{2}\in H$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\left|z_{1}\right|=\left|z_{2}\right|$
+\end_inset
+
+and 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ should be obtained from 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ by rotating clockwise through one of the angles 
+\begin_inset Formula $\pi/2,\pi,3\pi/2$
+\end_inset
+
+.
+ Thus the distinct cosets of 
+\begin_inset Formula $H$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ are sets of the form 
+\begin_inset Formula $\left\{ \pm re^{it},\pm ire^{it}\right\} $
+\end_inset
+
+ for 
+\begin_inset Formula $r\in\mathbf{R}^{+},\ t\in[0,\pi/2)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Observe that the fourth power of each element of a coset of 
+\begin_inset Formula $H$
+\end_inset
+
+ is the same element of 
+\begin_inset Formula $\mathbf{C}^{\times}$
+\end_inset
+
+, and the cosets of 
+\begin_inset Formula $H$
+\end_inset
+
+ are exactly the fourth roots of elements of 
+\begin_inset Formula $\mathbf{C}^{\times}$
+\end_inset
+
+.
+ The thereby-well-defined map 
+\begin_inset Formula $\phi\,\colon\, G/H\longrightarrow G$
+\end_inset
+
+ given by 
+\begin_inset Formula $\phi\left(\left\{ \pm z,\pm iz\right\} \right)=z^{4}$
+\end_inset
+
+ is an isomorphism.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $H$
+\end_inset
+
+ be a subgroup of 
+\begin_inset Formula $G.$
+\end_inset
+
+ If 
+\begin_inset Formula $\left[G\,\colon\, H\right]$
+\end_inset
+
+ is a prime 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $H\vartriangleleft G,$
+\end_inset
+
+ show that there exists an element 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+G=\bigcup_{i=0}^{p-1}a^{i}H.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\series bold
+Soln.
+
+\series default
+ 
+\begin_inset Formula $G/H$
+\end_inset
+
+ being of prime order is cyclic and the result follows because 
+\begin_inset Formula $G$
+\end_inset
+
+ is the disjoint union of left cosets by 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 We next show that the number of left cosets is equal to the number of right
  cosets.
@@ -7039,6 +9976,10 @@ Since
 \end_inset
 
  is surjective.
+\end_layout
+
+\begin_layout Section
+Normality and cosets.
 \end_layout
 
 \begin_layout Lemma
@@ -7166,11 +10107,11 @@ Let
 \begin_inset Formula $H$
 \end_inset
 
- is normal Iff the multiplication 
+ is normal if the multiplication 
 \begin_inset Formula $\left(aH\right)\left(bH\right)=abH$
 \end_inset
 
- is well defined then.
+ is well defined.
 \end_layout
 
 \begin_layout Proof
@@ -7190,11 +10131,15 @@ Let
 \begin_inset Formula $G.$
 \end_inset
 
- Since 
-\begin_inset Formula $Hg^{-1}H=g^{-1}H$
+ Since
+\begin_inset Formula 
+\[
+Hg^{-1}H=\left(eH\right)\left(gH\right)=eg^{-1}H=g^{-1}H,
+\]
+
 \end_inset
 
- it follows that 
+it follows that 
 \begin_inset Formula $hg^{-1}h'=g^{-1}h''$
 \end_inset
 
@@ -7208,7 +10153,7 @@ Let
 
 .
  It follows that 
-\begin_inset Formula $ghg^{-1}\in H$
+\begin_inset Formula $ghg^{-1}=h''h'^{-1}\in H$
 \end_inset
 
  so 
@@ -7219,86 +10164,8 @@ Let
  
 \end_layout
 
-\begin_layout Chapter
-Lagrange's Theorem
-\end_layout
-
-\begin_layout Standard
-Let 
-\begin_inset Formula $X$
-\end_inset
-
- be any set and 
-\begin_inset Formula $\sim$
-\end_inset
-
-be an equivalence relation.
- If 
-\begin_inset Formula $A_{1},A_{2},\ldots,A_{n}$
-\end_inset
-
- are 
-\begin_inset Formula $n$
-\end_inset
-
- distinct equivalence classes of 
-\begin_inset Formula $\sim$
-\end_inset
-
-so that
-\begin_inset Formula 
-\[
-X=\bigcup_{i=i}^{n}A_{i}
-\]
-
-\end_inset
-
-then 
-\begin_inset Formula 
-\[
-\left|X\right|={\displaystyle \sum_{i=1}^{n}\left|A_{i}\right|}.
-\]
-
-\end_inset
-
-In particular if 
-\begin_inset Formula $\left|A_{i}\right|=m$
-\end_inset
-
- for each 
-\begin_inset Formula $i$
-\end_inset
-
- then 
-\begin_inset Formula $\left|X\right|=m\cdot n$
-\end_inset
-
-.
- Thus an equivalence relation can be used to count the elements of a set
- or if the count is known then it allows us to determine the number of equivalen
-ce classes if each class has the same number of elements.
- In the latter case 
-\begin_inset Formula $m$
-\end_inset
-
- must be a divisor of 
-\begin_inset Formula $\left|X\right|$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-The counting result above is very useful.
- For it gives us the possible cardinality of the subgroups of any finite
- group.
- This is the content of the celebrated 
-\emph on
-Lagrange's Theorem
-\emph default
- one of the most important theorems in Group Theory.
- 
+\begin_layout Section
+Index of a Subgroup.
 \end_layout
 
 \begin_layout Definition
@@ -7370,6 +10237,10 @@ Note that even though
  Then there are two cosets (evens and odds) and so the index is two.
 \end_layout
 
+\begin_layout Section
+Lagrange's Theorem
+\end_layout
+
 \begin_layout Theorem
 \begin_inset Argument
 status open
@@ -7432,29 +10303,968 @@ Let
 \end_layout
 
 \begin_layout Proof
-Since 
+Lagrange's Theorem is a consequence of: 
+\end_layout
+
+\begin_layout Proof
+(i) 
 \begin_inset Formula $G$
 \end_inset
 
- is a disjoint union of its left cosets, it suffices to prove that the cardinali
-ty of each coset is equal to the cardinality of 
+ is a disjoint union of its left cosets (Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cosetpartition"
+
+\end_inset
+
+) and 
+\end_layout
+
+\begin_layout Proof
+(ii) the cardinality of each coset is equal to the cardinality of 
 \begin_inset Formula $H$
 \end_inset
 
+ (by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cardofcoset"
+
+\end_inset
+
+ )
+\end_layout
+
+\begin_layout Corollary
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite group.
+ Then 
+\begin_inset Formula $\left[G\,\colon\, H\right]=1$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $H=G$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[G\,\colon\, H\right]=\left|G\right|$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $H=\left\{ e\right\} $
+\end_inset
+
 .
- Fix any 
-\begin_inset Formula $g\in G$
+ In particular if 
+\begin_inset Formula $H\vartriangleleft G$
+\end_inset
+
+ then 
+\begin_inset Formula $\left|G/H\right|=\left|G\right|$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $H=\left\{ e\right\} $
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Proof
-Suppose that 
+Direct application of eqn.
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:index"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "index2subgroupisnormal"
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a group and 
+\begin_inset Formula $H$
+\end_inset
+
+ a subroup.
+ If 
+\begin_inset Formula $\left[G\,\colon\, H\right]=2$
+\end_inset
+
+ then 
+\begin_inset Formula $H$
+\end_inset
+
+ is normal.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $G=H\,\cup gH=H\,\cup Hg$
+\end_inset
+
+ where 
+\begin_inset Formula $g\not\in H$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula $gH=Hg\ \forall g\in G$
+\end_inset
+
+ so 
+\begin_inset Formula $H$
+\end_inset
+
+ is normal by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "normalequivdef"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+If 
+\begin_inset Formula $N$
+\end_inset
+
+ is a normal subgroup in the finite group 
+\begin_inset Formula $G$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left[G\,\colon\, N\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left|N\right|$
+\end_inset
+
+ are relatively prime, show that any element 
+\begin_inset Formula $x\in G$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $x^{\left|N\right|}=e$
+\end_inset
+
+ must be in 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Assume 
+\begin_inset Formula $x^{\left|N\right|}=e$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $\left[G\,\colon\, N\right]=\frac{\left|G\right|}{\left|N\right|}$
+\end_inset
+
+ is the order of 
+\begin_inset Formula $G/N$
+\end_inset
+
+.
+ Thus
+\begin_inset Formula 
+\[
+N=(xN)^{\left[G\,\colon\, N\right]}=x^{\left[G\,\colon\, N\right]}N,
+\]
+
+\end_inset
+
+ which implies that 
+\begin_inset Formula $x^{\left[G\,\colon\, N\right]}\in N$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\left|N\right|$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[G\,\colon\, N\right]$
+\end_inset
+
+ are relatively prime, there exist integers 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+a\left|N\right|+b\left[G\,\colon\, N\right]=1.
+\]
+
+\end_inset
+
+ Therefore
+\begin_inset Formula 
+\[
+x=(x^{\left|N\right|})^{a}(x^{\left[G\,\colon\, N\right]})^{b}=e^{a}(x^{\left[G\,\colon\, N\right]})^{b}=(x^{\left[G\,\colon\, N\right]})^{b}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $x^{\left[G\,\colon\, N\right]}\in N$
+\end_inset
+
+, therefore 
+\begin_inset Formula $x\in N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Coset inclusion and Intersection of cosets.
+ .
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "cosetinclusion"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $H,\, K\leq G$
+\end_inset
+
+ are subgroups of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $H\leq K$
+\end_inset
+
+ then, every left coset (right) of is contained in exactly one left coset
+ of 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ Conversely if 
+\begin_inset Formula $xH\subseteq yK$
+\end_inset
+
+ for some 
+\begin_inset Formula $x,y\in G$
+\end_inset
+
+ then 
+\begin_inset Formula $H\leq K.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
 \begin_inset Formula $gH$
 \end_inset
 
- is a left coset of 
+ be any left coset of 
+\begin_inset Formula $H$
+\end_inset
+
+ in 
+\begin_inset Formula $G.$
+\end_inset
+
+ Clearly 
+\begin_inset Formula $gH\subseteq gK.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Uniqueness.
+
+\series default
+ Suppose there is a coset 
+\begin_inset Formula $aK$
+\end_inset
+
+ which contains 
+\begin_inset Formula $gH.$
+\end_inset
+
+ Then 
+\begin_inset Formula $g\in aK$
+\end_inset
+
+ so 
+\begin_inset Formula $gK=aK.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Converse.
+
+\series default
+ Write 
+\begin_inset Formula $x=yk,\, k\in K.$
+\end_inset
+
+ Let 
+\begin_inset Formula $h\in H$
+\end_inset
+
+ be any element.
+ Then 
+\begin_inset Formula $ykH\subseteq yK$
+\end_inset
+
+ implies 
+\begin_inset Formula $ykh=yl,\ l\in K.$
+\end_inset
+
+ Thus 
+\begin_inset Formula $h=k^{-1}l\in K$
+\end_inset
+
+ so 
+\begin_inset Formula $H\leq K.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "cosetintersection"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\left\{ H_{i}\right\} _{i\in I}$
+\end_inset
+
+ is a family of subgroups of group 
+\begin_inset Formula $G$
+\end_inset
+
+ indexed by 
+\begin_inset Formula $I$
+\end_inset
+
+, and 
+\begin_inset Formula $g_{i}\in G.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\cap_{i\in I}g_{i}H_{i}$
+\end_inset
+
+, if non-empty, is a left coset of the subgroup 
+\begin_inset Formula $\cap_{i\in I}H_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $a\in\cap_{i\in I}g_{i}H_{i}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $a^{-1}g_{i}\in H_{i},\,\forall\, i\in I$
+\end_inset
+
+ so 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a^{-1}g_{i}H_{i}=H_{i}$
+\end_inset
+
+.
+ We first show that 
+\begin_inset Formula 
+\[
+a\left(\cap_{i\in I}H_{i}\right)\subseteq\cap_{i\in I}g_{i}H_{i}.
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $x\in$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\cap_{i\in I}H_{i}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $x=a^{-1}g_{i}h_{i}$
+\end_inset
+
+ for each 
+\begin_inset Formula $i\in I$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $ax\in g_{i}H_{i}$
+\end_inset
+
+ and hence 
+\begin_inset Formula $ax\in\cap_{i\in I}g_{i}H_{i}$
+\end_inset
+
+.
+ We next show the reverse inclusion
+\begin_inset Formula 
+\[
+\cap_{i\in I}g_{i}H_{i}\subseteq a\left(\cap_{i\in I}H_{i}\right).
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $y\in\cap_{i\in I}g_{i}H_{i}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ and write 
+\begin_inset Formula $y=g_{i}h_{i},\ h_{i}\in H_{i}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $y^{-1}a=h_{i}^{-1}g_{i}^{-1}a\in H_{i}$
+\end_inset
+
+ because 
+\begin_inset Formula $a^{-1}g_{i}\in H_{i}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $y^{-1}a\in\cap_{i\in I}H_{i}$
+\end_inset
+
+ so 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ belong to the same coset of 
+\begin_inset Formula $\cap_{i\in I}H_{i}$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+This completes the proof.
+\end_layout
+
+\begin_layout Corollary
+Let 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ be subgroups of finite index of a group 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $H\cap K$
+\end_inset
+
+ also has finite index.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+First proof.
+ 
+\series default
+Every coset of 
+\begin_inset Formula $H\cap K$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ is an intersection of a coset of 
+\begin_inset Formula $H$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ and a coset of 
+\begin_inset Formula $K$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ by Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cosetintersection"
+
+\end_inset
+
+.
+ The number of such intersections is at most 
+\begin_inset Formula $\left[G\,\colon\, H\right]\left[G\,\colon\, K\right]$
+\end_inset
+
+.
+ Hence
+\begin_inset Formula 
+\[
+\left[G\,\colon\, H\cap K\right]\leq\left[G\,\colon\, H\right]\left[G\,\colon\, K\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Second proof.
+
+\series default
+ Consider the map 
+\begin_inset Formula 
+\[
+f\,\colon\, G\longrightarrow G/H\times G/K
+\]
+
+\end_inset
+
+defined by 
+\begin_inset Formula 
+\[
+f\left(g\right)=\left(gH,gK\right).
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $f\left(x\right)=f\left(y\right)$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $y^{-1}x\in H\cap K$
+\end_inset
+
+.
+ So the quotient is precisely 
+\begin_inset Formula $G/H\cap K$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ induces an injective map 
+\begin_inset Formula 
+\[
+F\,\colon\, G/H\cap K\longrightarrow G/H\times G/K.
+\]
+
+\end_inset
+
+This immediately gives the index inequality.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Third proof.(Pigeon hole)
+\series default
+ Let 
+\begin_inset Formula $m=\left[G\,\colon\, H\right],\, n=\left[G\,\colon\, K\right]$
+\end_inset
+
+ and let if possible there be 
+\begin_inset Formula $mn+1$
+\end_inset
+
+ distinct cosets 
+\begin_inset Formula $g_{1}H\cap K,g_{2}H\cap K,\ldots,g_{mn+1}H\cap K$
+\end_inset
+
+.
+ Consider the map
+\begin_inset Formula 
+\[
+g\longmapsto\left(gH,gK\right)
+\]
+
+\end_inset
+
+of the set 
+\begin_inset Formula $\left\{ g_{1},g_{2},\ldots,g_{mn+1}\right\} $
+\end_inset
+
+into 
+\begin_inset Formula $G/H\times G/K$
+\end_inset
+
+.
+ By the pigeon hole principle there is a pair 
+\begin_inset Formula $g_{i},g_{j}$
+\end_inset
+
+ for which 
+\begin_inset Formula $g_{i}H=g_{j}H$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{i}K=g_{j}K$
+\end_inset
+
+.
+ But then 
+\begin_inset Formula $g_{j}^{-1}g_{j}\in H\cap K$
+\end_inset
+
+ which contradicts our assumption that the cosets 
+\begin_inset Formula $g_{1}H\cap K,g_{2}H\cap K,\ldots,g_{mn+1}H\cap K$
+\end_inset
+
+are distinct.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+ 
+\series default
+The above result is not true if 
+\begin_inset Formula $G$
+\end_inset
+
+ is infinite.
+ For example let 
+\begin_inset Formula $G=\mathbf{Z},\, H=2\mathbf{Z}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $H$
+\end_inset
+
+and 
+\begin_inset Formula $K$
+\end_inset
+
+ are normal subgroups of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ They both have finite index equal to a power of a given prime 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $H\cap K$
+\end_inset
+
+ is a normal subgroup of finite index equal to a power of 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ 
+\begin_inset Formula $G/H\times G/K$
+\end_inset
+
+ has order a power prime 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $G/H\cap K$
+\end_inset
+
+ is isomorphic to a subgroup under the map 
+\begin_inset Formula $F$
+\end_inset
+
+ hence has order which is a power of 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Alt.
+ soln.
+
+\series default
+ 
+\begin_inset Formula $\left[G\,:\, H\cap K\right]=\left[G\,:\, H\right]\cdot\left[H\,:\, H\cap K\right]$
+\end_inset
+
+ so it is enough to show that 
+\begin_inset Formula $\left[H\,:\, H\cap K\right]$
+\end_inset
+
+ is a power of 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $\left[H\,:\, H\cap K\right]=\left[HK\,\colon\, K\right]$
+\end_inset
+
+ and this divides 
+\begin_inset Formula $\left[G\,\colon\, K\right]$
+\end_inset
+
+ so must be a power of 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Multiplicative property of index.
+\end_layout
+
+\begin_layout Standard
+Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multpropofindex"
+
+\end_inset
+
+ is intuitively obvious: If a group 
+\begin_inset Formula $G$
+\end_inset
+
+ is partitioned into 
+\begin_inset Formula $m$
+\end_inset
+
+ cosets by a subgroup 
+\begin_inset Formula $K$
+\end_inset
+
+ and the latter is further partitioned into 
+\begin_inset Formula $n$
+\end_inset
+
+ cosets by a subgroup 
+\begin_inset Formula $H$
+\end_inset
+
+ then 
+\begin_inset Formula $G$
+\end_inset
+
+ must be partitioned into 
+\begin_inset Formula $mn$
+\end_inset
+
+ cosets by 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "multpropofindex"
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a group and let 
+\begin_inset Formula $H\leq K\leq G$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\left[G\,:\, H\right]=\left[G\,:\, K\right]\cdot\left[K\,:\, H\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+First suppose that 
+\begin_inset Formula $\left[G\,:\, K\right]=m$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[K\,:\, H\right]=n$
+\end_inset
+
+ are finite.
+ Let 
+\begin_inset Formula $g_{1}K,\ldots,g_{m}K$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{1}H,\ldots,k_{n}H$
+\end_inset
+
+ be the distinct right coset representatives of 
+\begin_inset Formula $K$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ and of 
+\begin_inset Formula $H$
+\end_inset
+
+ in 
+\begin_inset Formula $K$
+\end_inset
+
+, respectively.
+ We will show that 
+\begin_inset Formula 
+\[
+\left\{ g_{i}k_{j}H\,\colon\,1\leq i\leq m,\,1\leq j\leq n\right\} 
+\]
+
+\end_inset
+
+are the distinct right cosets of 
 \begin_inset Formula $H$
 \end_inset
 
@@ -7463,117 +11273,1107 @@ Suppose that
 \end_inset
 
 .
- Define a map
-\begin_inset Formula 
-\[
-A\colon\, H\longrightarrow gH,
-\]
-
-\end_inset
-
-by sending 
-\begin_inset Formula $h\in H$
-\end_inset
-
- to 
-\begin_inset Formula $A(h)=gh$
-\end_inset
-
-.
- Define a map
-\begin_inset Formula 
-\[
-B\colon\, gH\longrightarrow H,
-\]
-
-\end_inset
-
-by sending 
-\begin_inset Formula $k\in gH$
-\end_inset
-
- to 
-\begin_inset Formula $B(k)=g^{-1}k$
-\end_inset
-
-.
- These maps are both clearly well-defined.
+ 
 \end_layout
 
 \begin_layout Proof
-We show that 
-\begin_inset Formula $B$
+Suppose that 
+\begin_inset Formula $g_{i}k_{j}H=g_{r}k_{s}H$
 \end_inset
 
- is the inverse of 
-\begin_inset Formula $A$
+ then 
+\begin_inset Formula $k_{s}^{-1}g_{r}^{-1}g_{i}k_{j}\in H\subseteq K$
+\end_inset
+
+ hence 
+\begin_inset Formula $g_{r}^{-1}g_{i}\in K$
+\end_inset
+
+ which implies 
+\begin_inset Formula $g_{i}=g_{r}.$
+\end_inset
+
+ The equality 
+\begin_inset Formula $g_{i}k_{j}H=g_{r}k_{s}H$
+\end_inset
+
+ then shows that 
+\begin_inset Formula $k_{j}=k_{s}$
 \end_inset
 
 .
- We first compute
+ 
+\end_layout
+
+\begin_layout Proof
+Now
 \begin_inset Formula 
 \[
-B\circ A\colon\, H\longrightarrow H.
+{\displaystyle \bigcup_{i=1}^{m}\bigcup_{j=1}^{n}g_{i}k_{j}H=\bigcup_{i=1}^{m}g_{i}K=G.}
 \]
 
 \end_inset
 
-Suppose that 
-\begin_inset Formula $h\in H$
+The argument above shows that if either 
+\begin_inset Formula $m$
 \end_inset
 
-, then
-\begin_inset Formula 
-\begin{eqnarray*}
-\left(B\circ A\right)\left(h\right) & = & B\left(A\left(h\right)\right)\\
- & = & B\left(gh\right)\\
- & = & g^{-1}\left(gh\right)\\
- & = & h.
-\end{eqnarray*}
-
+ or 
+\begin_inset Formula $n$
 \end_inset
 
-Now consider
+ is infinite the there are an infinite number of right cosets of 
+\begin_inset Formula $H$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ so in all cases we have 
+\begin_inset Formula $\left[G\,:\, H\right]=\left[G\,:\, K\right]\cdot\left[K\,:\, H\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ A more formal way to write this proof in the finite case is as follows:
+ The map
 \begin_inset Formula 
 \[
-A\circ B\colon\, gH\longrightarrow gH.
+f\,\colon\,\left\{ g_{1,}g_{2},\ldots,g_{m}\right\} \times\left\{ k_{1},k_{2},\ldots,k_{n}\right\} \longrightarrow\left\{ gH\,\colon\: g\in G\right\} 
 \]
 
 \end_inset
 
-Suppose that 
-\begin_inset Formula $k\in gH$
+defined by 
+\begin_inset Formula $f\left(\left(g_{i},k_{j}\right)\right)=g_{i}k_{j}H$
 \end_inset
 
- , then
+ is a bijection hence
 \begin_inset Formula 
-\begin{eqnarray*}
-\left(A\circ B\right)\left(k\right) & = & A\left(B\left(k\right)\right)\\
- & = & A\left(g^{-1}k\right)\\
- & = & g\left(g^{-1}k\right)\\
- & = & k.
-\end{eqnarray*}
+\[
+\left[G\,\colon\, H\right]=mn=\left[G\,:\, K\right]\cdot\left[K\,:\, H\right].
+\]
 
 \end_inset
 
+ 
+\end_layout
 
-\begin_inset Formula $A$
+\begin_layout Example
+Given 
+\begin_inset Formula $H\vartriangleleft G,\; K\leq G,\; K\nsubseteq H$
 \end_inset
 
- must be a bijection and so 
+, and 
+\begin_inset Formula $\left[G\,\colon\, H\right]=p,\; p$
+\end_inset
+
+ prime prove that 
+\begin_inset Formula $HK=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ From Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prodNH"
+
+\end_inset
+
+ we know that 
+\begin_inset Formula $HK$
+\end_inset
+
+ is a subgroup.
+ By the index formula (Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multpropofindex"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\[
+p=\left[G\,\colon\, H\right]=\left[G\,\colon\, HK\right]\left[HK\,\colon\, H\right].
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $p$
+\end_inset
+
+ is prime either 
+\begin_inset Formula $\left[G\,\colon\, HK\right]=1$
+\end_inset
+
+ or 
+\begin_inset Formula $\left[HK\,\colon\, H\right]=1.$
+\end_inset
+
+ The latter is ruled out because 
+\begin_inset Formula $K\nsubseteq H$
+\end_inset
+
+ so 
+\begin_inset Formula $\left[G\,\colon\, HK\right]=1$
+\end_inset
+
+ which implies 
+\begin_inset Formula $HK=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Order of a product of subgroups.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "orderofHK"
+
+\end_inset
+
+Let 
 \begin_inset Formula $H$
 \end_inset
 
  and 
-\begin_inset Formula $gH$
+\begin_inset Formula $K$
 \end_inset
 
- must have the same cardinality.
+ be finite subgroups of a group 
+\begin_inset Formula $G.$
+\end_inset
+
+ Then
+\begin_inset Formula 
+\[
+\left|HK\right|=\frac{\left|H\right|\left|K\right|}{\left|H\cap K\right|}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+First Proof.
+
+\series default
+ Consider the map 
+\begin_inset Formula $f\,\colon\, H\times K\longrightarrow HK$
+\end_inset
+
+ defined by 
+\begin_inset Formula 
+\[
+f\left(\left(h,k\right)\right)=hk.
+\]
+
+\end_inset
+
+We note that 
+\begin_inset Formula $h_{1}k_{1}=h_{2}k_{2}$
+\end_inset
+
+ iff 
+\begin_inset Formula $h_{1}^{-1}h_{2}=t=k_{1}k_{2}^{-1}$
+\end_inset
+
+ so that 
+\begin_inset Formula $t\in H\cap K$
+\end_inset
+
+.
+ Thus the equivalence class containing 
+\begin_inset Formula $\left(h,k\right)$
+\end_inset
+
+ under the equivalence relation 
+\begin_inset Formula $\left(h,k\right)\sim\left(l,m\right)$
+\end_inset
+
+iff 
+\begin_inset Formula $hk=lm$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\left\{ \left(ht,t^{-1}k\right)\,\colon\: t\in H\cap K\right\} .
+\]
+
+\end_inset
+
+The cardinality of each equivalence class is thus 
+\begin_inset Formula $\left|H\cap K\right|$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto it induces a bijection
+\begin_inset Formula 
+\[
+F\,\colon\, H\times K/\sim\longrightarrow HK
+\]
+
+\end_inset
+
+hence 
+\begin_inset Formula 
+\[
+\left|HK\right|=\frac{\left|H\times K\right|}{\left|H\cap K\right|}=\frac{\left|H\right|\left|K\right|}{\left|H\cap K\right|}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Second Proof.
+
+\series default
  
+\end_layout
+
+\begin_layout Proof
+We have 
+\begin_inset Formula 
+\[
+HK=\bigcup_{h\in H}hK.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+From Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "transferineq"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|HK\right|=\left[HK\,\colon\, K\right]\left|K\right|=\left[H\,\colon\, H\cap K\right]\left|K\right|=\left|H/H\cap K\right|\left|K\right|=\frac{\left|H\right|\left|K\right|}{\left|H\cap K\right|}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Transfer Inequality.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "transferineq"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $G$
+\end_inset
+
+ is a group and 
+\begin_inset Formula $H\leq G,\, K\leq G$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{equation}
+\left[H\,:\, H\cap K\right]\leq\left[G\,:\, K\right]\label{eq:transferineq}
+\end{equation}
+
+\end_inset
+
+with equality if and only if 
+\begin_inset Formula $G=HK$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Define a map
+\begin_inset Formula 
+\[
+f\,\colon\, H\longrightarrow G/K,\ f\left(h\right)=hK.
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $f\left(a\right)=f\left(b\right)$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $b^{-1}a\in H\cap K$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $f$
+\end_inset
+
+ induces an injective map
+\begin_inset Formula 
+\[
+F\,\colon\, H/H\cap K\longrightarrow G/K.
+\]
+
+\end_inset
+
+The inequality now follows.
+\end_layout
+
+\begin_layout Proof
+Suppose equality holds in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:transferineq"
+
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\frac{\left|H\right|}{\left|H\cap K\right|}=\frac{\left|G\right|}{\left|K\right|}
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\[
+\left|G\right|=\frac{\left|H\right|\left|K\right|}{\left|H\cap K\right|}=\left|HK\right|
+\]
+
+\end_inset
+
+hence 
+\begin_inset Formula $G=HK$
+\end_inset
+
+.
+ The steps can be retraced so the converse holds.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remarks.
+\end_layout
+
+\begin_layout Itemize
+The map 
+\begin_inset Formula $F$
+\end_inset
+
+ is onto 
+\begin_inset Formula $HK/K$
+\end_inset
+
+ so we conclude that 
+\begin_inset Formula $\left[H\,:\, H\cap K\right]=\left[HK\,\colon\, K\right]$
+\end_inset
+
+.
+ Altough 
+\begin_inset Formula $HK$
+\end_inset
+
+ is not necessarily a group, the meaning of 
+\begin_inset Formula $\left[HK\,\colon\, K\right]$
+\end_inset
+
+ is it equals the number of distinct cosets of 
+\begin_inset Formula $K$
+\end_inset
+
+ in 
+\begin_inset Formula $HK$
+\end_inset
+
+ since
+\begin_inset Formula 
+\[
+HK=\bigcup_{h\in H}hK.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ are normal and 
+\begin_inset Formula $H\vartriangleleft K$
+\end_inset
+
+, then by Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "secondiso"
+
+\end_inset
+
+ 
+\begin_inset Formula $H/H\cap K\backsimeq HK/K$
+\end_inset
+
+ which is a subgroup of 
+\begin_inset Formula $G/K$
+\end_inset
+
+ so
+\begin_inset Formula 
+\[
+\left[H\,:\, H\cap K\right]\leq\left[G\,:\, K\right].
+\]
+
+\end_inset
+
+
+\begin_inset Formula $F$
+\end_inset
+
+ is an isomorphism in this case.
+\end_layout
+
+\begin_layout Itemize
+Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "transferineq"
+
+\end_inset
+
+ can be interpreted using conditional expectation in case of finite groups.
+ By Lagrange's Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lagrange"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\left|H\right|}{\left|H\cap K\right|}=\left[H\,:\, H\cap K\right]\leq\left[G\,:\, K\right]=\frac{\left|G\right|}{\left|K\right|}
+\]
+
+\end_inset
+
+which is equivalent to 
+\begin_inset Formula 
+\[
+\frac{\left|H\cap K\right|}{\left|H\right|}\geq\frac{\left|K\right|}{\left|G\right|}.
+\]
+
+\end_inset
+
+In other words, what it says is that, for a uniform distribution on a finite
+ group, knowing that a particular element is in the subgroup 
+\begin_inset Formula $H$
+\end_inset
+
+ either increases or keeps the same the probability that the element is
+ in the subgroup 
+\begin_inset Formula $K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The corollary to Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cosetintersection"
+
+\end_inset
+
+ shows that if two subgroups have finite index then so is the index of the
+ intersection.
+ We provide another proof using Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "transferineq"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "indexofintersection"
+
+\end_inset
+
+If 
+\begin_inset Formula $G$
+\end_inset
+
+ is a finite group with subgroups 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+, show that
+\begin_inset Formula 
+\[
+\left[G\,:\, H\cap K\right]=\left[G\,:\, H\right]\cdot\left[H\,:\, H\cap K\right]\leq\left[G\,:\, H\right]\cdot\left[G\,:\, K\right].
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $\left[G\,:\, H\right]$
+\end_inset
+
+ and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left[G\,:\, K\right]$
+\end_inset
+
+ are relatively prime
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ deduce that 
+\begin_inset Formula $G=HK$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[G\,:\, H\cap K\right]=\left[G\,:\, H\right]\cdot\left[G\,:\, K\right]$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ The first equality follows from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multpropofindex"
+
+\end_inset
+
+ and the second inequality from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "transferineq"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+To prove the last statement we have 
+\begin_inset Formula 
+\[
+\left[G\,:\, H\cap K\right]=\left[G\,:\, H\right]\cdot\left[H\,:\, H\cap K\right]=\left[G\,:\, K\right]\cdot\left[K\,:\, H\cap K\right]
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula $\left[G\,:\, K\right]\mid\left[H\,:\, H\cap K\right]$
+\end_inset
+
+ so by Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "transferineq"
+
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left[G\,:\, K\right]=\left[H\,:\, H\cap K\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $G=HK$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ be subgroups of a finite group 
+\begin_inset Formula $G$
+\end_inset
+
+, at least one of which is normal.
+ Show that if 
+\begin_inset Formula $\left|H\right|$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[G\,:\, K\right]$
+\end_inset
+
+ are relatively prime, then 
+\begin_inset Formula $H≤K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ We have 
+\begin_inset Formula $\left[HK\,\colon\, K\right]=\left[H\,\colon\, H\cap K\right]$
+\end_inset
+
+ so 
+\begin_inset Formula $\left[HK\,\colon\, K\right]\mid\left|H\right|$
+\end_inset
+
+.
+ Also since 
+\begin_inset Formula $HK$
+\end_inset
+
+ is a subgroup 
+\begin_inset Formula $HK/K$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $G/K$
+\end_inset
+
+ hence 
+\begin_inset Formula $\left[HK\,\colon\, K\right]\mid\left[G\,:\, K\right]$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $\left|H\right|$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[G\,:\, K\right]$
+\end_inset
+
+ are relatively prime so 
+\begin_inset Formula $\left[HK\,\colon\, K\right]=1$
+\end_inset
+
+ which means 
+\begin_inset Formula $K=HK$
+\end_inset
+
+ and 
+\begin_inset Formula $H\leq K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+If 
+\begin_inset Formula $H$
+\end_inset
+
+ is of finite index in 
+\begin_inset Formula $G$
+\end_inset
+
+ prove that there is a subgroup 
+\begin_inset Formula $N$
+\end_inset
+
+ of 
+\begin_inset Formula $G$
+\end_inset
+
+, contained in 
+\begin_inset Formula $H$
+\end_inset
+
+, and of finite index in 
+\begin_inset Formula $G$
+\end_inset
+
+ such that 
+\begin_inset Formula $aNa^{-1}=N$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Let 
+\begin_inset Formula $a_{1}H,\ldots,a_{k}H$
+\end_inset
+
+ be the left cosets of 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ For all 
+\begin_inset Formula $a\in G$
+\end_inset
+
+, we can write 
+\begin_inset Formula $a=a_{i}h$
+\end_inset
+
+ where 
+\begin_inset Formula $1\le i\le k$
+\end_inset
+
+ and 
+\begin_inset Formula $h\in H$
+\end_inset
+
+.
+ Thus, we have 
+\begin_inset Formula 
+\[
+aHa^{-1}=a_{i}hHh^{-1}a_{i}^{-1}=a_{i}Ha_{i}^{-1}.
+\]
+
+\end_inset
+
+ We claim that
+\begin_inset Formula 
+\[
+{\displaystyle N=\bigcap_{1\le i\le k}a_{i}Ha_{i}^{-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+is the required subgroup.
+ If 
+\begin_inset Formula $a_{j}H$
+\end_inset
+
+ is the coset which is equal to 
+\begin_inset Formula $H$
+\end_inset
+
+, then 
+\begin_inset Formula $a_{j}\in H$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{j}Ha_{j}^{-1}=H$
+\end_inset
+
+, hence 
+\begin_inset Formula $N\subseteq a_{j}Ha_{j}^{-1}=H$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $N$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since every subgroup of the form 
+\begin_inset Formula $aHa^{-1}$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $a_{i}Ha_{i}^{-1}$
+\end_inset
+
+ for some 
+\begin_inset Formula $i$
+\end_inset
+
+, therefore 
+\begin_inset Formula $N$
+\end_inset
+
+ is the intersection of all subgroups of the form 
+\begin_inset Formula $aHa^{-1}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $n$
+\end_inset
+
+ is an element of 
+\begin_inset Formula $N$
+\end_inset
+
+ if and only if for all 
+\begin_inset Formula $a\in G$
+\end_inset
+
+, there exists 
+\begin_inset Formula $h\in H$
+\end_inset
+
+ such that 
+\begin_inset Formula $n=aha^{-1}$
+\end_inset
+
+.
+ This is equivalent to saying that 
+\begin_inset Formula $a^{-1}na\in H$
+\end_inset
+
+ for all 
+\begin_inset Formula $a\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $n\in N$
+\end_inset
+
+ and 
+\begin_inset Formula $a\in G$
+\end_inset
+
+.
+ For all 
+\begin_inset Formula $b\in G$
+\end_inset
+
+, we have 
+\begin_inset Formula $(a^{-1}b)^{-1}n(a^{-1}b)\in H$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $b^{-1}(ana^{-1})b\in H$
+\end_inset
+
+ for all 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $ana^{-1}\in N$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $aNa^{-1}\subseteq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It remains to prove that 
+\begin_inset Formula $N$
+\end_inset
+
+ is of finite index.
+ Note that 
+\begin_inset Formula $N$
+\end_inset
+
+ is the intersection of finitely many subgroups 
+\begin_inset Formula $a_{1}Ha_{1}^{-1},\ldots,a_{k}Ha_{k}^{-1}$
+\end_inset
+
+.
+ It suffices to prove that each 
+\begin_inset Formula $a_{i}Ha_{i}^{-1}$
+\end_inset
+
+ is of finite index, then the conclusion follows because the intersection
+ of subgroups of finite index is again of finite index.
+\end_layout
+
+\begin_layout Standard
+More generally, we will prove that if 
+\begin_inset Formula $aHa^{-1}$
+\end_inset
+
+ is of finite index for any 
+\begin_inset Formula $a\in G$
+\end_inset
+
+.
+ Take any element 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $ga\in a_{i}H$
+\end_inset
+
+ for some 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $g\in(a_{i}a^{-1})(aHa^{-1})$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $(a_{1}a^{-1})(aHa^{-1}),\ldots,(a_{k}a^{-1})(aHa^{-1})$
+\end_inset
+
+ are the left cosets of 
+\begin_inset Formula $aHa^{-1}$
+\end_inset
+
+, and hence 
+\begin_inset Formula $aHa^{-1}$
+\end_inset
+
+ is of finite index.
+ Thus, our proof is complete.
 \end_layout
 
 \begin_layout Chapter
 Conjugation
+\end_layout
+
+\begin_layout Section*
+Introduction
 \end_layout
 
 \begin_layout Standard
@@ -7716,6 +12516,10 @@ so
 \end_inset
 
  is from being abelian.
+\end_layout
+
+\begin_layout Section
+Conjugacy Classes
 \end_layout
 
 \begin_layout Definition
@@ -8111,6 +12915,292 @@ The proof follows from the following two way implications
 
 \end_layout
 
+\begin_layout Section
+Commutator Subgroup
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a group and 
+\begin_inset Formula $U=\{xyx^{-1}y^{-1}|x,y\in G\}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $G'$
+\end_inset
+
+ be the smallest subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ which contains 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+(a) Prove that 
+\begin_inset Formula $G'$
+\end_inset
+
+ is normal in 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+(b) Prove that 
+\begin_inset Formula $G/G'$
+\end_inset
+
+ is abelian.
+ 
+\end_layout
+
+\begin_layout Theorem
+(c) If 
+\begin_inset Formula $G/N$
+\end_inset
+
+ is abelian, prove that 
+\begin_inset Formula $N\supseteq G'$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+(d) Prove that if 
+\begin_inset Formula $H$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ and 
+\begin_inset Formula $H\supseteq G'$
+\end_inset
+
+, then 
+\begin_inset Formula $H$
+\end_inset
+
+ is normal in 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+(a) For any 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ and 
+\begin_inset Formula $u=xyx^{-1}y^{-1}\in U$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+gug^{-1}=gxyx^{-1}y^{-1}g^{-1}=(gxg^{-1})(gyg^{-1})(gxg^{-1})^{-1}(gyg^{-1})^{-1}\in U.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Note that every element of 
+\begin_inset Formula $G'$
+\end_inset
+
+ can be written as a finite product of the elements in 
+\begin_inset Formula $U$
+\end_inset
+
+ and their inverses.
+ If 
+\begin_inset Formula $u_{1}^{k_{1}}\ldots u_{n}^{k_{n}}\in G'$
+\end_inset
+
+ where 
+\begin_inset Formula $k_{i}=\pm1$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+gu_{1}^{k_{1}}\ldots u_{n}^{k_{n}}g^{-1}=(gu_{1}^{k_{1}}g^{-1})\ldots(gu_{n}^{k_{n}}g^{-1})\in G'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+because each 
+\begin_inset Formula $gu_{i}^{k_{i}}g^{-1}$
+\end_inset
+
+ is equal to either 
+\begin_inset Formula $gu_{i}g^{-1}$
+\end_inset
+
+ (which is in 
+\begin_inset Formula $U$
+\end_inset
+
+) or its inverse, and hence belongs to 
+\begin_inset Formula $G$
+\end_inset
+
+'.
+ Therefore 
+\begin_inset Formula $gxg^{-1}\in G'$
+\end_inset
+
+ for any 
+\begin_inset Formula $x\in G'$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $G'$
+\end_inset
+
+ is a normal subgroup.
+\end_layout
+
+\begin_layout Proof
+(b) Let 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ be any element of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $G'$
+\end_inset
+
+ is normal, we have
+\begin_inset Formula 
+\[
+(aG')(bG')(a^{-1}G')(b^{-1}G')=(aba^{-1}b^{-1})G'=G'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+because 
+\begin_inset Formula $aba^{-1}b^{-1}\in U\subseteq G'$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $(aG')(bG')=(bG')(aG')$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $G/G'$
+\end_inset
+
+ is abelian.
+\end_layout
+
+\begin_layout Proof
+(c) Since 
+\begin_inset Formula $G/N$
+\end_inset
+
+ is abelian, therefore 
+\begin_inset Formula $(aN)(bN)=(bN)(aN)$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $abN=baN$
+\end_inset
+
+, which means 
+\begin_inset Formula $a^{-1}b^{-1}ab\in N$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $G'$
+\end_inset
+
+ is the smallest subgroup which contains 
+\begin_inset Formula $aba^{-1}b^{-1}$
+\end_inset
+
+ for all 
+\begin_inset Formula $a,b\in G$
+\end_inset
+
+, then 
+\begin_inset Formula $N\supseteq G'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+(d) Let 
+\begin_inset Formula $a,b\in G$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $a^{-1}b^{-1}ab\in G'\subseteq H$
+\end_inset
+
+, therefore 
+\begin_inset Formula $a^{-1}b^{-1}abH=H$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $abH=baH$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $H$
+\end_inset
+
+ is normal.
+\end_layout
+
+\begin_layout Section
+Automorphisms
+\end_layout
+
 \begin_layout Standard
 We have been studying the properties of conjugation 
 \begin_inset Formula $gxg^{-1}$
@@ -8396,63 +13486,306 @@ The notion of conjugation can be extended to arbitrary sets instead of just
  
 \end_layout
 
-\begin_layout Chapter
-The Class Equation
+\begin_layout Example
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite group, 
+\begin_inset Formula $\phi$
+\end_inset
+
+ an automorphism of 
+\begin_inset Formula $G$
+\end_inset
+
+ with the property that 
+\begin_inset Formula $\phi(g)=g$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $g=e$
+\end_inset
+
+.
+ Suppose further that 
+\begin_inset Formula $\phi^{2}$
+\end_inset
+
+ is the identity.
+ Prove that 
+\begin_inset Formula $G$
+\end_inset
+
+ must be abelian.
 \end_layout
 
 \begin_layout Standard
-We have seen that conjugacy is an equivalence relation on a group 
+
+\series bold
+Soln.
+
+\series default
+ Let 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+ Consider elements of the form 
+\begin_inset Formula $x^{-1}\phi(x)$
+\end_inset
+
+.
+ For any 
+\begin_inset Formula $x,y\in G$
+\end_inset
+
+, if 
+\begin_inset Formula $x^{-1}\phi(x)=y^{-1}\phi(y)$
+\end_inset
+
+, then 
+\begin_inset Formula $yx^{-1}=\phi(y)\phi(x)^{-1}=\phi(yx^{-1})$
+\end_inset
+
+, hence 
+\begin_inset Formula $yx^{-1}=e$
+\end_inset
+
+ and so 
+\begin_inset Formula $x=y$
+\end_inset
+
+.
+ Therefore, since 
+\begin_inset Formula $G$
+\end_inset
+
+ is finite, elements of the form 
+\begin_inset Formula $x^{-1}\phi(x)$
+\end_inset
+
+ represents all elements of 
 \begin_inset Formula $G$
 \end_inset
 
 .
- This yields another important counting result known as the 
-\emph on
-Class Equation
-\emph default
+ Thus 
+\begin_inset Formula $g$
+\end_inset
+
+ can be represented as 
+\begin_inset Formula $x^{-1}\phi(x)$
+\end_inset
+
 .
- Recall that if 
-\begin_inset Formula $x\in G$
+ Thus we have 
+\begin_inset Formula $\phi(g)=\phi(x^{-1}\phi(x))=\phi(x)^{-1}x=g^{-1}$
 \end_inset
 
- the conjugacy class of 
-\begin_inset Formula $x$
+.
+\end_layout
+
+\begin_layout Standard
+Now consider any two elements 
+\begin_inset Formula $a,b\in G$
 \end_inset
 
- is the set 
+.
+ We have 
+\begin_inset Formula $ba=\phi(a^{-1}b^{-1})=\phi(a^{-1})\phi(b^{-1})=ab$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $G$
+\end_inset
+
+ is abelian.
+\end_layout
+
+\begin_layout Example
+Suppose 
+\begin_inset Formula $H$
+\end_inset
+
+ is the only subgroup of order 
+\begin_inset Formula $\left|H\right|$
+\end_inset
+
+ in the finite group 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $H$
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ For every 
+\begin_inset Formula $g\in G\;\Phi_{g}\left(H\right)=gHg^{-1}$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ of order 
+\begin_inset Formula $\left|H\right|$
+\end_inset
+
+so 
+\begin_inset Formula $gHg^{-1}=H$
+\end_inset
+
+ i.e., 
+\begin_inset Formula $H$
+\end_inset
+
+ is normal.
+ 
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a group of order 
+\begin_inset Formula $2n$
+\end_inset
+
+.
+ Suppose that half of the elements of 
+\begin_inset Formula $G$
+\end_inset
+
+ are of order 2, and the other half form a subgroup 
+\begin_inset Formula $H$
+\end_inset
+
+ of order 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $H$
+\end_inset
+
+ is of odd order and is an abelian subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Each element of 
+\begin_inset Formula $H$
+\end_inset
+
+ except 
+\begin_inset Formula $e$
+\end_inset
+
+ is not of order 
+\begin_inset Formula $2$
+\end_inset
+
+, so it is not its own inverse.
+ So the elements of 
+\begin_inset Formula $H$
+\end_inset
+
+ except 
+\begin_inset Formula $e$
+\end_inset
+
+ can be paired up into pairs of inverses.
+ Hence 
+\begin_inset Formula $H$
+\end_inset
+
+ is of odd order.
+\end_layout
+
+\begin_layout Standard
+Note that H is a normal subgroup of index 2.
+ Let 
+\begin_inset Formula $g\not\in H$
+\end_inset
+
+.
+ So the mapping 
+\begin_inset Formula $\phi$
+\end_inset
+
+ defined by 
+\begin_inset Formula $\phi(h)=ghg^{-1}$
+\end_inset
+
+ is an automorphism on 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ Furthermore, we have 
+\begin_inset Formula $h\phi(h)=hghg^{-1}=hghg=e$
+\end_inset
+
+, because 
+\begin_inset Formula $hg$
+\end_inset
+
+ is of order 2.
+ So 
+\begin_inset Formula $\phi(h)=h^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For any 
+\begin_inset Formula $a,b\in H$
+\end_inset
+
+, we have 
 \begin_inset Formula 
 \[
-C_{x}=\left\{ gxg^{-1}\,\colon\, g\in G\right\} .
+ab=\phi(b^{-1}a^{-1})=\phi(b^{-1})\phi(a^{-1})=ba.
 \]
 
 \end_inset
 
-Recall also that 
-\begin_inset Formula $C_{x}=\left\{ x\right\} $
+ Therefore, 
+\begin_inset Formula $H$
 \end_inset
 
- iff 
-\begin_inset Formula $gx=xg\:\forall g\in G$
-\end_inset
-
- i.e., iff 
-\begin_inset Formula $x$
-\end_inset
-
- commutes with all the elements of 
-\begin_inset Formula $G.$
-\end_inset
-
- It turns out that the set of all the elements that commute with a given
- 
-\begin_inset Formula $x$
-\end_inset
-
- forms a subgroup.
+ is abelian.
 \end_layout
 
-\begin_layout Section
-The Class Equation
+\begin_layout Chapter
+Centre of a Group
 \end_layout
 
 \begin_layout Definition
@@ -8646,6 +13979,377 @@ every
  
 \end_layout
 
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "abeliancondition"
+
+\end_inset
+
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a group.
+ If 
+\begin_inset Formula $G/Z\left(G\right)$
+\end_inset
+
+ is cyclic then 
+\begin_inset Formula $G$
+\end_inset
+
+ is abelian and hence equal to 
+\begin_inset Formula $Z\left(G\right)$
+\end_inset
+
+.
+ In particular 
+\begin_inset Formula $G/Z\left(G\right)$
+\end_inset
+
+ cannot be a non-trivial cyclic group.
+\end_layout
+
+\begin_layout Proof
+Suppose that 
+\begin_inset Formula $G/Z\left(G\right)$
+\end_inset
+
+ is generated by the coset 
+\begin_inset Formula $aZ\left(G\right)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x,y\in G$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $G$
+\end_inset
+
+ is the union of cosets by 
+\begin_inset Formula $Z\left(G\right)$
+\end_inset
+
+(Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cosetpartition"
+
+\end_inset
+
+) we can write 
+\begin_inset Formula $x=a^{m}z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y=a^{n}z_{2}$
+\end_inset
+
+ for some 
+\begin_inset Formula $z_{1},z_{2}\in Z\left(G\right)$
+\end_inset
+
+.
+ We will show that 
+\begin_inset Formula $xy=yx$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+xy & = & a^{m}z_{1}a^{n}z_{2}\\
+ & = & a^{m}a^{n}z_{1}z_{2}\\
+ & = & a^{n}a^{m}z_{2}z_{1}\\
+ & = & a^{n}z_{2}a^{m}z_{1}\\
+ & = & yx
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite group and suppose the automorphism 
+\begin_inset Formula $\phi$
+\end_inset
+
+ sends more than three-quarters of the elements of 
+\begin_inset Formula $G$
+\end_inset
+
+ onto their inverses.
+ Prove that 
+\begin_inset Formula $\phi(g)=g^{-1}$
+\end_inset
+
+ for all 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Suppose 
+\begin_inset Formula $G$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ elements and 
+\begin_inset Formula $S=\{x\,:\,\phi(x)=x^{-1}\}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $S$
+\end_inset
+
+ contains at least 
+\begin_inset Formula $\frac{3}{4}n$
+\end_inset
+
+ elements.
+ Let 
+\begin_inset Formula $g\in S$
+\end_inset
+
+.
+ The intersection 
+\begin_inset Formula $S\cap gS$
+\end_inset
+
+ contains more than 
+\begin_inset Formula $\frac{n}{2}$
+\end_inset
+
+ elements.
+ Consider any 
+\begin_inset Formula $k\in S\cap gS$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $k\in S$
+\end_inset
+
+, then 
+\begin_inset Formula $\phi(k)=k^{-1}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $k\in gS$
+\end_inset
+
+, then 
+\begin_inset Formula $g^{-1}k\in S$
+\end_inset
+
+ and hence 
+\begin_inset Formula $\phi(g^{-1}k)=k^{-1}g$
+\end_inset
+
+.
+ Therefore, we get 
+\begin_inset Formula $k^{-1}g=\phi(g)^{-1}\phi(k)=gk^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\begin_inset Formula $g$
+\end_inset
+
+ commutes with more than half of the elements of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Hence, the centralizer of 
+\begin_inset Formula $g$
+\end_inset
+
+ has more than 
+\begin_inset Formula $\frac{n}{2}$
+\end_inset
+
+ elements.
+ By Lagrange’s Theorem, then the centralizer of 
+\begin_inset Formula $g$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $g$
+\end_inset
+
+ commutes with all elements of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus, every element of 
+\begin_inset Formula $S$
+\end_inset
+
+ belongs to the center of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $|S|>\frac{3n}{4}$
+\end_inset
+
+, therefore the center of 
+\begin_inset Formula $G$
+\end_inset
+
+ must be equal to 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $G$
+\end_inset
+
+ is abelian.
+\end_layout
+
+\begin_layout Standard
+Consider any element 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+ The intersection 
+\begin_inset Formula $S\cap gS$
+\end_inset
+
+ contains more than 
+\begin_inset Formula $\frac{n}{2}$
+\end_inset
+
+ elements, take one element 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $g^{-1}y$
+\end_inset
+
+ are elements of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $gy^{-1}=y^{-1}g=\phi(g^{-1}y)=\phi(g)^{-1}y^{-1}$
+\end_inset
+
+ which gives 
+\begin_inset Formula $g=\phi(g)^{-1}$
+\end_inset
+
+, and hence 
+\begin_inset Formula $\phi(g)=g^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+The Class Equation
+\end_layout
+
+\begin_layout Standard
+We have seen that conjugacy is an equivalence relation on a group 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ This yields another important counting result known as the 
+\emph on
+Class Equation
+\emph default
+.
+ Recall that if 
+\begin_inset Formula $x\in G$
+\end_inset
+
+ the conjugacy class of 
+\begin_inset Formula $x$
+\end_inset
+
+ is the set 
+\begin_inset Formula 
+\[
+C_{x}=\left\{ gxg^{-1}\,\colon\, g\in G\right\} .
+\]
+
+\end_inset
+
+Recall also that 
+\begin_inset Formula $C_{x}=\left\{ x\right\} $
+\end_inset
+
+ iff 
+\begin_inset Formula $gx=xg\:\forall g\in G$
+\end_inset
+
+ i.e., iff 
+\begin_inset Formula $x$
+\end_inset
+
+ commutes with all the elements of 
+\begin_inset Formula $G$
+\end_inset
+
+ i.e., if and only if 
+\begin_inset Formula $x\in Z\left(G\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+The Class Equation
+\end_layout
+
 \begin_layout Standard
 Now we can begin counting the number of elements in the conjugacy class
  
@@ -8653,7 +14357,7 @@ Now we can begin counting the number of elements in the conjugacy class
 \end_inset
 
 .
- First note that 
+ First note that since 
 \begin_inset Formula $C_{x}=\left\{ x\right\} $
 \end_inset
 
@@ -10023,7 +15727,7 @@ Introduction
 
 \begin_layout Standard
 If 
-\begin_inset Formula $f:M\rightarrow N$
+\begin_inset Formula $f\,:\, M\longrightarrow N$
 \end_inset
 
  is a map between sets 
@@ -10124,13 +15828,23 @@ first isomorphism theorem
 shows in fact that this correspondence is in fact an isomorphism.
 \end_layout
 
+\begin_layout Section
+First isomorphism theorem.
+\end_layout
+
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "firstisomorphism"
+
+\end_inset
+
 If 
-\begin_inset Formula $f\,:G\to K$
+\begin_inset Formula $f\,:\, G\longrightarrow K$
 \end_inset
 
  is a homomorphism of groups, then it induces an isomorphism 
-\begin_inset Formula $G/\mathrm{ker\,}f\cong f\left(G\right)$
+\begin_inset Formula $G/\mathrm{ker\,}f\thickapprox f\left(G\right)$
 \end_inset
 
 .
@@ -10165,7 +15879,7 @@ reference "normalsubgroup"
 
 \begin_layout Proof
 Let 
-\begin_inset Formula $\theta\colon G/H\to f(G)$
+\begin_inset Formula $\theta\,\colon\, G/H\longrightarrow f(G)$
 \end_inset
 
  be a map that sends the coset 
@@ -10390,6 +16104,1276 @@ where
  as needed.
 \end_layout
 
+\begin_layout Example
+Let 
+\begin_inset Formula $\mathbf{R^{\times}}$
+\end_inset
+
+ be the group of nonzero real numbers under multiplication and let 
+\begin_inset Formula $\mathbf{R^{+}}$
+\end_inset
+
+ be the group of positive numbers under multiplication.
+ Prove 
+\end_layout
+
+\begin_layout Example
+(a) 
+\begin_inset Formula $\left\{ -1,1\right\} $
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $\mathbf{R}^{\times}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+(b) The quotient group 
+\begin_inset Formula $\mathbf{R^{\times}/}\left\{ -1,1\right\} $
+\end_inset
+
+ is isomorphic to 
+\begin_inset Formula $\mathbf{R^{+}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+(c) The quotient group 
+\begin_inset Formula $\mathbf{R^{\times}/\mathbf{R^{+}}}$
+\end_inset
+
+ is isomorphic to 
+\begin_inset Formula $\mathbf{Z}_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Define a function 
+\begin_inset Formula $\phi\colon\,$
+\end_inset
+
+
+\begin_inset Formula $\mathbf{R}^{\times}\longrightarrow\mathbf{R^{+}}$
+\end_inset
+
+ by 
+\begin_inset Formula $\phi\left(x\right)=\left|x\right|$
+\end_inset
+
+.
+ Clearly 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is a homomorphism onto 
+\begin_inset Formula $\mathbf{R^{+}}$
+\end_inset
+
+ with kernel 
+\begin_inset Formula $\left\{ -1,1\right\} $
+\end_inset
+
+.
+ Part (a) follows from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "kernelhomo"
+
+\end_inset
+
+ and part (b) from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "firstisomorphism"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{R^{+}}$
+\end_inset
+
+ is the kernel of the homomorphism 
+\begin_inset Formula $\psi\,\colon\,\mathbf{R}^{\times}\longrightarrow\left\{ -1,1\right\} $
+\end_inset
+
+ given by 
+\begin_inset Formula $\psi\left(x\right)=x/\left|x\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ be two groups whose orders have no common factor.
+ Prove that the only homomorphism 
+\begin_inset Formula $\phi\,\colon\, G\longrightarrow K$
+\end_inset
+
+ is the trivial one 
+\begin_inset Formula $\phi(g)=e$
+\end_inset
+
+ for all 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Let 
+\begin_inset Formula $H=\textrm{ker}\phi.$
+\end_inset
+
+ By Lagrange's Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lagrange"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left|G\right| & = & \left|H\right|\left[G\,\colon\, H\right]=\left|H\right|\left|G/H\right|\\
+ & = & \left|H\right|\left|\phi\left(G\right)\right|\qquad(\textrm{Theorem \ref{firstisomorphism}})
+\end{eqnarray*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\left|\phi\left(G\right)\right|\mid\left|G\right|.$
+\end_inset
+
+ But 
+\begin_inset Formula $\phi\left(G\right)\leq K$
+\end_inset
+
+ (by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "homo"
+
+\end_inset
+
+(iii) so 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left|\phi\left(G\right)\right|\mid\left|K\right|$
+\end_inset
+
+ hence 
+\begin_inset Formula $\left|\phi\left(G\right)\right|=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ be a homomorphism from a finite group 
+\begin_inset Formula $G$
+\end_inset
+
+ to itself.
+ Show that the index of 
+\begin_inset Formula $\Psi(G)$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ equals the order of the kernel of 
+\begin_inset Formula $\Psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Let 
+\begin_inset Formula $N=\textrm{ker }\Psi,\ H=\Psi\left(G\right).$
+\end_inset
+
+ By Lagrange's Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lagrange"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left|G\right| & = & \left|H\right|\left[G\,\colon\, H\right]\\
+ & = & \left|G/N\right|\left[G\,\colon\, H\right]\qquad(\textrm{Theorem \ref{firstisomorphism}})\\
+ & = & \frac{\left|G\right|\left[G\,\colon\, H\right]}{\left|N\right|}\qquad(\textrm{Lagrange})
+\end{eqnarray*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\left[G\,\colon\, H\right]=\left|N\right|.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As an application of the First Isomorphism Theorem we prove that there is
+ upto isomorphism a unique cyclic group for each positive integer 
+\begin_inset Formula $n.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "uniquecyclic"
+
+\end_inset
+
+Let 
+\begin_inset Formula $G=\left\langle g\right\rangle $
+\end_inset
+
+ be a cyclic group.
+ Then either 
+\begin_inset Formula $G\thickapprox\mathbf{Z}$
+\end_inset
+
+ or 
+\begin_inset Formula $G\thickapprox\mathbf{Z}/n\mathbf{Z}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+The map 
+\begin_inset Formula $f\,\colon\,\mathbf{Z}\longrightarrow G$
+\end_inset
+
+ defined by 
+\begin_inset Formula $f\left(n\right)=g^{n}$
+\end_inset
+
+ is clearly an epimorphism whose kernel is either trivial or 
+\begin_inset Formula $n\mathbf{Z}$
+\end_inset
+
+ for some positive integer 
+\begin_inset Formula $n.$
+\end_inset
+
+ The result follows from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "firstisomorphism"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite cyclic group of order 
+\begin_inset Formula $n$
+\end_inset
+
+ and the homomorphism 
+\begin_inset Formula $\pi,$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+G=\left\langle g\right\rangle ,\ \pi\,\colon\,\mathbf{Z}\longrightarrow G,\ \pi\left(1\right)=g,\ (\textrm{ker\left(\pi\right)=}n\mathbf{Z}.
+\]
+
+\end_inset
+
+Consider a subgroup, 
+\begin_inset Formula 
+\[
+H=\left\langle g^{k}\right\rangle \ 0<k<n.
+\]
+
+\end_inset
+
+Show that 
+\begin_inset Formula 
+\[
+\left|H\right|=\frac{n}{\gcd\left(k,n\right)}.
+\]
+
+\end_inset
+
+Conclude that 
+\begin_inset Formula $G$
+\end_inset
+
+ has 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+ generators.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ 
+\begin_inset Formula $\pi^{-1}\left(H\right)$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $\mathbf{Z}$
+\end_inset
+
+ by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "homo"
+
+\end_inset
+
+(iv) equal to 
+\begin_inset Formula $k\mathbf{Z}.$
+\end_inset
+
+ The restriction
+\begin_inset Formula 
+\[
+\pi\,\colon\, k\mathbf{Z\longrightarrow}H
+\]
+
+\end_inset
+
+is an epimorphism with kernel 
+\begin_inset Formula $k\mathbf{Z}\cap n\mathbf{Z}.$
+\end_inset
+
+ Hence 
+\begin_inset Formula 
+\[
+H\thickapprox k\mathbf{Z}/k\mathbf{Z}\cap n\mathbf{Z}=k\mathbf{Z}/\textrm{lcm}\left(k,n\right)\mathbf{Z}.
+\]
+
+\end_inset
+
+The multiply-by-
+\begin_inset Formula $k$
+\end_inset
+
+ map followed by a natural quotient map gives an epimorphsim
+\begin_inset Formula 
+\[
+\mathbf{Z}\longrightarrow k\mathbf{Z}/\textrm{lcm}\left(k,n\right)\mathbf{Z}
+\]
+
+\end_inset
+
+and the kernel of the composition is
+\begin_inset Formula 
+\[
+\left(\textrm{lcm}\left(k,n\right)/k\right)\mathbf{Z}=\left(n/\gcd\left(k,n\right)\right)\mathbf{Z}.
+\]
+
+\end_inset
+
+Thus 
+\begin_inset Formula 
+\[
+H\thickapprox\mathbf{Z}/\left(n/\gcd\left(k,n\right)\right)\mathbf{Z}.
+\]
+
+\end_inset
+
+Hence
+\begin_inset Formula 
+\[
+\left|H\right|=\frac{n}{\gcd\left(k,n\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The epimorphism
+\begin_inset Formula 
+\[
+\left|\right|\colon\,\mathbf{C}^{\times}\longrightarrow\mathbf{R}^{+}
+\]
+
+\end_inset
+
+of the multiplicative group of non-zero complex numbers onto the multiplicative
+ group of positive real numbers has its kernel the complex unit circle,
+ denoted by
+\begin_inset Formula $\mathbf{T},$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\mathbf{T}=\left\{ z\in\mathbf{C}^{\times}\,\colon\,\left|z\right|=1\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The quotient group 
+\begin_inset Formula $\mathbf{C}^{\times}/\mathbf{T}$
+\end_inset
+
+ is the set of circles in 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ centered at the origin and having positive radius, with the multiplication
+ of two such circles returning the circle whose radius is the product of
+ the radii.
+ The isomorphism
+\begin_inset Formula 
+\[
+\mathbf{C}^{\times}/\mathbf{T}\tilde{\longrightarrow}\mathbf{R}^{+}
+\]
+
+\end_inset
+
+takes each circle to its radius.
+\end_layout
+
+\begin_layout Example
+The epimorphism
+\begin_inset Formula 
+\[
+\exp\,\colon\,\mathbf{C}\longrightarrow\mathbf{C}^{\times}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+of the additive group of complex numbers onto the multiplicative group of
+ non-zero complex numbers has as its kernel a dilated vertical copy of the
+ integers,
+\begin_inset Formula 
+\[
+K=2\pi i\mathbf{Z}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Each element of the quotient group 
+\begin_inset Formula $\mathbf{C}/2\pi i\mathbf{Z}$
+\end_inset
+
+ is a translate of the kernel.
+ The quotient group overall can be viewed as the strip of complex numbers
+ with imaginary part between 0 and 
+\begin_inset Formula $2\pi$
+\end_inset
+
+, rolled up into a tube.
+ The isomorphism
+\begin_inset Formula 
+\[
+\mathbf{C}/2\pi i\mathbf{Z}\tilde{\longrightarrow}\mathbf{C}^{\times}
+\]
+
+\end_inset
+
+takes each horizontal line at height 
+\begin_inset Formula $y$
+\end_inset
+
+ to the ray making angle 
+\begin_inset Formula $y$
+\end_inset
+
+ with the positive real axis.
+ Loosely, the exponential maps shows us a view of the tube looking ``down''
+ it from the end.
+\end_layout
+
+\begin_layout Example
+The epimorphism
+\begin_inset Formula 
+\[
+\det\,\colon\,\mathbf{GL}_{n}\left(\mathbf{R}\right)\longrightarrow\mathbf{R}^{\times}
+\]
+
+\end_inset
+
+ has as its kernel the special linear group 
+\begin_inset Formula $\mathbf{SL}_{n}\left(\mathbf{R}\right).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Each element of the quotient group 
+\begin_inset Formula $\mathbf{GL}_{n}\left(\mathbf{R}\right)/\mathbf{SL}_{n}\left(\mathbf{R}\right)$
+\end_inset
+
+ is the equivalence class of all 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ real matrices having a given nonzero determinant.
+ The isomorphism
+\begin_inset Formula 
+\[
+\mathbf{GL}_{n}\left(\mathbf{R}\right)/\mathbf{SL}_{n}\left(\mathbf{R}\right)\tilde{\longrightarrow}\mathbf{R}^{\times}
+\]
+
+\end_inset
+
+takes each equivalence class to the shared determinant of all its members.
+\end_layout
+
+\begin_layout Example
+Prove that the subset 
+\begin_inset Formula $H$
+\end_inset
+
+ of 
+\begin_inset Formula $G=\mathbf{GL}_{n}\left(\mathbf{R}\right)$
+\end_inset
+
+ of matrices whose determinant is positive forms a normal subgroup, and
+ describe the quotient group 
+\begin_inset Formula $G/H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ is the kernel of the epimorphism 
+\begin_inset Formula $\phi\,\colon\,\mathbf{GL}_{n}\left(\mathbf{R}\right)\longrightarrow\left\{ \pm1\right\} $
+\end_inset
+
+ given by 
+\begin_inset Formula 
+\[
+\phi\left(A\right)=\frac{\det\, A}{\left|\det\, A\right|},
+\]
+
+\end_inset
+
+so the quotient group is the image the cyclic group of order 2.
+\end_layout
+
+\begin_layout Example
+The epimorphism
+\begin_inset Formula 
+\[
+\textrm{sgn}\,\colon\, S_{n}\longrightarrow\left\{ \pm1\right\} 
+\]
+
+\end_inset
+
+has as its kernel the alternating group 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The quotient group 
+\begin_inset Formula $S_{n}/A_{n}$
+\end_inset
+
+ can be viewed as the set
+\begin_inset Formula 
+\[
+\left\{ \textrm{even, odd}\right\} ,
+\]
+
+\end_inset
+
+forming the group of order 2 having 
+\emph on
+even
+\emph default
+ as the identity element.
+ The isomorphism
+\begin_inset Formula 
+\[
+S_{n}/A_{n}\tilde{\longrightarrow}\left\{ \pm1\right\} 
+\]
+
+\end_inset
+
+takes 
+\emph on
+even
+\emph default
+ to 1 and 
+\emph on
+odd
+\emph default
+ to 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Prove that the subset 
+\begin_inset Formula $G\times\left\{ 1\right\} $
+\end_inset
+
+ of the product group 
+\begin_inset Formula $G\times K$
+\end_inset
+
+ is a normal subgroup isomorphic to 
+\begin_inset Formula $G$
+\end_inset
+
+ and that 
+\begin_inset Formula $(G\times K)/(G\times\left\{ 1\right\} )$
+\end_inset
+
+ is isomorphic to 
+\begin_inset Formula $K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Let 
+\begin_inset Formula $\pi\,\colon\, G\times K\longrightarrow K$
+\end_inset
+
+ be the projection map defined by 
+\begin_inset Formula $\pi\left(\left(g,k\right)\right)=k$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi$
+\end_inset
+
+ is an epimomorphism as
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi\left(\left(a,b\right)\left(c,d\right)\right) & = & \pi\left(\left(ac,bd\right)\right)\\
+ & = & bd\\
+ & = & \pi\left(\left(a,b\right)\right)\pi\left(\left(c,d\right)\right).
+\end{eqnarray*}
+
+\end_inset
+
+The kernel of 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is 
+\begin_inset Formula $G\times\left\{ 1\right\} $
+\end_inset
+
+ which is normal and clearly isomorphic to 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ The rest follows from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "firstisomorphism"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Lattice of Subgroups
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "latticeiso"
+
+\end_inset
+
+
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{(Lattice Isomorphism.)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $f\,\colon\, G\longrightarrow K$
+\end_inset
+
+ be an epimorphism(onto homomorphism), and let 
+\begin_inset Formula $N$
+\end_inset
+
+ be its kernel.
+ Then there is a bijective correspondence 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ between the set of subgroups of 
+\begin_inset Formula $G$
+\end_inset
+
+ which contain 
+\begin_inset Formula $N$
+\end_inset
+
+ and the set of all subgroups of 
+\begin_inset Formula $K.$
+\end_inset
+
+ Moreover 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ restricted to the set of all normal subgroups of 
+\begin_inset Formula $G$
+\end_inset
+
+ which contain 
+\begin_inset Formula $N$
+\end_inset
+
+ is a bijection onto the set of normal subgroups of 
+\begin_inset Formula $K.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Define 
+\begin_inset Formula $\Phi$
+\end_inset
+
+by 
+\begin_inset Formula $\Phi\left(H\right)=f\left(H\right)$
+\end_inset
+
+ for any subgroup 
+\begin_inset Formula $H$
+\end_inset
+
+ of 
+\begin_inset Formula $G$
+\end_inset
+
+ which contains 
+\begin_inset Formula $N.$
+\end_inset
+
+ By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "homo"
+
+\end_inset
+
+(iii) 
+\begin_inset Formula $f\left(H\right)$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $K.$
+\end_inset
+
+ We will prove that 
+\begin_inset Formula $f^{-1}\left(f\left(H\right)\right)=H.$
+\end_inset
+
+ This will show that 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ is injective.
+ For
+\begin_inset Formula 
+\[
+\begin{array}{lrcl}
+ & \Phi\left(H_{1}\right) & = & \Phi\left(H_{2}\right)\\
+\iff\qquad & f\left(H_{1}\right) & = & f\left(H_{2}\right)\\
+\implies\qquad & f^{-1}\left(f\left(H_{1}\right)\right) & = & f^{-1}\left(f\left(H_{2}\right)\right)\\
+\implies\qquad & H_{1} & = & H_{2}.
+\end{array}
+\]
+
+\end_inset
+
+Clearly 
+\begin_inset Formula $H\subseteq f^{-1}\left(f\left(H\right)\right).$
+\end_inset
+
+ To show the reverse inclusion, note that if for any 
+\begin_inset Formula $g\in G,$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ccrclc}
+f\left(g\right)\in f\left(H\right) & \implies & f\left(g\right) & = & f\left(h\right) & \qquad\textrm{for some }h\in H\\
+ & \implies & f\left(h^{-1}g\right) & = & e_{K}\\
+ & \implies & h^{-1}g & \in & N\\
+ & \implies & g & \in & hN\subseteq HN=H & \textrm{since }N\subseteq H.
+\end{array}
+\]
+
+\end_inset
+
+In order to show that 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ is onto we let 
+\begin_inset Formula $L$
+\end_inset
+
+ be any subgroup of 
+\begin_inset Formula $K.$
+\end_inset
+
+ Then by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "homo"
+
+\end_inset
+
+(iv) 
+\begin_inset Formula $f^{-1}\left(L\right)$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ containing 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ The inclusion 
+\begin_inset Formula $f\left(f^{-1}\left(L\right)\right)\subseteq L$
+\end_inset
+
+ is clear, and the reverse inclusion is valid because 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto.
+ Thus 
+\begin_inset Formula $\Phi\left(f^{-1}\left(L\right)\right)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Next suppose that 
+\begin_inset Formula $H$
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ containing 
+\begin_inset Formula $N.$
+\end_inset
+
+ Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto, any 
+\begin_inset Formula $k\in K$
+\end_inset
+
+ takes the form 
+\begin_inset Formula $f\left(g\right),$
+\end_inset
+
+ and so
+\begin_inset Formula 
+\[
+kf\left(H\right)k^{-1}=f\left(g\right)f\left(H\right)f\left(g^{-1}\right)=f\left(gHg^{-1}\right)=f\left(H\right),
+\]
+
+\end_inset
+
+showing that 
+\begin_inset Formula $\Phi\left(H\right)=f\left(H\right)$
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $K.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Conversely, suppose that 
+\begin_inset Formula $L$
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $K.$
+\end_inset
+
+ Then for any 
+\begin_inset Formula $g\in G,$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f\left(gf^{-1}\left(L\right)g^{-1}\right)=f\left(g\right)f\left(f^{-1}\left(L\right)\right)f\left(g\right)^{-1}=f\left(g\right)Lf\left(g\right)^{-1}=L,
+\]
+
+\end_inset
+
+ and so, 
+\begin_inset Formula $gf^{-1}\left(L\right)g^{-1}=f^{-1}\left(L\right),$
+\end_inset
+
+ showing that 
+\begin_inset Formula $f^{-1}\left(L\right)$
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ which maps to 
+\begin_inset Formula $L$
+\end_inset
+
+ under 
+\begin_inset Formula $\Phi.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+Let 
+\begin_inset Formula $N\vartriangleleft G.$
+\end_inset
+
+Then the subgroups of 
+\begin_inset Formula $G$
+\end_inset
+
+ containing 
+\begin_inset Formula $N$
+\end_inset
+
+ are in bijective correspondence with the the subgroups of 
+\begin_inset Formula $G/N$
+\end_inset
+
+, and the correspondence preserves normality.
+ The bijection can be taken to be 
+\begin_inset Formula $A\longleftrightarrow A/N.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The canonical map 
+\begin_inset Formula $\pi\,\colon\, G\longrightarrow G/N,\ \pi\left(g\right)=gN$
+\end_inset
+
+ is an epimorphism with kernel 
+\begin_inset Formula $N$
+\end_inset
+
+ by Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "quotgroup"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+We can use this corollary to visualize all the subgroups of a group 
+\begin_inset Formula $G.$
+\end_inset
+
+ Imagine making a giant chart of all the subgroups in the group 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Now, in your diagram, draw an arrow from subgroup 
+\begin_inset Formula $H$
+\end_inset
+
+ to subgroup 
+\begin_inset Formula $K$
+\end_inset
+
+ exactly when 
+\begin_inset Formula $H\subset K$
+\end_inset
+
+.
+ It might keep things tidier if you only draw an arrow to the ``next largest''
+ subgroup.
+ The drawing you make helps you understand the subgroup structure of your
+ group.
+ You see all the subgroups and how each is contained in the other.
+\end_layout
+
+\begin_layout Remark*
+Now, find a normal subgroup.
+ Since its normal, you can quotient and obtain a brand new group 
+\begin_inset Formula $G/N$
+\end_inset
+
+.
+ You can then go through and make this ``subgroup chart'' for this group.
+ If you did things correctly, you can now see what the lattice isomorphism
+ theorem is saying.
+ The picture of the subgroup structure of 
+\begin_inset Formula $G/N$
+\end_inset
+
+ should look exactly like all the subgroups of 
+\begin_inset Formula $G$
+\end_inset
+
+ sitting ``above'' 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Each subgroup 
+\begin_inset Formula $K\supset N$
+\end_inset
+
+ should correspond to a unique subgroup in 
+\begin_inset Formula $G/N$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $N\vartriangleleft G.$
+\end_inset
+
+ If the index of 
+\begin_inset Formula $N$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ is a prime number show that 
+\begin_inset Formula $N$
+\end_inset
+
+ is maximal (i.e., no subgroup 
+\begin_inset Formula $H$
+\end_inset
+
+ exists with 
+\begin_inset Formula $N\subset H\subset G$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Since 
+\begin_inset Formula $\left|G/N\right|$
+\end_inset
+
+is prime there does not exist any subgroup of 
+\begin_inset Formula $G/N$
+\end_inset
+
+ strictly between the trivial group and 
+\begin_inset Formula $G/N$
+\end_inset
+
+ showing that 
+\begin_inset Formula $N$
+\end_inset
+
+ is maximal.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $N$
+\end_inset
+
+ be normal in 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $G/N$
+\end_inset
+
+ is simple iff there exists no normal subgroups 
+\begin_inset Formula $K$
+\end_inset
+
+ of 
+\begin_inset Formula $G$
+\end_inset
+
+ with 
+\begin_inset Formula $N\subset K\subset G$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Obvious.
+\end_layout
+
 \begin_layout Chapter
 Second Isomorphism Theorem
 \end_layout
@@ -10514,6 +17498,25 @@ Let
 \end_layout
 
 \begin_layout Proof
+Note first that 
+\begin_inset Formula $N\vartriangleleft HN$
+\end_inset
+
+ by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prodNH"
+
+\end_inset
+
+ so 
+\begin_inset Formula $\left(HN\right)/N$
+\end_inset
+
+ makes sense.
+\end_layout
+
+\begin_layout Proof
 The image of 
 \begin_inset Formula $HN$
 \end_inset
@@ -10531,7 +17534,11 @@ The image of
 \end_inset
 
 .
- Also 
+ 
+\end_layout
+
+\begin_layout Proof
+Also 
 \begin_inset Formula $N$
 \end_inset
 
@@ -10618,7 +17625,7 @@ The basic idea of the proof is to ``count'' the number of distinct cosets
 
 \begin_layout Remark*
 We can give an alternate proof by defining 
-\begin_inset Formula $\phi\colon H\to\left(HN\right)/N$
+\begin_inset Formula $\phi\,\colon\, H\longrightarrow\left(HN\right)/N$
 \end_inset
 
  by 
@@ -10796,8 +17803,308 @@ hence
  
 \end_layout
 
+\begin_layout Example
+Suppose 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ are distinct subgroups of 
+\begin_inset Formula $G$
+\end_inset
+
+ of index 2.
+ Prove that 
+\begin_inset Formula $H\cap K$
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ of index 4 and that 
+\begin_inset Formula $G/H\cap K$
+\end_inset
+
+ is not cyclic.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Since 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ are distinct subgroups, there exists 
+\begin_inset Formula $x\in K\setminus H$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $H$
+\end_inset
+
+ has index 
+\begin_inset Formula $2$
+\end_inset
+
+ we must have 
+\begin_inset Formula $G=H\,\cup xH$
+\end_inset
+
+ and this implies that 
+\begin_inset Formula $G=HK$
+\end_inset
+
+.
+ Similarly 
+\begin_inset Formula $G=KH$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula 
+\[
+2=\left[G\,:\, K\right]=\left[HK\,:\, K\right]=\left[H\,:\, H\cap K\right]\qquad(\textrm{by Theorem \ref{secondiso})}
+\]
+
+\end_inset
+
+Since (by Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multpropofindex"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+\left[G\,:\,(H\cap K)\right]=\left[G\,:\, H\right]\left[H\,:\,(H\cap K)\right]
+\]
+
+\end_inset
+
+it follows that 
+\begin_inset Formula $\left[G\,\colon\, H\cap K\right]=4.$
+\end_inset
+
+ We show that 
+\begin_inset Formula $G/H\cap K$
+\end_inset
+
+ cannot be cyclic by proving that every non-identity element has order 2
+ so it is isomorphic to the Klein-4 group.
+ Let 
+\begin_inset Formula $g\in G,$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g^{2}\in H,\ g^{2}\in K\quad\implies g^{2}\in H\cap K,
+\]
+
+\end_inset
+
+hence 
+\begin_inset Formula $g^{2}H\cap K=H\cap K.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2nd Soln.
+
+\series default
+ For a proof not using the Second Isomorphism Theorem, let 
+\begin_inset Formula $\pi\,\colon\, G\longrightarrow G/H,$
+\end_inset
+
+ be an epimorphism with kernel 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $G/H$
+\end_inset
+
+ a cyclic group of order two.
+ Similarly, let 
+\begin_inset Formula $\pi'\,\colon\, G\longrightarrow G/K,$
+\end_inset
+
+ be an epimorphism with kernel 
+\begin_inset Formula $K$
+\end_inset
+
+ and 
+\begin_inset Formula $G/K$
+\end_inset
+
+ a cyclic group of order two.
+ 
+\end_layout
+
+\begin_layout Standard
+Now define
+\begin_inset Formula 
+\[
+\Pi\,\colon\, G\longrightarrow G/H\times G/K,\ \Pi\left(g\right)=\left(\pi\left(g\right),\pi'\left(g\right)\right).
+\]
+
+\end_inset
+
+Clearly 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ is a homomorphism with 
+\begin_inset Formula $\textrm{ker}\Pi=H\cap K$
+\end_inset
+
+ so 
+\begin_inset Formula $G/H\cap K$
+\end_inset
+
+ is isomorphic to 
+\begin_inset Formula $\Pi\left(G\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now 
+\begin_inset Formula $G/H\times G/K$
+\end_inset
+
+ is isomorphic to the Klein four group 
+\begin_inset Formula $V_{4}$
+\end_inset
+
+ since every non-identity element has order 2, hence, it is not cyclic.
+ Let 
+\begin_inset Formula $h\in H\setminus K,\ k\in K\setminus H$
+\end_inset
+
+ and consider the elements 
+\begin_inset Formula 
+\[
+\left(H,K\right),\left(H,hK\right),\left(kH,K\right)
+\]
+
+\end_inset
+
+which are all distinct and in 
+\begin_inset Formula $\Pi\left(G\right)$
+\end_inset
+
+ so 
+\begin_inset Formula $\left|\Pi\left(G\right)\right|=4$
+\end_inset
+
+ and hence equals 
+\begin_inset Formula $G/H\times G/K.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Chapter
 Third Isomorphism Theorem
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Let G be a group.
+ H◃G,K≤G.
+ Then:
+\end_layout
+
+\begin_layout Plain Layout
+HK≤G, (H∩K)◃K, and K/(H∩K)≅HK/H≤G/H.
+\end_layout
+
+\begin_layout Plain Layout
+The third isomorphism theorem [wiki] is as follows:
+\end_layout
+
+\begin_layout Plain Layout
+Let G be a group.
+ K◃G.
+ Then:
+\end_layout
+
+\begin_layout Plain Layout
+If K≤H≤G, (H/K◃G/K)⟺H◃G, and If K≤H◃G, (G/K)/(H/K)≅G/H.
+\end_layout
+
+\begin_layout Plain Layout
+The two isomorphism theorems seem to be quite different.
+ However, I notice that the nature homomorphism g↦gN(g∈G,N◃G) plays a key
+ role in both of their proofs.
+ Specifically, for the third isomorphism theorem, it is σ3:g∈G↦gK∈G/K while
+ for the second one, it is σ2:k∈K↦kH∈G/H where K is a subgroup of G.
+\end_layout
+
+\begin_layout Plain Layout
+It seems that they are both talking about something about the subgroups
+ and quotient groups under the natural homomorphism.
+ However, I am not able to figure it out.
+ Could anybody make it more clear?
+\end_layout
+
+\begin_layout Plain Layout
+Specifically, what is the relationship between these two isomorphism theorems?
+ Can they be stated in a unified, more general framework? 
+\end_layout
+
+\begin_layout Plain Layout
+________________________________
+\end_layout
+
+\begin_layout Plain Layout
+The homomorphism you mention is indeed important because, if N◃G then the
+ projection p:G→G/N of G onto its quotient G/N is "universal among morphisms
+ killing N":
+\end_layout
+
+\begin_layout Plain Layout
+Suppose N◃G and let ϕ:G→L be a group homomorphism with ϕ(N)=1.
+ Then there is a unique morphism f:G/N→L such that ϕ=f∘p
+\end_layout
+
+\begin_layout Plain Layout
+This is the basic result from which all the properties of quotient groups
+ derive.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11238,6 +18545,164 @@ Suppose that
 \end_inset
 
 
+\end_layout
+
+\begin_layout Example
+(cf.
+ Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "multpropofindex"
+
+\end_inset
+
+) Let 
+\begin_inset Formula $N\vartriangleleft G,\, H\vartriangleleft G$
+\end_inset
+
+ and 
+\begin_inset Formula $N\subseteq H$
+\end_inset
+
+ then 
+\begin_inset Formula $\left[G\,:\, N\right]=\left[G\,:\, H\right]\cdot\left[H\,:\, N\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ By Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ThirdIsoThm"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+[G\,:\, H]\cdot[H\,:\, N] & = & |(G/N)/(H/N)|\cdot[H\,:\, N]\\
+ & = & [G/N\,:\, H/N]\cdot[H\,:\, N]\\
+ & = & [G/N\,:\, H/N]\cdot|H/N|\\
+ & = & |G/N|\qquad(\mathrm{Lagrange's\ Theorem\ \ref{Lagrange})}\\
+ & = & [G\,:\, N].
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ be normal subgroups of a group 
+\begin_inset Formula $G.$
+\end_inset
+
+ Prove that if 
+\begin_inset Formula $G/H\cap K$
+\end_inset
+
+ is cyclic, then 
+\begin_inset Formula $G/H$
+\end_inset
+
+ and 
+\begin_inset Formula $G/K$
+\end_inset
+
+ are cyclic.
+ Give a counter example to show that the converse is not always true.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ By Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ThirdIsoThm"
+
+\end_inset
+
+ 
+\begin_inset Formula $G/H$
+\end_inset
+
+ (as well as 
+\begin_inset Formula $G/K$
+\end_inset
+
+) is isomorphic to a quotient group of 
+\begin_inset Formula $G/H\cap K$
+\end_inset
+
+.
+ This quotient is cyclic because 
+\begin_inset Formula $G/H\cap K$
+\end_inset
+
+ is cyclic.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Counterexample
+\series default
+ Let 
+\begin_inset Formula $G=V_{4}$
+\end_inset
+
+ the Klein four group.
+ Each element 
+\begin_inset Formula $a\in G,\ a\neq e$
+\end_inset
+
+ has order 2.
+ Let 
+\begin_inset Formula $H=\left\{ e,a\right\} $
+\end_inset
+
+and 
+\begin_inset Formula $K=\left\{ e,b\right\} ,\ a\neq b.$
+\end_inset
+
+ Then 
+\begin_inset Formula $G/H\cap K=G/\left\{ e\right\} $
+\end_inset
+
+ is isomorphic to 
+\begin_inset Formula $G$
+\end_inset
+
+ so is not cyclic.
+ But 
+\begin_inset Formula $G/H$
+\end_inset
+
+ and 
+\begin_inset Formula $G/K$
+\end_inset
+
+ being of order 2 are cyclic.
+ 
 \end_layout
 
 \begin_layout Chapter
