@@ -1,0 +1,4713 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass memoir
+\begin_preamble
+\usepackage[svgnames,table]{xcolor}
+\usepackage{array}
+\usepackage{amssymb, amsmath,physics}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+theorems-chap-bytype
+enumitem
+eqs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*{
+\backslash
+arraycolor}[1]{
+\backslash
+protect
+\backslash
+leavevmode
+\backslash
+color{#1}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcolumntype{A}{>{
+\backslash
+columncolor{blue!30!white}}c} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcolumntype{B}{>{
+\backslash
+columncolor{LightGoldenrod}}c} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcolumntype{C}{>{
+\backslash
+columncolor{FireBrick!50}}c} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcolumntype{D}{>{
+\backslash
+columncolor{Gray!42}}c} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Number Theoretic Functions
+\end_layout
+
+\begin_layout Section
+Sum and Number of Divisor Functions
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "DefinitionArithmeticFunction"
+
+\end_inset
+
+We say that a function 
+\begin_inset Formula $f\,\colon\,\mathbf{N}\longrightarrow\mathbf{R}$
+\end_inset
+
+ is an 
+\emph on
+arithmetic function
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Note that key fact here is that the domain is the natural numbers.
+ In this section we will consider two arithmetic functions.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Definition-tau_n-and-sigma_n"
+
+\end_inset
+
+Given a positive integer 
+\begin_inset Formula $n,$
+\end_inset
+
+let
+\begin_inset Formula 
+\begin{eqnarray*}
+\tau\left(n\right) & = & \sum_{d\mid n}1\\
+\sigma\left(n\right) & = & \sum_{d\mid n}d\\
+\sigma_{k}\left(n\right) & = & \sum_{d\mid n}d^{k}.
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\tau\left(n\right)$
+\end_inset
+
+ is equal to the number of divisors of 
+\begin_inset Formula $n$
+\end_inset
+
+, while 
+\begin_inset Formula $\sigma_{k}\left(n\right)$
+\end_inset
+
+ is equal to the sum of the 
+\begin_inset Formula $k$
+\end_inset
+
+-th power of the divisors.
+\end_layout
+
+\begin_layout Definition
+Given an integer 
+\begin_inset Formula $n$
+\end_inset
+
+ we want to be able able to say something about the value of 
+\begin_inset Formula $\tau\left(n\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma\left(n\right)$
+\end_inset
+
+.
+ In order to do this consider the factorization 
+\begin_inset Formula $n=p_{1}^{n_{1}}p_{2}^{n_{2}}\cdot\cdot\cdot p_{r}^{n_{r}}$
+\end_inset
+
+ .
+ Let us consider 
+\begin_inset Formula $\tau\left(n\right)$
+\end_inset
+
+ first.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-tau_n"
+
+\end_inset
+
+Let 
+\begin_inset Formula $n=p_{1}^{n_{1}}p_{2}^{n_{2}}\cdot\cdot\cdot p_{r}^{n_{r}}$
+\end_inset
+
+ where 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+'s are distinct primes.
+ Then
+\begin_inset Formula 
+\[
+\tau\left(n\right)=\left(n_{1}+1\right)\left(n_{2}+1\right)\cdot\cdot\cdot\left(n_{r}+1\right)=\prod_{i=1}^{r}\left(n_{i}+1\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Any divisor 
+\begin_inset Formula $d$
+\end_inset
+
+ of 
+\begin_inset Formula $n$
+\end_inset
+
+ must be of the form
+\begin_inset Formula 
+\[
+d=p_{1}^{a_{1}}p_{2}^{a_{2}}\cdot\cdot\cdot p_{r}^{a_{r}}
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $0\le a_{k}\le n_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+ with 
+\begin_inset Formula $1\le k\le r$
+\end_inset
+
+.
+ So there are 
+\begin_inset Formula $n_{k}+1$
+\end_inset
+
+ choices for the exponent 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ of the prime factor 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus the number of divisors is as advertised.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-sigma_n"
+
+\end_inset
+
+Let 
+\begin_inset Formula $n=p_{1}^{n_{1}}p_{2}^{n_{2}}\cdot\cdot\cdot p_{r}^{n_{r}}$
+\end_inset
+
+ where 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+'s are distinct primes.
+ Then
+\begin_inset Formula 
+\[
+\sigma\left(n\right)=\left(\frac{p_{1}^{n_{1}+1}-1}{p_{1}-1}\right)\left(\frac{p_{2}^{n_{2}+1}-1}{p_{2}-1}\right)\cdot\cdot\cdot\left(\frac{p_{r}^{n_{r}+1}-1}{p_{r}-1}\right)=\prod_{i=1}^{r}\left(\frac{p_{i}^{n_{i}+1}-1}{p_{i}-1}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Consider the product
+\begin_inset Formula 
+\[
+\begin{split}\left(1+p_{1}+p_{1}^{2}+\cdot\cdot\cdot+p_{1}^{n_{1}}\right)\left(1+p_{2}+p_{2}^{2}+\cdot\cdot\cdot+p_{2}^{n_{2}}\right)\cdot\cdot\cdot\left(1+p_{r}+p_{r}^{2}+\cdot\cdot\cdot+p_{r}^{n_{r}}\right)\\
+=\left(\frac{p_{1}^{n_{1}+1}-1}{p_{1}-1}\right)\left(\frac{p_{2}^{n_{2}+1}-1}{p_{2}-1}\right)\cdot\cdot\cdot\left(\frac{p_{r}^{n_{r}+1}-1}{p_{r}-1}\right)
+\end{split}
+.
+\]
+
+\end_inset
+
+Expanding the LHS above we get
+\begin_inset Formula 
+\[
+1+\sum_{i,j=1}^{r}p_{i}p_{j}+\sum_{i,j,k=1}^{r}p_{i}p_{j}p_{k}+\cdot\cdot\cdot+\prod_{i=1}^{r}p_{i}^{n_{i}}
+\]
+
+\end_inset
+
+which is the sum of all the divisors of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+ 
+\series default
+In the same manner we can show that
+\begin_inset Formula 
+\[
+\sigma_{k}\left(n\right)={\displaystyle \prod_{i=1}^{r}\left(\frac{p_{i}^{k\left(n_{i}+1\right)}-1}{p_{i}^{k}-1}\right)}
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $\sigma_{k}$
+\end_inset
+
+ is multiplicative.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Product-of-Divisors"
+
+\end_inset
+
+Let 
+\begin_inset Formula $n=p_{1}^{n_{1}}p_{2}^{n_{2}}\cdot\cdot\cdot p_{r}^{n_{r}}$
+\end_inset
+
+ where 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+'s are distinct primes.
+ Then
+\begin_inset Formula 
+\[
+\prod_{d\mid n}d=\sqrt{n^{\tau\left(n\right)}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The idea of the proof is to multiply a divisor 
+\begin_inset Formula $d$
+\end_inset
+
+ by its pair 
+\begin_inset Formula $n/d$
+\end_inset
+
+ .
+ If we do this for each divisor we get 
+\begin_inset Formula $n$
+\end_inset
+
+ and if we multiply over all divisors then on the one hand we get 
+\begin_inset Formula $n^{\tau\left(n\right)}$
+\end_inset
+
+ and on the other we will get the square of the product of divisors.
+\begin_inset Formula 
+\[
+n^{\tau\left(n\right)}=\prod_{d\mid n}\left(d\cdot\frac{n}{d}\right)=\left(\prod_{d\mid n}d\right)^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "Corollary-Product-of-Proper-Divisors"
+
+\end_inset
+
+Let 
+\begin_inset Formula $n=p_{1}^{n_{1}}p_{2}^{n_{2}}\cdot\cdot\cdot p_{r}^{n_{r}}$
+\end_inset
+
+ where 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+'s are distinct primes.
+ Then
+\begin_inset Formula 
+\[
+\prod_{\begin{array}{c}
+d\mid n\\
+d\neq n
+\end{array}}d=n^{\frac{\tau\left(n\right)}{2}-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Multiplicative Functions
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Definition-Multiplicative-Function"
+
+\end_inset
+
+An arithmetic function 
+\begin_inset Formula $f$
+\end_inset
+
+ is called 
+\series bold
+multiplicative
+\series default
+ if 
+\begin_inset Formula $f(mn)=f(m)f(n)$
+\end_inset
+
+ for all 
+\begin_inset Formula $m,n\in\mathbf{Z}$
+\end_inset
+
+ with 
+\begin_inset Formula $\gcd\left(m,n\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Definition-Completely-Multiplicative-Function"
+
+\end_inset
+
+An arithmetic function 
+\begin_inset Formula $f$
+\end_inset
+
+ is called 
+\series bold
+completely multiplicative
+\series default
+ if 
+\begin_inset Formula $f(mn)=f(m)f(n)$
+\end_inset
+
+ for all 
+\begin_inset Formula $m,n\in\mathbf{Z}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We should think of a function being multiplicative as being a ``good'' property.
+ The reason is that if 
+\begin_inset Formula $f$
+\end_inset
+
+ is multiplicative and 
+\begin_inset Formula $n=p_{1}^{n_{1}}p_{2}^{n_{2}}\cdot\cdot\cdot p_{r}^{n_{r}}$
+\end_inset
+
+ is an integer with its prime factorization then we can see that
+\begin_inset Formula 
+\[
+f\left(n\right)=f\left(p_{1}^{n_{1}}\right)f\left(p_{2}^{n_{2}}\right)\dotsm f\left(p_{r}^{n_{r}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore we only need to know the value of 
+\begin_inset Formula $f$
+\end_inset
+
+ on powers of primes to determine the value of 
+\begin_inset Formula $f$
+\end_inset
+
+ on any integer.
+ In fact, using this observation we can see that we now know how to contruct
+ 
+\emph on
+ALL
+\emph default
+ multiplicative function.
+ Namely we have to determine the values of the function at all powers of
+ primes (and at 1) and the extend it via the multiplicative property, much
+ in the same way that one can define all linear transformations by defining
+ them on a basis and then extend linearly.
+\end_layout
+
+\begin_layout Example
+The functions 
+\begin_inset Formula $f\left(n\right)=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $g\left(n\right)=n$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+ are multiplicative.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-tau-and-sigma-are-multiplicative"
+
+\end_inset
+
+Let 
+\begin_inset Formula $n$
+\end_inset
+
+ be a positive integer.
+ The functions 
+\begin_inset Formula $\tau\left(n\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma\left(n\right)$
+\end_inset
+
+ are multiplicative.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ be positive integers with 
+\begin_inset Formula $\gcd\left(m,n\right)=1$
+\end_inset
+
+.
+ Note that since 
+\begin_inset Formula $\tau\left(1\right)=1=\sigma\left(1\right)$
+\end_inset
+
+ the equations
+\begin_inset Formula 
+\begin{eqnarray*}
+\tau\left(mn\right) & = & \tau\left(m\right)\tau\left(n\right)\\
+\sigma\left(mn\right) & = & \sigma\left(m\right)\sigma\left(n\right)
+\end{eqnarray*}
+
+\end_inset
+
+ trivially holds if either 
+\begin_inset Formula $m$
+\end_inset
+
+ or 
+\begin_inset Formula $n$
+\end_inset
+
+ is equal to 1.
+ So assume 
+\begin_inset Formula $m,n>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let the prime factorization of 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ be
+\begin_inset Formula 
+\begin{eqnarray*}
+m & = & p_{1}^{m_{1}}p_{2}^{m_{2}}\cdot\cdot\cdot p_{r}^{m_{r}}\\
+n & = & q_{1}^{n_{1}}q_{2}^{n_{2}}\cdot\cdot\cdot q_{s}^{n_{s}}.
+\end{eqnarray*}
+
+\end_inset
+
+Then since 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are relatively prime we know that 
+\begin_inset Formula $p_{i}\neq q_{j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus
+\begin_inset Formula 
+\[
+mn=p_{1}^{m_{1}}p_{2}^{m_{2}}\cdot\cdot\cdot p_{r}^{m_{r}}q_{1}^{n_{1}}q_{2}^{n_{2}}\cdot\cdot\cdot q_{s}^{n_{s}}
+\]
+
+\end_inset
+
+is the prime factorization of 
+\begin_inset Formula $mn$
+\end_inset
+
+.
+ So by Theorems 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-tau_n"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-sigma_n"
+
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\tau\left(mn\right) & = & \left[\left(m_{1}+1\right)\left(m_{2}+1\right)\cdot\cdot\cdot\left(m_{r}+1\right)\right]\left[\left(n_{1}+1\right)\left(n_{2}+1\right)\cdot\cdot\cdot\left(n_{s}+1\right)\right]\\
+ & = & \tau\left(m\right)\tau\left(n\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{eqnarray*}
+\sigma\left(mn\right) & = & \left[\left(\frac{p_{1}^{m_{1}+1}-1}{p_{1}-1}\right)\left(\frac{p_{2}^{m_{2}+1}-1}{p_{2}-1}\right)\cdot\cdot\cdot\left(\frac{p_{r}^{m_{r}+1}-1}{p_{r}-1}\right)\right]\\
+ & \times & \left[\left(\frac{q_{1}^{n_{1}+1}-1}{q_{1}-1}\right)\left(\frac{q_{2}^{n_{2}+1}-1}{q_{2}-1}\right)\cdot\cdot\cdot\left(\frac{q_{s}^{n_{s}+1}-1}{q_{s}-1}\right)\right]\\
+ & = & \sigma\left(m\right)\sigma\left(n\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Perfect Numbers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ref: pete clark 4400arithmetic.pdf in Z:
+\backslash
+www.math.uga.edu
+\backslash
+~pete
+\backslash
+numbertheory
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The ancient Greeks regarded a positive integer 
+\begin_inset Formula $n$
+\end_inset
+
+ as perfect if it is equal to the sum of its proper divisors (``aliquot
+ parts'').
+ They knew some examples, e.g.
+ 6, 28, 496, 8128.
+ In modern language a perfect number is a solution 
+\begin_inset Formula $n$
+\end_inset
+
+ of the equation 
+\begin_inset Formula $\sigma\left(n\right)-n=n$
+\end_inset
+
+, or 
+\begin_inset Formula $\sigma\left(n\right)=2n$
+\end_inset
+
+.
+ But we have an exact formula for the 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ function: perhaps we can use it to write down all perfect numbers? The
+ answer is a resounding ``sort of.'' 
+\end_layout
+
+\begin_layout Standard
+Best, as usual, is to examine some data to try to figure out what is going
+ on.
+ Since our formula for 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ takes into account the standard form factorization of 
+\begin_inset Formula $n$
+\end_inset
+
+, we should probably look at these factorizations of our sample perfect
+ numbers.
+ We find:
+\begin_inset Formula 
+\begin{eqnarray*}
+6 & = & 2\cdot3\\
+28 & = & 2^{2}\cdot7\\
+496 & = & 2^{4}\cdot31\\
+8128 & = & 2^{6}\cdot127
+\end{eqnarray*}
+
+\end_inset
+
+so we have a power of 2 multiplied by a special odd prime.
+ All these numbers are of the form 
+\begin_inset Formula $2^{n-1}\cdot\left(2^{n}-1\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $n$
+\end_inset
+
+ is a prime.
+ This experimental data was recognized by Euclid.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Perfect-Numbers"
+
+\end_inset
+
+Let 
+\begin_inset Formula $p$
+\end_inset
+
+ be a prime such that 
+\begin_inset Formula $2^{p}-1$
+\end_inset
+
+ is also prime.
+ Then 
+\begin_inset Formula $2^{p-1}\cdot\left(2^{p}-1\right)$
+\end_inset
+
+ is a perfect number.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $2^{p-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $2^{p}-1$
+\end_inset
+
+ are coprime
+\begin_inset Formula 
+\begin{eqnarray*}
+\sigma\left(2^{p-1}\cdot\left(2^{p}-1\right)\right) & = & \sigma\left(2^{p-1}\right)\sigma\left(2^{p}-1\right)\\
+ & = & \frac{2^{p}-1}{2-1}\cdot\left(1+2^{p}-1\right)\\
+ & = & 2\cdot2^{p-1}\cdot\left(2^{p}-1\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ Are there infinitely many primes 
+\begin_inset Formula $p$
+\end_inset
+
+ such that 
+\begin_inset Formula $2^{p}-1$
+\end_inset
+
+ is prime? Such primes are called 
+\series bold
+Mersenne primes
+\series default
+ after Father Marin Mersenne, a penpal of Fermat.
+ It is a wide open problem to show that there exist infinitely many Mersenne
+ primes, but in practice, we do keep finding successively larger Mersenne
+ primes (at a rate of several a year), meaning that new and ridiculously
+ large perfect numbers are being discovered all the time.
+ 
+\end_layout
+
+\begin_layout Standard
+Is every perfect number of the form 
+\begin_inset Formula $2^{p-1}\cdot\left(2^{p}-1\right)$
+\end_inset
+
+for a Mersenne prime 
+\begin_inset Formula $p$
+\end_inset
+
+? Euler was able to show that every even perfect number is of this form.
+ Whether or not there exist any odd perfect numbers is one of the notorious
+ open problems of number theory.
+ At least you should not go searching for odd perfect numbers by hand: it
+ is known that there are no odd perfect numbers 
+\begin_inset Formula $n<10300$
+\end_inset
+
+, and that any odd perfect number must satisfy a slew of restrictive conditions
+ (e.g.
+ on the shape of its standard form factorization).
+\end_layout
+
+\begin_layout Section
+Sum of a Multiplicative Function
+\end_layout
+
+\begin_layout Standard
+Note that for the two nontrivial multiplicative functions that we have,
+ 
+\begin_inset Formula $\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, we defined them as
+\begin_inset Formula 
+\[
+\tau\left(n\right)=\sum_{d\mid n}1\qquad\qquad\sigma\left(n\right)=\sum_{d\mid n}d.
+\]
+
+\end_inset
+
+So recalling that 
+\begin_inset Formula $f(d)=1$
+\end_inset
+
+ and 
+\begin_inset Formula $f(d)=d$
+\end_inset
+
+ are both multiplicative functions we see that we can write both and as
+\begin_inset Formula 
+\[
+F\left(n\right)=\sum_{d\mid n}f\left(d\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $f(d)$
+\end_inset
+
+ is some multiplicative function, and we just showed that in these cases
+ the 
+\begin_inset Formula $F(n)$
+\end_inset
+
+ which we get is again multiplicative.
+ Therefore it is natural to ask if the this always occurs.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-sum-of-multiplicative-function"
+
+\end_inset
+
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a multiplicative arithmetic function.
+ Then consider the function 
+\begin_inset Formula $F(n)$
+\end_inset
+
+ defined by
+\begin_inset Formula 
+\[
+F\left(n\right)=\sum_{d\mid n}f\left(d\right).
+\]
+
+\end_inset
+
+Then 
+\begin_inset Formula $F(n)$
+\end_inset
+
+ is also multiplicative.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $m=p_{1}^{m_{1}}p_{2}^{m_{2}}\cdot\cdot\cdot p_{r}^{m_{r}}$
+\end_inset
+
+ and 
+\begin_inset Formula $n=q_{1}^{n_{1}}q_{2}^{n_{2}}\cdot\cdot\cdot q_{s}^{n_{s}}$
+\end_inset
+
+ be relatively prime integers.
+ We want to calculate
+\begin_inset Formula 
+\[
+F\left(mn\right)=\sum_{l\mid mn}f\left(l\right).
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\gcd(m,n)=1$
+\end_inset
+
+ we know that 
+\begin_inset Formula $p_{i}\neq q_{j}$
+\end_inset
+
+ for any 
+\begin_inset Formula $i,\, j$
+\end_inset
+
+.
+ Thus if 
+\begin_inset Formula $l\mid mn$
+\end_inset
+
+ then
+\begin_inset Formula 
+\[
+l=p_{1}^{a_{1}}p_{2}^{a_{2}}\cdot\cdot\cdot p_{r}^{a_{r}}q_{1}^{b_{1}}q_{2}^{b_{2}}\cdot\cdot\cdot q_{s}^{b_{s}}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & \le & a_{i}\le m_{i},\quad i=1,2,\dots,r\\
+0 & \le & b_{j}\le n_{j},\quad j=1,2,\dots,s.
+\end{eqnarray*}
+
+\end_inset
+
+Thus we can write 
+\begin_inset Formula $l=dt$
+\end_inset
+
+ where 
+\begin_inset Formula 
+\begin{eqnarray*}
+d & = & p_{1}^{a_{1}}p_{2}^{a_{2}}\cdot\cdot\cdot p_{r}^{a_{r}}\mid m\\
+t & = & q_{1}^{b_{1}}q_{2}^{b_{2}}\cdot\cdot\cdot q_{s}^{b_{s}}\mid n\\
+\gcd\left(d,t\right) & = & 1.
+\end{eqnarray*}
+
+\end_inset
+
+So we can write
+\begin_inset Formula 
+\begin{eqnarray*}
+F\left(mn\right) & = & \sum_{\begin{array}{c}
+d\mid m\\
+t\mid n
+\end{array}}f\left(dt\right)\\
+ & = & \sum_{\begin{array}{c}
+d\mid m\\
+t\mid n
+\end{array}}f\left(d\right)f\left(t\right)\\
+ & = & \sum_{d\mid m}f\left(d\right)\sum_{t\mid n}f\left(t\right)\\
+ & = & F\left(m\right)F\left(n\right).
+\end{eqnarray*}
+
+\end_inset
+
+since 
+\begin_inset Formula $f$
+\end_inset
+
+ is multiplicative.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ The functions 
+\begin_inset Formula $\mathbf{1},\, n,\, n^{k}$
+\end_inset
+
+ are completely multiplicative with the corresponding sum functions 
+\begin_inset Formula $\tau,\sigma,\sigma_{k}$
+\end_inset
+
+ so the above theorem provides a nice proof of their being multiplicative.
+\end_layout
+
+\begin_layout Section
+The Möbius Inversion Function
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Definition-Mobius-function"
+
+\end_inset
+
+For each positive integer 
+\begin_inset Formula $n$
+\end_inset
+
+ we define the Möbius function 
+\begin_inset Formula $\mu$
+\end_inset
+
+ by
+\begin_inset Formula 
+\[
+\mu\left(n\right)=\begin{cases}
+1 & \textrm{if }n=1\\
+0 & \textrm{if }p^{2}\mid n\textrm{ for some prime }p\\
+\left(-1\right)^{r} & \textrm{if }n=p_{1}p_{2}\dotsc p_{r},\textrm{ where }p_{i}\textrm{ are distinct primes.}
+\end{cases}
+\]
+
+\end_inset
+
+Observe that 
+\begin_inset Formula $\mu$
+\end_inset
+
+ takes only 3 values 
+\begin_inset Formula $0,\pm1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Mobius-Function-is-multiplicative"
+
+\end_inset
+
+The function 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is a multiplicative function.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ be positive integers with 
+\begin_inset Formula $\gcd\left(m,n\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+case 1.
+
+\series default
+ 
+\begin_inset Formula $mn=1$
+\end_inset
+
+.
+ In this case 
+\begin_inset Formula $m=1=n$
+\end_inset
+
+ so 
+\begin_inset Formula $\mu\left(mn\right)=1=\mu\left(m\right)\mu\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+case 2.
+
+\series default
+ 
+\begin_inset Formula $p^{2}\mid mn$
+\end_inset
+
+ for some prime 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are relatively prime either 
+\begin_inset Formula $p^{2}\mid m$
+\end_inset
+
+ or 
+\begin_inset Formula $p^{2}\mid n$
+\end_inset
+
+.
+ Thus either 
+\begin_inset Formula $\mu\left(m\right)=0$
+\end_inset
+
+ or 
+\begin_inset Formula $\mu\left(n\right)=0$
+\end_inset
+
+.
+ In any case 
+\begin_inset Formula $\mu\left(mn\right)=0=\mu\left(m\right)\mu\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+case 3.
+
+\series default
+ 
+\begin_inset Formula $mn$
+\end_inset
+
+ is square free.
+\end_layout
+
+\begin_layout Proof
+In this case both 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are square free.
+ So let us suppose
+\begin_inset Formula 
+\begin{eqnarray*}
+m & = & p_{1}p_{2}\dotsc p_{r}\\
+n & = & q_{1}q_{2}\dotsc q_{s}
+\end{eqnarray*}
+
+\end_inset
+
+where the 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+'s and the 
+\begin_inset Formula $q_{j}$
+\end_inset
+
+'s are all distinct and distinct from each other.
+ Thus
+\begin_inset Formula 
+\begin{eqnarray*}
+\mu\left(m\right) & = & \left(-1\right)^{r}\qquad\mu\left(n\right)=\left(-1\right)^{s}\\
+\mu\left(mn\right) & = & \left(-1\right)^{r+s}\\
+ & = & \mu\left(m\right)\mu\left(n\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now that we have this new multiplicative function we would like to create
+ the new multiplicative function
+\begin_inset Formula 
+\[
+F\left(n\right)=\sum_{d\mid n}\mu\left(d\right)
+\]
+
+\end_inset
+
+and study its properties.
+ Let us calculate 
+\begin_inset Formula $F\left(n\right)$
+\end_inset
+
+ for a few values.
+\begin_inset Formula 
+\begin{eqnarray*}
+F\left(1\right) & = & \mu\left(1\right)=1\\
+F\left(2\right) & = & \mu\left(1\right)+\mu\left(2\right)=1-1=0\\
+F\left(3\right) & = & \mu\left(1\right)+\mu\left(3\right)=1-1=0\\
+F\left(4\right) & = & \mu\left(1\right)+\mu\left(2\right)+\mu\left(4\right)=1-1+0=0\\
+F\left(5\right) & = & \mu\left(1\right)+\mu\left(5\right)=1-1=0\\
+F\left(6\right) & = & \mu\left(1\right)+\mu\left(2\right)+\mu\left(3\right)+\mu\left(6\right)=1-1-1+1=0\\
+F\left(7\right) & = & \mu\left(1\right)+\mu\left(7\right)=1-1=0\\
+F\left(8\right) & = & \mu\left(1\right)+\mu\left(2\right)+\mu\left(4\right)+\mu\left(8\right)=1-1+0+0=0\\
+F\left(9\right) & = & \mu\left(1\right)+\mu\left(3\right)+\mu\left(9\right)=1-1+0=0\\
+F\left(10\right) & = & \mu\left(1\right)+\mu\left(2\right)+\mu\left(5\right)+\mu\left(10\right)=1-1-1+1=0\\
+F\left(11\right) & = & \mu\left(1\right)+\mu\left(11\right)=1-1=0\\
+F\left(12\right) & = & \mu\left(1\right)+\mu\left(2\right)+\mu\left(3\right)+\mu\left(4\right)+\mu\left(6\right)+\mu\left(12\right)=1-1-1+0+1+0=0.
+\end{eqnarray*}
+
+\end_inset
+
+It appears that except for 
+\begin_inset Formula $F\left(1\right)$
+\end_inset
+
+ all other values are 0.
+ Indeed this is true.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Mobius-Sum-over-Divisors"
+
+\end_inset
+
+Let 
+\begin_inset Formula $F(n)$
+\end_inset
+
+ be defined by
+\begin_inset Formula 
+\[
+F\left(n\right)=\sum_{d\mid n}\mu\left(d\right)
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+F\left(n\right)=\begin{cases}
+1 & \textrm{if }n=1\\
+0 & \textrm{if }n>1.
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ We can write 
+\begin_inset Formula $F\left(n\right)=\left\lfloor {\displaystyle \frac{1}{n}}\right\rfloor $
+\end_inset
+
+ more compactly.
+\end_layout
+
+\begin_layout Proof
+Clearly 
+\begin_inset Formula $F\left(1\right)=1$
+\end_inset
+
+ so to prove the theorem it is enough to show that 
+\begin_inset Formula $F\left(p^{k}\right)=0$
+\end_inset
+
+ for any prime 
+\begin_inset Formula $p$
+\end_inset
+
+ and any integer 
+\begin_inset Formula $k\ge1$
+\end_inset
+
+.
+ Now
+\begin_inset Formula 
+\begin{eqnarray*}
+F\left(p^{k}\right) & = & \mu\left(1\right)+\mu\left(p\right)+\mu\left(p^{2}\right)+\cdots+\mu\left(p^{k}\right)\\
+ & = & 1-1+0+0+\cdots+0\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+since 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+ divides each of the numbers 
+\begin_inset Formula $p^{2},p^{3},\ldots,p^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Definition-Kronecker-delta-function"
+
+\end_inset
+
+The arithmetic function 
+\begin_inset Formula $\delta$
+\end_inset
+
+ defined by
+\begin_inset Formula 
+\[
+\delta\left(n\right)=\begin{cases}
+1 & \textrm{if }n=1\\
+0 & \textrm{if }n>1.
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-Mobius-Sum-over-Divisors"
+
+\end_inset
+
+
+\begin_inset Formula $\delta$
+\end_inset
+
+ is a multiplicative function.
+\end_layout
+
+\begin_layout Section
+Möbius Inversion Formula
+\end_layout
+
+\begin_layout Standard
+We have have been studying the multiplicative function 
+\begin_inset Formula $\mu$
+\end_inset
+
+ which at first glance seems a little stupid, especially once we look at
+ the corresponding 
+\begin_inset Formula $F(n)$
+\end_inset
+
+.
+ However, we will see the true signicance of this function now.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{M
+\backslash
+o bius Inversion Formula}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Mobius-Inversion-Formula"
+
+\end_inset
+
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be an arithmetic function and let
+\begin_inset Formula 
+\[
+F\left(n\right)=\sum_{d\mid n}f\left(d\right).
+\]
+
+\end_inset
+
+Then
+\begin_inset Formula 
+\[
+f\left(n\right)=\sum_{d\mid n}\mu\left(d\right)F\left(\frac{n}{d}\right)=\sum_{d\mid n}F\left(d\right)\mu\left(\frac{n}{d}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We can show this equality by a calculation.
+\begin_inset Formula 
+\[
+\sum_{d\mid n}\mu\left(d\right)F\left(\frac{n}{d}\right)=\sum_{d\mid n}\mu\left(d\right)\sum_{c\mid n/d}f\left(c\right)=\sum_{d\mid n}\left(\sum_{c\mid n/d}\mu\left(d\right)f\left(c\right)\right).
+\]
+
+\end_inset
+
+Now if 
+\begin_inset Formula $d\mid n$
+\end_inset
+
+ and 
+\begin_inset Formula $c\mid n/d$
+\end_inset
+
+ then 
+\begin_inset Formula $c\mid n$
+\end_inset
+
+ and 
+\begin_inset Formula $d\mid n/c$
+\end_inset
+
+ and conversely, therefore we can rewrite the above expression as
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{d\mid n}\left(\sum_{c\mid n/d}\mu\left(d\right)f\left(c\right)\right) & = & \sum_{c\mid n}\left(\sum_{d\mid n/c}f\left(c\right)\mu\left(d\right)\right)\\
+ & = & \sum_{c\mid n}f\left(c\right)\left(\sum_{d\mid n/c}\mu\left(d\right)\right).
+\end{eqnarray*}
+
+\end_inset
+
+We know from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-Mobius-Sum-over-Divisors"
+
+\end_inset
+
+ that
+\begin_inset Formula 
+\[
+\sum_{d\mid n/c}\mu\left(d\right)=\begin{cases}
+1 & \textrm{if }\frac{n}{c}=1\ \textrm{i.e., when }c=n\\
+0 & \textrm{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+hence 
+\begin_inset Formula 
+\[
+\sum_{d\mid n}\mu\left(d\right)F\left(\frac{n}{d}\right)=f\left(n\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ The change in the order of summation deserves some explanation.
+ Let us illustrate this with 
+\begin_inset Formula 
+\[
+n=6
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{d\mid n}\mu\left(d\right)F\left(\frac{n}{d}\right) & = & \mu\left(1\right)F\left(6\right)+\mu\left(2\right)F\left(3\right)+\mu\left(3\right)F\left(2\right)+\mu\left(6\right)F\left(1\right)\\
+ & = & \mu\left(1\right)\left[f\left(1\right)+f\left(2\right)+f\left(3\right)+f\left(6\right)\right]\\
+ &  & +\mu\left(2\right)\left[f\left(1\right)+f\left(3\right)\right]\\
+ &  & +\mu\left(3\right)\left[f\left(1\right)+f\left(2\right)\right]\\
+ &  & +\mu\left(6\right)f\left(1)\right)\\
+ & = & f\left(1\right)\left[\mu\left(1\right)+\mu\left(2\right)+\mu\left(3\right)+\mu\left(6\right)\right]\\
+ & + & f\left(2\right)\left[\mu\left(1\right)+\mu\left(3\right)\right]\\
+ & + & f\left(3\right)\left[\mu\left(1\right)+\mu\left(2\right)\right]\\
+ & + & f\left(6\right)\mu\left(1\right)\\
+ & = & f\left(6\right).
+\end{eqnarray*}
+
+\end_inset
+
+We can now prove the converse of Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-sum-of-multiplicative-function"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Charcterization-of-Multiplicative Functions"
+
+\end_inset
+
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be an arithmetic function and let function 
+\begin_inset Formula $F(n)$
+\end_inset
+
+be the associated sum 
+\begin_inset Formula 
+\[
+F\left(n\right)=\sum_{d\mid n}f\left(d\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Then 
+\begin_inset Formula $f$
+\end_inset
+
+ is multiplicative if and only if 
+\begin_inset Formula $F$
+\end_inset
+
+ is multiplicative.
+\end_layout
+
+\begin_layout Proof
+Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-sum-of-multiplicative-function"
+
+\end_inset
+
+ shows that if 
+\begin_inset Formula $f$
+\end_inset
+
+ is multiplicative then so is 
+\begin_inset Formula $F.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Suppose now that 
+\begin_inset Formula $F$
+\end_inset
+
+ is multiplicative and let 
+\begin_inset Formula $m,n$
+\end_inset
+
+ be coprime.
+ Then, by Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-Mobius-Inversion-Formula"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+f\left(n\right)=\sum_{d\mid n}\mu\left(d\right)F\left(\frac{n}{d}\right)=\sum_{d\mid n}F\left(d\right)\mu\left(\frac{n}{d}\right).
+\]
+
+\end_inset
+
+Now every divisor 
+\begin_inset Formula $d$
+\end_inset
+
+ of 
+\begin_inset Formula $mn$
+\end_inset
+
+ can be written uniquely as 
+\begin_inset Formula $d=d_{1}d_{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $d_{1}\mid m$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{2}\mid n$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are relatively prime so are 
+\begin_inset Formula $d_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{2}$
+\end_inset
+
+as well as 
+\begin_inset Formula $m/d$
+\end_inset
+
+
+\begin_inset Formula $_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $n/d_{2}$
+\end_inset
+
+.
+ Hence
+\begin_inset Formula 
+\begin{eqnarray*}
+f\left(mn\right) & = & \sum_{d_{1}d_{2}=mn}\mu\left(d_{1}d_{2}\right)F\left(\frac{mn}{d_{1}d_{2}}\right)=\\
+ & = & \sum_{\begin{array}{c}
+d_{1}\mid m\\
+d_{2}\mid n
+\end{array}}\mu\left(d_{1}\right)\mu\left(d_{2}\right)F\left(\frac{m}{d_{1}}\right)F\left(\frac{n}{d_{2}}\right)\\
+ & = & \sum_{d_{1}\mid m}\mu\left(d_{1}\right)F\left(\frac{m}{d_{1}}\right)\sum_{d_{2}\mid n}\mu\left(d_{2}\right)F\left(\frac{n}{d_{2}}\right)\\
+ & = & f\left(m\right)f\left(n\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Dirichlet Convolutions
+\end_layout
+
+\begin_layout Standard
+In the Möbius inversion formula we had a sum 
+\begin_inset Formula $\sum_{d\mid n}\mu\left(d\right)F\left(\frac{n}{d}\right)$
+\end_inset
+
+ and it may be of independent interest to study such sums for any two arithmetic
+ functions.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Definition-Dirichlet-Convolution"
+
+\end_inset
+
+For arithmetical functions 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+, we define their 
+\series bold
+convolution
+\series default
+, or 
+\series bold
+Dirichlet product
+\series default
+, as
+\begin_inset Formula 
+\[
+\left(f\star g\right)\left(n\right)=\sum_{d\mid n}f\left(d\right)g\left(\frac{n}{d}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Let us compute a few convolutions
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{1}\star f & = & F\\
+\mathbf{1}\star\mu & = & \delta\\
+f\star\delta & = & f\\
+\mu\star F & = & \underbrace{\mu\star\left(\mathbf{1}\star f\right)\stackrel{?}{=}\left(\mu\star\mathbf{1}\right)\star f}_{\textrm{Möbius Inversion Formula}}=f\star\delta=f\\
+\mathbf{1}\star\mathbf{1} & = & \tau\\
+\varphi\star\mathbf{1} & = & \iota\quad\textrm{(identitity function on }\mathbf{Z})\\
+\mu\star\iota & = & \varphi\\
+\mathbf{1\star\iota} & = & \sigma\textrm{.}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We see the usefulness of the convolution.
+ For example 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Möbius Inversion Formula will follow if we can prove associativity and commutati
+vity.
+\end_layout
+
+\begin_layout Chapter
+Euler's Phi Function
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\varphi\left(1\right)=1,\ \varphi\left(2\right)=1,\ \varphi\left(3\right)=2,\ \varphi\left(4\right)=2,\ \varphi\left(5\right)=4,\ \varphi\left(6\right)=2,\ \varphi\left(15\right)=8$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $n$
+\end_inset
+
+ is prime if and only if 
+\begin_inset Formula $\varphi\left(n\right)=n-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $n$
+\end_inset
+
+ is prime if and only if every integer in the set 
+\begin_inset Formula 
+\[
+\left\{ 1,2,3,\ldots,n-1\right\} 
+\]
+
+\end_inset
+
+is relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+ i.e., if and only if 
+\begin_inset Formula $\varphi\left(n\right)=n-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ So 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+ is capable of producting somewhat of a test to determine when a given integer
+ is a prime.
+ Thus being able to calculate 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+ will be quite useful.
+ The following theorem, which might be quite surprising, facilitates this
+ goal.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-phi-is-multiplicative"
+
+\end_inset
+
+The Euler phi function is multiplicative.
+\begin_inset Formula 
+\[
+\varphi\left(mn\right)=\varphi\left(m\right)\varphi\left(n\right)\quad\textrm{if }\quad\gcd\left(m,n\right)=1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+ be relatively prime integers.
+ The statement clearly holds if 
+\begin_inset Formula $n=1$
+\end_inset
+
+ or 
+\begin_inset Formula $m=1$
+\end_inset
+
+.
+ So let us assume that 
+\begin_inset Formula $n,\, m>1$
+\end_inset
+
+.
+ We would like to calculate 
+\begin_inset Formula $\varphi\left(mn\right)$
+\end_inset
+
+ and so below we arrange the integers from 1 to 
+\begin_inset Formula $mn$
+\end_inset
+
+ in 
+\begin_inset Formula $m$
+\end_inset
+
+ columns of 
+\begin_inset Formula $n$
+\end_inset
+
+ integers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+sffamily 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arrayrulecolor{white} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arrayrulewidth=1pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.5} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rowcolors[
+\backslash
+hline]{2}{.!50!White}{} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{A|A|A|A|A|A}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rowcolor{.!50!white}
+\end_layout
+
+\begin_layout Plain Layout
+
+$1$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$2$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+cdot
+\backslash
+cdot
+\backslash
+cdot$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$r$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+cdot
+\backslash
+cdot
+\backslash
+cdot$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$m$
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+$m+1$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$m+2$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+cdot
+\backslash
+cdot
+\backslash
+cdot$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$m+r$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+cdot
+\backslash
+cdot
+\backslash
+cdot$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$2m$
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+$2m+1$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$2m+2$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+cdot
+\backslash
+cdot
+\backslash
+cdot$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$2m+r$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+cdot
+\backslash
+cdot
+\backslash
+cdot$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$3m$
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+vdots$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+vdots$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+&
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+vdots$&
+\end_layout
+
+\begin_layout Plain Layout
+
+&
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+vdots$
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+$(n-1)m+1$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$(n-1)m+2$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+cdot
+\backslash
+cdot
+\backslash
+cdot$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$(n-1)m+r$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+cdot
+\backslash
+cdot
+\backslash
+cdot$&
+\end_layout
+
+\begin_layout Plain Layout
+
+$nm$
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+Multiplicative property of 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So to calculate 
+\begin_inset Formula $\varphi\left(mn\right)$
+\end_inset
+
+ we need to determine how many elements of this array are relatively prime
+ with 
+\begin_inset Formula $mn$
+\end_inset
+
+, which are the elements that are relatively prime to both 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ So what was the point of us arranging the integers in such an array.
+ 
+\end_layout
+
+\begin_layout Standard
+We notice that since 
+\begin_inset Formula $\gcd\left(km+r,m\right)=\gcd\left(r,m\right)$
+\end_inset
+
+ we see that an entry in the 
+\begin_inset Formula $r$
+\end_inset
+
+-th column is relatively prime to 
+\begin_inset Formula $m$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $r$
+\end_inset
+
+ is relatively prime to 
+\begin_inset Formula $m$
+\end_inset
+
+, and in this case then all of the entries of the column are relatively
+ prime to 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+So looking at it this way, there are 
+\begin_inset Formula $\varphi\left(m\right)$
+\end_inset
+
+ columns with 
+\begin_inset Formula $r$
+\end_inset
+
+'s that are relatively prime to 
+\begin_inset Formula $m$
+\end_inset
+
+, and so we need to show that in each column there are 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+ entries relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+ and then we will be done.
+ So let us choose such a column with 
+\begin_inset Formula $\gcd\left(r,m\right)=1$
+\end_inset
+
+.
+ The entries of this column are
+\begin_inset Formula 
+\[
+r,m+r,2m+r,\ldots,\left(n-1\right)m+r.
+\]
+
+\end_inset
+
+These are exactly 
+\begin_inset Formula $n$
+\end_inset
+
+ in numbers and are distinct modulo 
+\begin_inset Formula $n$
+\end_inset
+
+ since
+\begin_inset Formula 
+\[
+\left[km+r\right]_{n}=\left[lm+r\right]_{n},\quad0\le k,l<n
+\]
+
+\end_inset
+
+implies 
+\begin_inset Formula $\left[k\right]_{n}=\left[l\right]_{n}$
+\end_inset
+
+, since 
+\begin_inset Formula $\gcd\left(m,n\right)=1$
+\end_inset
+
+, so 
+\begin_inset Formula $l=k$
+\end_inset
+
+ .
+ Therefore the number of them that are relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+ is 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So we have divided the numbers that are relatively prime to 
+\begin_inset Formula $mn$
+\end_inset
+
+ into 
+\begin_inset Formula $\varphi\left(m\right)$
+\end_inset
+
+ columns where in each column there are 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+ such numbers.
+ Thus the total amount of such numbers is 
+\begin_inset Formula $\varphi\left(m\right)\varphi\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-phi-of-prime-power"
+
+\end_inset
+
+If 
+\begin_inset Formula $p$
+\end_inset
+
+ is a prime and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a positive integer, then
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\varphi\left(p^{\alpha}\right)=p^{\alpha}-p^{\alpha-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We want to calculate the number of non-negative integers less than 
+\begin_inset Formula $n=p^{\alpha}$
+\end_inset
+
+ that are relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ As in many cases, it turns out to be easier to calculate the number that
+ are not relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+, and subtract from the total.
+ 
+\end_layout
+
+\begin_layout Proof
+List the positive integers less than 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+: 
+\begin_inset Formula $1,2,\ldots,p^{\alpha}$
+\end_inset
+
+; there are 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+ of them.
+ The numbers that have a common factor with 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+ (namely, the ones that are not relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+) are the multiples of 
+\begin_inset Formula $p$
+\end_inset
+
+: 
+\begin_inset Formula $p,2p,\ldots,\left(p^{\alpha-1}\right)p$
+\end_inset
+
+ that is, every 
+\begin_inset Formula $p$
+\end_inset
+
+-th number.
+ There are thus 
+\begin_inset Formula $p^{\alpha-1}$
+\end_inset
+
+ numbers in this list, so 
+\begin_inset Formula $\varphi(p^{\alpha})=p^{\alpha}-p^{\alpha−1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-phi_n"
+
+\end_inset
+
+Let 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+ and suppose that 
+\begin_inset Formula $p_{1},p_{2},\ldots,p_{m}$
+\end_inset
+
+ are the distinct prime divisors of 
+\begin_inset Formula $n$
+\end_inset
+
+ so that 
+\begin_inset Formula 
+\[
+n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdot\cdot\cdot p_{m}^{\alpha_{m}}.
+\]
+
+\end_inset
+
+ Then
+\begin_inset Formula 
+\[
+\varphi\left(n\right)=n\prod_{r=1}^{m}\left(1-\frac{1}{p_{r}}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By the multiplicative property of 
+\begin_inset Formula $\varphi$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\varphi\left(n\right) & = & \prod_{r=1}^{m}\varphi\left(p_{r}^{\alpha_{r}}\right)\\
+ & = & \prod_{r=1}^{m}\left(p_{r}^{\alpha_{r}}-p_{r}^{\alpha_{r}\text{−}1}\right)\\
+ & = & p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdot\cdot\cdot p_{m}^{\alpha_{m}}\prod_{r=1}^{m}\left(1-\frac{1}{p_{r}}\right)\\
+ & = & n\prod_{r=1}^{m}\left(1-\frac{1}{p_{r}}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-sum-phi-over-divisors-of-n"
+
+\end_inset
+
+Let 
+\begin_inset Formula $n\ge1$
+\end_inset
+
+ be a positive integer.
+ Then
+\begin_inset Formula 
+\[
+n=\sum_{d\mid n}\varphi\left(d\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Clearly the statement is true if 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ So assume that 
+\begin_inset Formula $n>1$
+\end_inset
+
+ and write
+\begin_inset Formula 
+\[
+n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdot\cdot\cdot p_{k}^{\alpha_{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By Theorems 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-phi-is-multiplicative"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-sum-of-multiplicative-function"
+
+\end_inset
+
+ the function
+\begin_inset Formula 
+\[
+F\left(n\right)=\sum_{d\mid n}\varphi\left(d\right)
+\]
+
+\end_inset
+
+is multiplicative so it is enough th show that 
+\begin_inset Formula $F\left(p^{\alpha}\right)=p^{\alpha}$
+\end_inset
+
+and it will follow that 
+\begin_inset Formula $F\left(n\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Now, using Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-phi-of-prime-power"
+
+\end_inset
+
+ we get
+\begin_inset Formula 
+\begin{eqnarray*}
+F\left(p^{\alpha}\right) & = & 1+\varphi\left(p\right)+\varphi\left(p^{2}\right)+\cdots+\varphi\left(p^{\alpha}\right)\\
+ & = & 1+\left(p-1\right)+\left(p^{2}-p\right)+\cdots+\left(p^{\alpha}-p^{\alpha-1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+and the sum telescopes to 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-sum-of-coprime-divisors"
+
+\end_inset
+
+Let 
+\begin_inset Formula $n\ge1$
+\end_inset
+
+ be an integer.
+ Consider the function 
+\begin_inset Formula $F(n)$
+\end_inset
+
+ dened by
+\begin_inset Formula 
+\[
+F\left(n\right)=\sum_{\begin{array}{c}
+d\\
+\gcd\left(d,n\right)=1
+\end{array}}d.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Then 
+\begin_inset Formula 
+\[
+F\left(n\right)=\frac{1}{2}n\varphi\left(n\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+First note that 
+\begin_inset Formula $\gcd\left(a,n\right)=1$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\gcd\left(n-a,n\right)=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{\varphi\left(n\right)}$
+\end_inset
+
+ be the positive integers less than 
+\begin_inset Formula $n$
+\end_inset
+
+ that are relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\left\{ a_{1},a_{2},\ldots,a_{\varphi\left(n\right)}\right\} =\left\{ n-a_{1},n-a_{2},\ldots,n-a_{\varphi\left(n\right)}\right\} 
+\]
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+2F\left(n\right)=\left(a_{1}+a_{2}+\cdots+a_{\varphi\left(n\right)}\right)+\left(n-a_{1}+n-a_{2}+\cdots+n-a_{\varphi\left(n\right)}\right)=n\varphi\left(n\right)
+\]
+
+\end_inset
+
+and this proves the result.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Mobius-inversion-of-phi"
+
+\end_inset
+
+Let 
+\begin_inset Formula $n$
+\end_inset
+
+ be a positive integer.
+ Then
+\begin_inset Formula 
+\[
+\varphi\left(n\right)=n\sum_{d\mid n}\frac{\mu\left(d\right)}{d}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The proof is a simple application of the Möbius inversion formula.
+ We know from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-sum-phi-over-divisors-of-n"
+
+\end_inset
+
+that
+\begin_inset Formula 
+\[
+F\left(n\right)=n=\sum_{d\mid n}\varphi\left(d\right).
+\]
+
+\end_inset
+
+Thus if we apply the Möbius inversion formula, Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-Mobius-Inversion-Formula"
+
+\end_inset
+
+ to the above equation we get
+\begin_inset Formula 
+\[
+\varphi\left(n\right)=\sum_{d\mid n}\mu\left(d\right)F\left(\frac{n}{d}\right)=n\sum_{d\mid n}\frac{\mu\left(d\right)}{d}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Group 
+\begin_inset Formula $\mathbf{U}_{8}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+sffamily 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arrayrulecolor{white} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arrayrulewidth=1pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.5} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rowcolors[
+\backslash
+hline]{2}{.!50!White}{} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{A|A|A|A|A} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{5}{D}{
+\backslash
+bfseries Cayley Table for U$_
+\backslash
+textbf 8$}
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rowcolor{blue!70!Black} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{Black}
+\backslash
+bfseries 
+\backslash
+arraycolor{White}$
+\backslash
+times$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[1
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[3
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[5
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[7
+\backslash
+right]$ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+cellcolor{blue!70!Black}$
+\backslash
+left[1
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[3
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[5
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[7
+\backslash
+right]$ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+cellcolor{blue!70!Black}$
+\backslash
+left[3
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[3
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[7
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[5
+\backslash
+right]$ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+cellcolor{blue!70!Black}$
+\backslash
+left[5
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[5
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[7
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[3
+\backslash
+right]$ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+cellcolor{blue!70!Black}$
+\backslash
+left[7
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[7
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[5
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[3
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+The Group U
+\begin_inset Formula $_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+The Chinese Remainder Theorem
+\end_layout
+
+\begin_layout Standard
+The Chinese Remainder Theorem says that certain systems of simultaneous
+ congruences with different moduli have solutions.
+ The idea embodied in the theorem was apparently known to Chinese mathematicians
+ a long time ago --- hence the name.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "Lemma-relatively-prime-product"
+
+\end_inset
+
+Let 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ be positive integers.
+ If 
+\begin_inset Formula $m$
+\end_inset
+
+ is relatively prime to each of 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ , then it is relatively prime to their product 
+\begin_inset Formula $a_{1}\cdot\cdot\cdot a_{n}$
+\end_inset
+
+ and conversely.
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $\gcd(m,a_{1}\cdot\cdot\cdot a_{n})\ne1$
+\end_inset
+
+ , then there is a prime 
+\begin_inset Formula $p$
+\end_inset
+
+ which divides both 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{1}\cdot\cdot\cdot a_{n}$
+\end_inset
+
+ .
+ Since 
+\begin_inset Formula $p\mid a_{1}\cdot\cdot\cdot a_{n}$
+\end_inset
+
+ , 
+\begin_inset Formula $p$
+\end_inset
+
+ must divide 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ for some 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Now 
+\begin_inset Formula $p$
+\end_inset
+
+ divides both 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ , so 
+\begin_inset Formula $\gcd(m,a_{i})\ne1$
+\end_inset
+
+.
+ This contradiction implies that 
+\begin_inset Formula $\gcd(m,a_{1}\cdot\cdot\cdot a_{n})=1$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Proof
+The converse is obvious.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "Lemma-multiple-of-LCM"
+
+\end_inset
+
+Let 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ be positive integers.
+ Then 
+\begin_inset Formula $m$
+\end_inset
+
+ is a multiple of each of 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ , if and only if 
+\begin_inset Formula $m$
+\end_inset
+
+ is a multiple of their lcm 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $m$
+\end_inset
+
+ is a multiple of their lcm 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n}\right]$
+\end_inset
+
+ then clearly it is a multiple of each 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Suppose 
+\begin_inset Formula $m$
+\end_inset
+
+ is a multiple of each 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+By the Division Algorithm, there are unique numbers 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $r$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+m=q\cdot\left[a_{1},\ldots,a_{n}\right]+r,\ \textrm{where }0\le r<\left[a_{1},\ldots,a_{n}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ divides both 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n}\right]$
+\end_inset
+
+ , so 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ divides 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Since this is true for all 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $r$
+\end_inset
+
+ is a common multiple of the 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ smaller than the least common multiple 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n}\right]$
+\end_inset
+
+ .
+ This is only possible if 
+\begin_inset Formula $r=0$
+\end_inset
+
+ .
+ Then 
+\begin_inset Formula $m=q\cdot\left[a_{1},\ldots,a_{n}\right]$
+\end_inset
+
+ , i.e.
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ is a multiple of 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n}\right]$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "Lemma-LCM-equals-product"
+
+\end_inset
+
+Let 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ be positive integers.
+ 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ are pairwise relatively prime (that is, 
+\begin_inset Formula $\gcd(a_{i},a_{j})=1$
+\end_inset
+
+ for 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+ ) if and only if
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula 
+\[
+\left[a_{1},\ldots,a_{n}\right]=a_{1}\cdot\cdot\cdot a_{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Suppose 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n}\right]=a_{1}\cdot\cdot\cdot a_{n}.$
+\end_inset
+
+ Then 
+\begin_inset Formula 
+\[
+\gcd\left(a_{1},\ldots,a_{n}\right)=\frac{a_{1}\cdot\cdot\cdot a_{n}}{\left[a_{1},\ldots,a_{n}\right]}=1
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ are pairwise relatively prime.
+\end_layout
+
+\begin_layout Proof
+Suppose 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ are pairwise relatively prime.
+ We will give a proof using induct on 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+The statement is trivially true for 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+The statement for 
+\begin_inset Formula $n=2$
+\end_inset
+
+ follows from the equation 
+\begin_inset Formula $xy=\left[x,y\right]\gcd(x,y)$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left[a_{1},a_{2}\right]=\dfrac{a_{1}a_{2}}{\gcd(a_{1},a_{2})}=\dfrac{a_{1}a_{2}}{1}=a_{1}a_{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now assume 
+\begin_inset Formula $n>2$
+\end_inset
+
+ , and assume the result is true for 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ We will prove it for 
+\begin_inset Formula $n+1$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Assertion:
+\series default
+ 
+\begin_inset Formula $\left[\left[a_{1},\ldots,a_{n}\right],a_{n+1}\right]=\left[a_{1},\ldots,a_{n},a_{n+1}\right]$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Proof
+(Some people take this as an iterative definition of 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n},a_{n+1}\right]$
+\end_inset
+
+ .)
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left[a_{1},\ldots,a_{n},a_{n+1}\right]$
+\end_inset
+
+ is a multiple of each of 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ , so by Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-multiple-of-LCM"
+
+\end_inset
+
+ it's a multiple of 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n}\right]$
+\end_inset
+
+.
+ It's also a multiple of 
+\begin_inset Formula $a_{n+1}$
+\end_inset
+
+ , so
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left[\left[a_{1},\ldots,a_{n}\right],a_{n+1}\right]\mid\left[a_{1},\ldots,a_{n},a_{n+1}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+On the other hand, for 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+ ,
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+a_{i}\mid\left[a_{1},\ldots,a_{n}\right]\quad\textrm{and }\quad\left[a_{1},\ldots,a_{n}\right]\mid\left[\left[a_{1},\ldots,a_{n}\right],a_{n+1}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Therefore,
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+a_{i}\mid\left[\left[a_{1},\ldots,a_{n}\right],a_{n+1}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Obviously,
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+a_{n+1}\mid\left[\left[a_{1},\ldots,a_{n}\right],a_{n+1}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus, 
+\begin_inset Formula $\left[\left[a_{1},\ldots,a_{n}\right],a_{n+1}\right]$
+\end_inset
+
+ is a common multiple of all the 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ 's.
+ Since 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n},a_{n+1}\right]$
+\end_inset
+
+ is the least common multiple, Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-multiple-of-LCM"
+
+\end_inset
+
+ implies that
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left[a_{1},\ldots,a_{n},a_{n+1}\right]\mid\left[\left[a_{1},\ldots,a_{n}\right],a_{n+1}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left[\left[a_{1},\ldots,a_{n}\right],a_{n+1}\right]=\left[a_{1},\ldots,a_{n},a_{n+1}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+This proves the assertion.
+\end_layout
+
+\begin_layout Proof
+Returning to the proof of the induction step, 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left[a_{1},\ldots,a_{n},a_{n+1}\right]=\left[\left[a_{1},\ldots,a_{n}\right],a_{n+1}\right]=\left[a_{1}\cdot\cdot\cdot a_{n},a_{n+1}\right]=a_{1}\cdot\cdot\cdot a_{n}\cdot a_{n+1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The second equality follows by the induction hypothesis (the statement for
+ 
+\begin_inset Formula $n$
+\end_inset
+
+).
+ The third equality follows from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-relatively-prime-product"
+
+\end_inset
+
+ and the result for 
+\begin_inset Formula $n=2$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Chinese Remainder Theorem.}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-CRT"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $m_{1},\ldots,m_{n}$
+\end_inset
+
+ are pairwise relatively prime (that is, 
+\begin_inset Formula $(m_{i},m_{j})=1$
+\end_inset
+
+ for 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+ ).
+ Then the system of congruences
+\begin_inset Formula 
+\begin{eqnarray*}
+x & \equiv & a_{1}\left(\mod\, m_{1}\right)\\
+x & \equiv & a_{2}\left(\mod\, m_{2}\right)\\
+ & \vdots\\
+x & \equiv & a_{n}\left(\mod\, m_{n}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+has a unique solution mod 
+\begin_inset Formula $m_{1}m_{2}\cdot\cdot\cdot m_{n}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notation
+\series default
+.
+\begin_inset Formula 
+\[
+x_{1}x_{2}\cdot\cdot\cdot\widehat{x_{i}}\cdot\cdot\cdot x_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+means the product 
+\begin_inset Formula $x_{1}x_{2}\cdot\cdot\cdot x_{i}\cdots x_{n}$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ omitted.
+ For example,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{1}x_{2}\cdot\cdot\cdot\widehat{x_{4}}\cdot\cdot\cdot x_{6}\quad\textrm{means }\quad x_{1}x_{2}x_{3}x_{5}x_{6}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is a convenient (and standard) notation for omitting a single variable
+ term in a product of things.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Existence.
+
+\series default
+ Let 
+\begin_inset Formula $m=m_{1}m_{2}\cdot\cdot\cdot m_{n}$
+\end_inset
+
+ and define
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+p_{k}=m_{1}\cdot\cdot\cdot\widehat{m_{k}}\cdot\cdot\cdot m_{n}=\frac{m}{m_{k}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Idea of proof.
+
+\series default
+ Since 
+\begin_inset Formula $\gcd\left(p_{k},m_{k}\right)=1$
+\end_inset
+
+ there exists an inverse, 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+, of 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ modulo 
+\begin_inset Formula $m_{k}$
+\end_inset
+
+ so that 
+\begin_inset Formula $x=a_{k}p_{k}s_{k}$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $\left[x\right]_{m_{k}}=\left[a_{k}\right]_{m_{k}}$
+\end_inset
+
+and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left[x\right]_{m_{j}}=\left[0\right]_{m_{j}}$
+\end_inset
+
+ if 
+\begin_inset Formula $j\neq k$
+\end_inset
+
+ because 
+\begin_inset Formula $\left[p_{k}\right]_{m_{j}}=\left[0\right]_{m_{j}}$
+\end_inset
+
+.
+ By linear superposition a good candidate for the solution then is
+\begin_inset Formula 
+\[
+x=a_{1}p_{1}s_{1}+a_{2}s_{2}p_{2}+\cdots+a_{n}p_{n}s_{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Note that 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ is the product of the 
+\begin_inset Formula $m$
+\end_inset
+
+'s with 
+\begin_inset Formula $m_{k}$
+\end_inset
+
+ omitted.
+ By Lemma 1, 
+\begin_inset Formula $\gcd(p_{k},m_{k})=1$
+\end_inset
+
+ .
+ Hence, there are numbers 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+,
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+s_{k}p_{k}+t_{k}m_{k}=1\quad\textrm{i.e.,}\quad\left[s_{k}p_{k}\right]_{m_{k}}=1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+In terms of congruences,
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+s_{k}p_{k}\equiv1\left(\mod\, m_{k}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now let
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+x=a_{1}p_{1}s_{1}+a_{2}s_{2}p_{2}+\cdots+a_{n}p_{n}s_{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $j\ne k$
+\end_inset
+
+ , then 
+\begin_inset Formula $m_{k}\mid p_{j}$
+\end_inset
+
+ , so mod 
+\begin_inset Formula $m_{k}$
+\end_inset
+
+ all the terms but the 
+\begin_inset Formula $k$
+\end_inset
+
+-th term die:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+x\equiv a_{k}p_{k}s_{k}\equiv a_{k}\cdot1\equiv a_{k}\left(\mod\, m_{k}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+This proves that 
+\begin_inset Formula $x$
+\end_inset
+
+ is a solution to the system of congruences (and incidentally, gives a formula
+ for 
+\begin_inset Formula $x$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Uniqueness.
+
+\series default
+ Suppose that 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are two solutions to the system of congruences.
+\begin_inset Formula 
+\begin{eqnarray*}
+x & \equiv & a_{1}\left(\mod\, m_{1}\right)\quad\textrm{and}\quad y\equiv a_{1}\left(\mod\, m_{1}\right)\\
+x & \equiv & a_{2}\left(\mod\, m_{2}\right)\quad\textrm{and}\quad y\equiv a_{2}\left(\mod\, m_{2}\right)\\
+ & \vdots\\
+x & \equiv & a_{n}\left(\mod\, m_{n}\right)\quad\textrm{and}\quad y\equiv a_{n}\left(\mod\, m_{n}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Then
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+x\equiv a_{k}\equiv y\left(\mod\, m_{k}\right)\quad\mathrm{so}\quad x-y\equiv0\left(\mod\, m_{k}\right)\quad\textrm{or}\quad m_{k}\mid x-y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus, 
+\begin_inset Formula $x-y$
+\end_inset
+
+ is a multiple of all the 
+\begin_inset Formula $m$
+\end_inset
+
+'s, so
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left[m_{1},\ldots,m_{n}\right]\mid x-y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+But the 
+\begin_inset Formula $m$
+\end_inset
+
+'s are pairwise relatively prime, so by Lemma 3,
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+m_{1}\cdot\cdot\cdot m_{n}\mid x-y,\textrm{ i.e.,}x\equiv y\left(\mod\, m_{1}\cdot\cdot\cdot m_{n}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+That is, the solution to the congruences is unique mod 
+\begin_inset Formula $m_{1}\cdot\cdot\cdot m_{n}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 1.
+
+\series default
+ The Chinese Remainder Theorem tells us that the map
+\begin_inset Formula 
+\[
+\psi\,\colon\,\mathbf{Z}_{m_{1}m_{2}\cdot\cdot\cdot m_{n}}\longrightarrow\mathbf{Z}_{m_{1}}\times\mathbf{Z}_{m_{2}}\times\cdots\times\mathbf{Z}_{m_{n}}
+\]
+
+\end_inset
+
+defined by
+\begin_inset Formula 
+\[
+\psi\left(\left[x\right]_{m_{1}m_{2}\cdot\cdot\cdot m_{n}}\right)=\left(\left[x\right]_{m_{1}},\left[x\right]_{m_{2}},\ldots,\left[x\right]_{m_{n}}\right)
+\]
+
+\end_inset
+
+is an isomorphism.
+ The surjectivity is the content of CRT.
+ Since 
+\begin_inset Formula 
+\[
+\left|\mathbf{Z}_{m_{1}m_{2}\cdot\cdot\cdot m_{n}}\right|=\left|\mathbf{Z}_{m_{1}}\times\mathbf{Z}_{m_{2}}\times\cdots\times\mathbf{Z}_{m_{n}}\right|
+\]
+
+\end_inset
+
+injectivity follows.
+ Alternatively the uniqueness in CRT also gives injectivity.
+\end_layout
+
+\begin_layout Standard
+In fact more is true because 
+\begin_inset Formula $\psi$
+\end_inset
+
+ also maps 
+\begin_inset Formula $\mathbf{U}_{m_{1}m_{2}\cdot\cdot\cdot m_{n}}$
+\end_inset
+
+ onto 
+\begin_inset Formula $\mathbf{U}_{m_{1}}\times\mathbf{U}_{m_{2}}\times\cdots\times\mathbf{U}_{m_{n}}$
+\end_inset
+
+.This is because of Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-relatively-prime-product"
+
+\end_inset
+
+.
+ Now the uniqueness in CRT is essential for injectivity.
+ It follows that
+\begin_inset Formula 
+\[
+\left|\mathbf{U}_{m_{1}m_{2}\cdot\cdot\cdot m_{n}}\right|=\left|\mathbf{U}_{m_{1}}\times\mathbf{U}_{m_{2}}\times\cdots\times\mathbf{U}_{m_{n}}\right|
+\]
+
+\end_inset
+
+which implies that the Euler's phi function is multiplicative since 
+\begin_inset Formula $\left|\mathbf{U}_{n}\right|=\varphi\left(n\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 2.
+
+\series default
+ We can see this in another way: By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-relatively-prime-product"
+
+\end_inset
+
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ is relatively prime to 
+\begin_inset Formula $m_{1}m_{2}\cdot\cdot\cdot m_{n}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\gcd\left(x,m_{i}\right)=1$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\gcd\left(a_{i},m_{i}\right)=1$
+\end_inset
+
+ so the number of such 
+\begin_inset Formula $x$
+\end_inset
+
+ are 
+\begin_inset Formula 
+\[
+\underbrace{\left(\textrm{\# of choices of }a_{1}\right)}_{\varphi\left(m_{1}\right)}\underbrace{\left(\textrm{\# of choices of }a_{2}\right)}_{\varphi\left(m_{2}\right)}\cdot\cdot\cdot\underbrace{\left(\textrm{\# of choices of }a_{n}\right)}_{\varphi\left(m_{n}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Solve
+\begin_inset Formula 
+\begin{eqnarray*}
+x & \equiv & 2\left(\mod\,4\right)\\
+x & \equiv & 7\left(\mod\,9\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ 
+\begin_inset Formula $\gcd(4,9)=1$
+\end_inset
+
+ , so there is a unique solution mod 36.
+ Following the construction of 
+\begin_inset Formula $x$
+\end_inset
+
+ in the proof,
+\begin_inset Formula 
+\[
+p_{1}=9,\quad\left[9^{-1}\right]_{4}=\left[1\right]_{4},\quad\textrm{so take }s_{1}=1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p_{2}=4,\quad\left[4^{-1}\right]_{9}=\left[7\right]_{9},\quad\textrm{so take }s_{2}=7
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[x\right]_{36}=\left[\ensuremath{a_{1}p_{1}s_{1}+a_{2}p_{2}s_{\ensuremath{2}}}\right]_{36}=\left[18+196\right]_{36}=\left[34\right]_{36}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Solve
+\begin_inset Formula 
+\begin{eqnarray*}
+x & \equiv & 3\left(\mod,4\right)\\
+x & \equiv & 1\left(\mod\,5\right)\\
+x & \equiv & 2\left(\mod\,3\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ The moduli are pairwise relatively prime, so there is a unique solution
+ mod 60.
+ This time, we will solve the system using an iterative method.
+\end_layout
+
+\begin_layout Standard
+The first congruence gives
+\begin_inset Formula 
+\[
+x=3+4s.
+\]
+
+\end_inset
+
+Substituting in the second congruence we get
+\begin_inset Formula 
+\[
+4s\equiv3\left(\mod\,5\right).
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\left[4^{-1}\right]_{5}=\left[4\right]_{5}$
+\end_inset
+
+ we get
+\begin_inset Formula 
+\[
+s\equiv2\left(\mod\,5\right)
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula 
+\[
+s=2+5t,\quad x=3+4s=11+20t.
+\]
+
+\end_inset
+
+Finally we substitute this in the third congruence to get
+\begin_inset Formula 
+\[
+11+20t\equiv2\left(\mod\,3\right)\ \implies20t\equiv0\left(\mod\,3\right)
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $t=3u$
+\end_inset
+
+.
+ This gives 
+\begin_inset Formula $x=11+60u$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[x\right]_{60}=\left[11\right]_{60}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Generalized-Chinese-Remainder"
+
+\end_inset
+
+Let 
+\begin_inset Formula $m_{1},\ldots,m_{n}$
+\end_inset
+
+ be any 
+\begin_inset Formula $n$
+\end_inset
+
+ positive integers.
+ Consider the natural map
+\begin_inset Formula 
+\[
+\Phi\,\colon\,\mathbf{Z}\longrightarrow\mathbf{Z}_{m_{1}}\times\mathbf{Z}_{m_{2}}\times\cdots\times\mathbf{Z}_{m_{n}}
+\]
+
+\end_inset
+
+which sends an integer 
+\begin_inset Formula $x$
+\end_inset
+
+ to 
+\begin_inset Formula $\left(\left[x\right]_{m_{1}},\left[x\right]_{m_{2}},\ldots,\left[x\right]_{m_{n}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(a) The kernel of 
+\begin_inset Formula $\Phi$
+\end_inset
+
+is 
+\begin_inset Formula $m\mathbf{Z}$
+\end_inset
+
+ where 
+\begin_inset Formula $m=\left[m_{1},\ldots,m_{n}\right]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+(b) The following are equivalent:
+\end_layout
+
+\begin_layout Theorem
+(i) 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ is surjective.
+\end_layout
+
+\begin_layout Theorem
+(ii) 
+\begin_inset Formula $\left[m_{1},\ldots,m_{n}\right]=m_{1}m_{2}\cdot\cdot\cdot m_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(iii) The integers 
+\begin_inset Formula $m_{1},\ldots,m_{n}$
+\end_inset
+
+ are pairwise relatively prime.
+\end_layout
+
+\begin_layout Proof
+(a) This is essentially Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-multiple-of-LCM"
+
+\end_inset
+
+.
+ For 
+\begin_inset Formula $x$
+\end_inset
+
+ is in kernel of 
+\begin_inset Formula $\Phi$
+\end_inset
+
+if and only if 
+\begin_inset Formula $x$
+\end_inset
+
+ is a multiple of each 
+\begin_inset Formula $m_{i}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x$
+\end_inset
+
+ is a multiple of their LCM.
+\end_layout
+
+\begin_layout Proof
+(b) (ii) and (iii) are equivalent.
+ This is just Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-LCM-equals-product"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+(iii) implies (i) is The Chinese Remainder Theorem.
+\end_layout
+
+\begin_layout Proof
+(i) implies (ii) follows from surjectivity
+\begin_inset Formula 
+\[
+\left|\mathbf{Z}_{\left[m_{1},\ldots,m_{n}\right]}\right|=\left|\mathbf{Z}_{m_{1}}\times\mathbf{Z}_{m_{2}}\times\cdots\times\mathbf{Z}_{m_{n}}\right|.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
