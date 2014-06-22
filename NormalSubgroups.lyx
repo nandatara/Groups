@@ -1100,7 +1100,7 @@ modular arithmetic
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "congruent"
+name "Proposition-congruence"
 
 \end_inset
 
@@ -1223,7 +1223,7 @@ so
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "congruentmodn"
+name "Definition-congruent-mod-n"
 
 \end_inset
 
@@ -1242,7 +1242,7 @@ We will say that two integers
  if any one of the equivalent statements in Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "congruent"
+reference "Proposition-congruence"
 
 \end_inset
 
@@ -1262,7 +1262,7 @@ reference "congruent"
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "additionandmultiplicationmodn"
+name "Proposition-Addition-and-Multiplication-mod-n"
 
 \end_inset
 
@@ -1298,7 +1298,7 @@ Suppose
 By Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "congruent"
+reference "Proposition-congruence"
 
 \end_inset
 
@@ -1341,7 +1341,7 @@ so (i) and (ii) are true.
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "divisionmodn"
+name "Proposition-Cancellation-mod-n"
 
 \end_inset
 
@@ -1349,11 +1349,7 @@ Suppose that
 \begin_inset Formula $am\equiv bm\left(\mod\, n\right)$
 \end_inset
 
- and 
-\begin_inset Formula $n\nmid m$
-\end_inset
-
- or 
+ and
 \begin_inset Formula $\gcd\left(m,n\right)=1$
 \end_inset
 
@@ -1371,10 +1367,6 @@ If
 \end_inset
 
  and 
-\begin_inset Formula $n\nmid m$
-\end_inset
-
- or
 \begin_inset Formula $\gcd\left(m,n\right)=1$
 \end_inset
 
@@ -1392,7 +1384,7 @@ If
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "residueclassmodn"
+name "Definition-residue-class-mod-n"
 
 \end_inset
 
@@ -1446,7 +1438,7 @@ congruence class
 By Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "congruent"
+reference "Proposition-congruence"
 
 \end_inset
 
@@ -1468,7 +1460,7 @@ reference "congruent"
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "residueclassesdistinct"
+name "Proposition-residue-classes-distinct"
 
 \end_inset
 
@@ -1553,7 +1545,7 @@ have no elements in common.
 , which can be represented by 
 \begin_inset Formula 
 \[
-\left[0\right],\left[1\right],\left[2\right],\ldots,\left[n-1\right].
+\left[0\right]_{n},\left[1\right]_{n},\left[2\right]_{n},\ldots,\left[n-1\right]_{n}.
 \]
 
 \end_inset
@@ -1703,7 +1695,7 @@ Observe that, by definition
  viz., 
 \begin_inset Formula 
 \[
-\left[0\right],\left[1\right],\left[2\right],\ldots,\left[n-1\right].
+\left[0\right]_{n},\left[1\right]_{n},\left[2\right]_{n},\ldots,\left[n-1\right]_{n}.
 \]
 
 \end_inset
@@ -1734,7 +1726,7 @@ is an equivalence relation on
 \end_inset
 
  and 
-\begin_inset Formula $\left[0\right],\left[1\right],\left[2\right],\ldots,\left[n-1\right]$
+\begin_inset Formula $\left[0\right]_{n},\left[1\right]_{n},\left[2\right]_{n},\ldots,\left[n-1\right]_{n}$
 \end_inset
 
  are the equivalence classes.
@@ -1745,10 +1737,14 @@ is an equivalence relation on
 .
 \end_layout
 
+\begin_layout Section
+Modular Inverse
+\end_layout
+
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "modularinverse"
+name "Definition-modular-inverse"
 
 \end_inset
 
@@ -1791,7 +1787,7 @@ inverses
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "modularinversethm"
+name "Theorem-Modular-Inverse"
 
 \end_inset
 
@@ -1872,12 +1868,49 @@ Uniqueness.
  and Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "divisionmodn"
+reference "Proposition-Cancellation-mod-n"
 
 \end_inset
 
  implies 
 \begin_inset Formula $x\equiv y\left(\mod\, n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-Modular-Inverse"
+
+\end_inset
+
+is one of the fundamental results of Gauss in his 
+\emph on
+Disquisitones Arithmeticae
+\emph default
+.
+ He shows that
+\begin_inset Formula 
+\[
+\left[0\right]_{n},\left[a\right]_{n},\left[2a\right]_{n},\ldots,\left[\left(n-1\right)a\right]_{n}
+\]
+
+\end_inset
+
+are distinct so 
+\begin_inset Formula $\left[ka\right]_{n}=\left[1\right]_{n}$
+\end_inset
+
+ for some 
+\begin_inset Formula $k,\,1\le k\le n-1$
 \end_inset
 
 .
@@ -1894,7 +1927,7 @@ Group of residue classes mod
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "groupofresidueclassesmodn"
+name "Theorem-Group-of-residue-classes-mod-n"
 
 \end_inset
 
@@ -1930,7 +1963,7 @@ Moreover
 The group operation is well defined because of Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "additionandmultiplicationmodn"
+reference "Proposition-Addition-and-Multiplication-mod-n"
 
 \end_inset
 
@@ -2019,6 +2052,12 @@ Wilson's Theorem
 \end_layout
 
 \begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "Lemma-x^2-congruent-1-mod-p"
+
+\end_inset
+
 Let p be a prime and let 
 \begin_inset Formula $0<k<p$
 \end_inset
@@ -2157,7 +2196,7 @@ textbf{Wilson's Theorem.}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "wilson"
+name "Theorem-Wilson"
 
 \end_inset
 
@@ -2326,10 +2365,121 @@ Wilson's theorem implies that the product of any ten consecutive numbers,
 Fermat's Theorem
 \end_layout
 
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Definition-complete-set-of-residues-mod-m"
+
+\end_inset
+
+A 
+\series bold
+complete residue system
+\series default
+ 
+\series bold
+mod
+\series default
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ is a collection of integers 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{m}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{i}\not\equiv a_{j}\left(\mod\, m\right)$
+\end_inset
+
+ if 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ and any integer 
+\begin_inset Formula $n$
+\end_inset
+
+ is congruent to some 
+\begin_inset Formula $a_{i}\left(\mod\, m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left[0\right],\left[1\right],\left[2\right],\ldots,\left[n-1\right]$
+\end_inset
+
+ is a complete residue system mod 
+\begin_inset Formula $n$
+\end_inset
+
+ for any positive integer 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Definition-Reduced-Residue-System"
+
+\end_inset
+
+A 
+\series bold
+reduced residue system mod
+\series default
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ is a collection of integers 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{k}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{i}\not\equiv a_{j}\left(\mod\, m\right)$
+\end_inset
+
+ if 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ and 
+\begin_inset Formula $\gcd\left(a_{i},m\right)=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ and any integer 
+\begin_inset Formula $n$
+\end_inset
+
+ coprime to 
+\begin_inset Formula $m$
+\end_inset
+
+ must be congruent to some 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ mod 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "completesetofresidues"
+name "Lemma-complete-set-of-residues-in-Z_p"
 
 \end_inset
 
@@ -2377,7 +2527,7 @@ If
  then Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "divisionmodn"
+reference "Proposition-Cancellation-mod-n"
 
 \end_inset
 
@@ -2413,7 +2563,7 @@ textbf{Fermat's Little Theorem.}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "Fermat"
+name "Theorem-Fermat-Little"
 
 \end_inset
 
@@ -2441,7 +2591,7 @@ Let
 Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "completesetofresidues"
+reference "Lemma-complete-set-of-residues-in-Z_p"
 
 \end_inset
 
@@ -2473,7 +2623,7 @@ hence
 By Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "divisionmodn"
+reference "Proposition-Cancellation-mod-n"
 
 \end_inset
 
@@ -2550,6 +2700,186 @@ In other words, if you're trying to reduce
 \end_layout
 
 \begin_layout Section
+Leibniz' Prrof of Fermat's Theorem
+\end_layout
+
+\begin_layout Standard
+The following proof is due to Leibniz and probably the oldest proof known
+ of Fermat's Little Theorem.
+ It uses binomial coefficients.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "Lemma-Binomial-Coefficients-divisible-by-prime"
+
+\end_inset
+
+If 
+\begin_inset Formula $p$
+\end_inset
+
+ is prime, then the numbers 
+\begin_inset Formula ${\displaystyle \binom{p}{k}},\, k=1,2,\ldots,p-1$
+\end_inset
+
+, are all divisible by 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+From definition
+\begin_inset Formula 
+\[
+\binom{p}{k}=\frac{p!}{k!\left(p-k\right)!}
+\]
+
+\end_inset
+
+we see that the numerator is divisible by 
+\begin_inset Formula $p$
+\end_inset
+
+ while the denominator is not divisible by 
+\begin_inset Formula $p$
+\end_inset
+
+ unless 
+\begin_inset Formula $k=0$
+\end_inset
+
+ or 
+\begin_inset Formula $k=p$
+\end_inset
+
+.
+ Thus we conclude that
+\begin_inset Formula 
+\[
+p\mid\binom{p}{k}\quad\textrm{for }0<k<p.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can now prove the statement equivalent to Fermat's Little Theorem
+\begin_inset Formula 
+\[
+n^{p}\equiv n\left(\mod\, p\right)
+\]
+
+\end_inset
+
+by induction on 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ The statement is true for 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ Assume it has been proved for some 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\left(n+1\right)^{p}=n^{p}+\binom{p}{1}n^{p-1}+\cdots+\binom{p}{p-1}n+1.
+\]
+
+\end_inset
+
+By Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-Binomial-Coefficients-divisible-by-prime"
+
+\end_inset
+
+ the binomial coefficients are all divisible by 
+\begin_inset Formula $p$
+\end_inset
+
+, so
+\begin_inset Formula 
+\[
+\left(n+1\right)^{p}\equiv n^{p}+1\left(\mod\, p\right),
+\]
+
+\end_inset
+
+and by the induction assumption, 
+\begin_inset Formula $n^{p}\equiv n\left(\mod\, p\right)$
+\end_inset
+
+, so we get 
+\begin_inset Formula 
+\[
+\left(n+1\right)^{p}\equiv n+1\left(\mod\, p\right)
+\]
+
+\end_inset
+
+and the induction step is established.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $x,y\in\mathbf{Z}$
+\end_inset
+
+ and 
+\begin_inset Formula $p$
+\end_inset
+
+ be prime.
+ Prove that 
+\begin_inset Formula 
+\[
+\left(x+y\right)^{p}\equiv x^{p}+y^{p}\left(\mod\, p\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ Use the binomial theorem
+\begin_inset Formula 
+\[
+\left(x+y\right)^{p}=x^{p}+\underbrace{\sum_{k=1}^{p-1}\binom{p}{k}\, x^{k}y^{n-k}}_{\equiv0\left(\mod\, p\right)}+y^{p}
+\]
+
+\end_inset
+
+and apply Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-Binomial-Coefficients-divisible-by-prime"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 Euler's Theorem
 \end_layout
 
@@ -2562,7 +2892,7 @@ Fermat's Theorem can be generalized to the group
  We first generalize Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "completesetofresidues"
+reference "Lemma-complete-set-of-residues-in-Z_p"
 
 \end_inset
 
@@ -2572,7 +2902,7 @@ reference "completesetofresidues"
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "completesetofresiduesinU_n"
+name "Lemma-Complete-set-of-residues-in-U_n"
 
 \end_inset
 
@@ -2613,7 +2943,7 @@ If
  then Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "divisionmodn"
+reference "Proposition-Cancellation-mod-n"
 
 \end_inset
 
@@ -2649,7 +2979,7 @@ textbf{Euler's Theorem.}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "Eulerthm"
+name "Theorem-Euler"
 
 \end_inset
 
@@ -2676,7 +3006,7 @@ a^{\text{\varphi}(n)}\equiv1\left(\mod\, n\right).
 By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "completesetofresiduesinU_n"
+reference "Lemma-Complete-set-of-residues-in-U_n"
 
 \end_inset
 
@@ -2692,7 +3022,7 @@ reference "completesetofresiduesinU_n"
 By Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "divisionmodn"
+reference "Proposition-Cancellation-mod-n"
 
 \end_inset
 
@@ -2726,7 +3056,7 @@ Multiplicative Group of Units in
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "unitsofZ_n"
+name "Definition-units-of-Z_n"
 
 \end_inset
 
@@ -2763,7 +3093,7 @@ Remark.
  By Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "modularinversethm"
+reference "Theorem-Modular-Inverse"
 
 \end_inset
 
@@ -2789,7 +3119,7 @@ reference "modularinversethm"
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "mutiplicativegroupofunits"
+name "Theorem-Mutiplicative-Group-of-Units-mod-n"
 
 \end_inset
 
@@ -2830,7 +3160,7 @@ The semi-group operation
  is well defined because of Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "additionandmultiplicationmodn"
+reference "Proposition-Addition-and-Multiplication-mod-n"
 
 \end_inset
 
@@ -2908,7 +3238,7 @@ If
 \end_inset
 
  then there are integers 
-\begin_inset Formula $x,y$
+\begin_inset Formula $x,\, y$
 \end_inset
 
  such that 
@@ -2923,7 +3253,7 @@ If
  By Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "additionandmultiplicationmodn"
+reference "Proposition-Addition-and-Multiplication-mod-n"
 
 \end_inset
 
@@ -2956,7 +3286,7 @@ If
  then by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "modularinversethm"
+reference "Theorem-Modular-Inverse"
 
 \end_inset
 
@@ -2969,16 +3299,16 @@ reference "modularinversethm"
 \end_inset
 
  so 
-\begin_inset Formula $\left[a\right]\times\left[b\right]=\left[1\right]$
+\begin_inset Formula $\left[a\right]_{n}\times\left[b\right]_{n}=\left[1\right]_{n}$
 \end_inset
 
 .
  Thus the inverse of 
-\begin_inset Formula $\left[a\right]$
+\begin_inset Formula $\left[a\right]_{n}$
 \end_inset
 
  is 
-\begin_inset Formula $\left[b\right]$
+\begin_inset Formula $\left[b\right]_{n}$
 \end_inset
 
 .
@@ -3661,14 +3991,14 @@ Remark.
  By Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "modularinversethm"
+reference "Theorem-Modular-Inverse"
 
 \end_inset
 
  its elements are 
 \begin_inset Formula 
 \[
-\left[1\right],\left[2\right],\ldots,\left[p-1\right]
+\left[1\right]_{p},\left[2\right]_{p},\ldots,\left[p-1\right]_{p}
 \]
 
 \end_inset
@@ -3681,6 +4011,12 @@ and its order is
 \end_layout
 
 \begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "Proposition-Characterization-of-units-in-U_n"
+
+\end_inset
+
 Let 
 \begin_inset Formula $n>1$
 \end_inset
@@ -3748,7 +4084,7 @@ has a solution
  By Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "modularinversethm"
+reference "Theorem-Modular-Inverse"
 
 \end_inset
 
@@ -3763,10 +4099,68 @@ reference "modularinversethm"
  is a unit.
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ Gauss in his 
+\emph on
+Disquisitiones Arithmeticae
+\emph default
+ establishes the existence of 
+\begin_inset Formula $k$
+\end_inset
+
+ by looking at the geometric progression
+\begin_inset Formula 
+\[
+\left[1\right]_{n},\left[a\right]_{n},\left[a^{2}\right]_{n}\cdot\cdot\cdot
+\]
+
+\end_inset
+
+Each of these numbers belongs to the finite set
+\begin_inset Formula 
+\[
+\left\{ \left[1\right]_{n},\left[2\right]_{n},\ldots,\left[n-1\right]_{n}\right\} .
+\]
+
+\end_inset
+
+Since the number of these is 
+\begin_inset Formula $n-1$
+\end_inset
+
+, it is clear that if we consider more than 
+\begin_inset Formula $n-1$
+\end_inset
+
+ terms of the progression, not all of them can have distinct least residues.
+ So, among the 
+\begin_inset Formula $n$
+\end_inset
+
+ terms
+\begin_inset Formula 
+\[
+\left[1\right]_{n},\left[a\right]_{n},\left[a^{2}\right]_{n},\ldots,\left[a^{n}\right]_{n}
+\]
+
+\end_inset
+
+there must be two which are equal.
+\end_layout
+
+\begin_layout Section
+Order of a unit
+\end_layout
+
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofaunit"
+name "Definition-Order-of-a-unit"
 
 \end_inset
 
@@ -3813,7 +4207,7 @@ Note that
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofaunitdividesphi_n"
+name "Theorem-order-of-a-unit-divides-phi_n"
 
 \end_inset
 
@@ -3925,7 +4319,7 @@ Let
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "primitiverootofunitinU_n"
+name "Definition-Primitive-root-of-unity-in-U_n"
 
 \end_inset
 
@@ -3964,7 +4358,7 @@ if
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "generatorsofU_n"
+name "Theorem-Generators-of-U_n"
 
 \end_inset
 
@@ -4050,7 +4444,7 @@ then the only element which is
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "primitiverootsofunitymodn"
+name "Theorem-Primitive-roots-of-unity-mod-n"
 
 \end_inset
 
@@ -4216,7 +4610,7 @@ Assume
 , it follows from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofaunitdividesphi_n"
+reference "Theorem-order-of-a-unit-divides-phi_n"
 
 \end_inset
 
@@ -4291,7 +4685,7 @@ Remark.
  Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "primitiverootsofunitymodn"
+reference "Theorem-Primitive-roots-of-unity-mod-n"
 
 \end_inset
 
@@ -4306,7 +4700,7 @@ reference "primitiverootsofunitymodn"
 , hence by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "generatorsofU_n"
+reference "Theorem-Generators-of-U_n"
 
 \end_inset
 
@@ -4359,7 +4753,401 @@ Therefore, every unit in
 \end_layout
 
 \begin_layout Theorem
+gggg
+\end_layout
 
+\begin_layout Section
+Disquisitiones Arithmeticae
+\end_layout
+
+\begin_layout Standard
+Although Gauss did not use any of the terminology of modern group theory
+ in his 
+\emph on
+Disquisitiones Arithmeticae
+\emph default
+ of 1801, he did establish some of the most important properties of the
+ multiplicative group 
+\begin_inset Formula $\mathbf{Z}_{p}^{\times}$
+\end_inset
+
+ of the non-zero integers mod 
+\begin_inset Formula $p$
+\end_inset
+
+, where p is prime.
+\end_layout
+
+\begin_layout Standard
+Gauss shows that 
+\begin_inset Formula $\mathbf{Z}_{p}^{\times}$
+\end_inset
+
+ is cyclic (he expends lot of effort in showing this), and shows how to
+ determine the number of generators for a particular value of 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ He also defines the order of an element and shows that this order must
+ divide 
+\begin_inset Formula $p−1$
+\end_inset
+
+.
+ He then proves that for each factor of 
+\begin_inset Formula $p−1$
+\end_inset
+
+, there exist elements of that order, and that the number of elements of
+ order 
+\begin_inset Formula $t$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $\varphi\left(t\right)$
+\end_inset
+
+, making use of Euler’s phi-function.
+ Gauss’ ideas regarding 
+\begin_inset Formula $\mathbf{Z}_{p}^{\times}$
+\end_inset
+
+ are outlined mainly in Section III of the 
+\emph on
+Disquisitiones Arithmeticae
+\emph default
+, although his proofs sometimes rely upon material from Section II.
+ 
+\end_layout
+
+\begin_layout Standard
+Although Gauss did not discuss 
+\begin_inset Formula $\mathbf{Z}_{p}^{\times}$
+\end_inset
+
+ as a quotient group, these ideas appear in rudimentary form in his discussion
+ of residues in Section I .
+ Without explicitly stating as much, Gauss implies the structure of what
+ are today called residue classes by focusing his discussion on the ``least
+ positive residues.''
+\end_layout
+
+\begin_layout Standard
+One of the key results of Gauss is Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-Modular-Inverse"
+
+\end_inset
+
+.
+ For example he proves the following:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Article 24.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $a,b$
+\end_inset
+
+ be given numbers and 
+\begin_inset Formula $x$
+\end_inset
+
+ an indeterminate or variable number.
+ The expression 
+\begin_inset Formula $ax+b$
+\end_inset
+
+ can be made congruent to any number relative to a modulus 
+\begin_inset Formula $m$
+\end_inset
+
+, provided 
+\begin_inset Formula $m$
+\end_inset
+
+ is prime relative to 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To solve
+\begin_inset Formula 
+\[
+ax+b\equiv c\left(\mod\, m\right)
+\]
+
+\end_inset
+
+we need only take 
+\begin_inset Formula $\left[x\right]_{m}=\left[a\right]_{m}^{-1}\left[c-b\right]_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the first article of Section III of 
+\emph on
+Disquisitiones Arithmeticae
+\emph default
+, he shows that all elements of 
+\begin_inset Formula $\mathbf{Z}_{p}^{\times}$
+\end_inset
+
+ will have finite order.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Article 45.
+\end_layout
+
+\begin_layout Standard
+In any geometric progression 
+\begin_inset Formula $1,a,a^{2},a^{3},$
+\end_inset
+
+ etc., outside of the first term 1, there is still another term 
+\begin_inset Formula $a^{t}$
+\end_inset
+
+ which is congruent to unity relative to the modulus 
+\begin_inset Formula $p$
+\end_inset
+
+ when 
+\begin_inset Formula $p$
+\end_inset
+
+ is prime relative to 
+\begin_inset Formula $a$
+\end_inset
+
+; and the exponent 
+\begin_inset Formula $t$
+\end_inset
+
+ is 
+\begin_inset Formula $<p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In Article 49 Gauss produces a result analogous to Lagrange’s Theorem on
+ the order of subgroups of a finite group.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Article 49.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $p$
+\end_inset
+
+ is a prime number that does not divide 
+\begin_inset Formula $a$
+\end_inset
+
+, and if 
+\begin_inset Formula $a^{t}$
+\end_inset
+
+ is the lowest power of 
+\begin_inset Formula $a$
+\end_inset
+
+ that is congruent to unity relative to the modulus 
+\begin_inset Formula $p$
+\end_inset
+
+, the exponent 
+\begin_inset Formula $t$
+\end_inset
+
+ will either equal 
+\begin_inset Formula $p-1$
+\end_inset
+
+ or be a factor of this number.
+\end_layout
+
+\begin_layout Standard
+Articles 52, 53 and 54 essentially prove that 
+\begin_inset Formula $\mathbf{Z}_{p}^{\times}$
+\end_inset
+
+ is a cyclic group.
+ Gauss provides a separate proof that 
+\begin_inset Formula $\mathbf{Z}_{p}^{\times}$
+\end_inset
+
+ is cyclic in Article 55, and states at the end of this article that the
+ demonstration in 52, 53 and 54 is less direct than that of 55.
+ However, Article 55 depends squarely upon the result of 52, 53 and 54 in
+ stating that there must always exist an element whose order is equal to
+ a given divisor of 
+\begin_inset Formula $p-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The proof in Articles 52, 53 and 54 itself depends upon Article 39 which
+ states that the sum of Euler’s phi function for all the divisors of a number
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ will equal 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Article 39.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $a,a',a'',$
+\end_inset
+
+ etc.
+ are all the divisors of 
+\begin_inset Formula $A$
+\end_inset
+
+ (including unity and 
+\begin_inset Formula $A$
+\end_inset
+
+ itself), we will have
+\begin_inset Formula 
+\[
+\phi a+\phi a'+\phi a''+\textrm{etc. }=A.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Article 52.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose we are given numbers which are to be made congruent to unity by
+ raising to a power.
+ We know that for the exponent involved to be of lowest degree it must be
+ a divisor of 
+\begin_inset Formula $p-1$
+\end_inset
+
+.
+ The question arises whether all divisors of 
+\begin_inset Formula $p-1$
+\end_inset
+
+ enjoy this property.
+ And if we take all numbers [ less than 
+\begin_inset Formula $p-1$
+\end_inset
+
+], how many are there for each exponent?
+\begin_inset Formula $\ldots$
+\end_inset
+
+ Thus we must find out how in this respect the numbers 
+\begin_inset Formula $1,2,3,\ldots,p-1$
+\end_inset
+
+ should be distributed among the individual factors of the number 
+\begin_inset Formula $p-1$
+\end_inset
+
+.
+ In brief, if 
+\begin_inset Formula $d$
+\end_inset
+
+ is one of the divisors of the number 
+\begin_inset Formula $p-1$
+\end_inset
+
+ (among these 1 and 
+\begin_inset Formula $p-1$
+\end_inset
+
+ itself must be included), we will designate by 
+\begin_inset Formula $\psi d$
+\end_inset
+
+ the number of positive numbers less than 
+\begin_inset Formula $p$
+\end_inset
+
+ whose 
+\begin_inset Formula $d$
+\end_inset
+
+ power is the lowest one congruent to unity.
+ To make this easier to understand, we give an example.
+ For 
+\begin_inset Formula $p=19\ldots$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\psi1=1,\,\psi2=1,\,\psi3=2,\,\psi6=2,\,\psi9=6,\,\psi18=6.
+\]
+
+\end_inset
+
+ A little attention shows that with each exponent there are associated as
+ many numbers as there are numbers relatively prime to the exponent not
+ greater than it.
+ In other words in this case 
+\begin_inset Formula $\ldots\psi d=\phi d$
+\end_inset
+
+.
+ Now we will show that this observation is true in general.
 \end_layout
 
 \begin_layout Chapter
@@ -4479,7 +5267,7 @@ Remark.
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "phiismultiplicative"
+name "Theorem-phi-is-Multiplicative"
 
 \end_inset
 
@@ -4535,6 +5323,155 @@ Let
 \end_inset
 
  integers.
+\end_layout
+
+\begin_layout Proof
+So to calculate 
+\begin_inset Formula $\varphi\left(mn\right)$
+\end_inset
+
+ we need to determine how many elements of this array are relatively prime
+ with 
+\begin_inset Formula $mn$
+\end_inset
+
+, which are the elements that are relatively prime to both 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ So what was the point of us arranging the integers in such an array.
+ 
+\end_layout
+
+\begin_layout Proof
+We notice that since 
+\begin_inset Formula $\gcd\left(km+r,m\right)=\gcd\left(r,m\right)$
+\end_inset
+
+ we see that an entry in the 
+\begin_inset Formula $r$
+\end_inset
+
+-th column is relatively prime to 
+\begin_inset Formula $m$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $r$
+\end_inset
+
+ is relatively prime to 
+\begin_inset Formula $m$
+\end_inset
+
+, and in this case then all of the entries of the column are relatively
+ prime to 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+So looking at it this way, there are 
+\begin_inset Formula $\varphi\left(m\right)$
+\end_inset
+
+ columns with 
+\begin_inset Formula $r$
+\end_inset
+
+'s that are relatively prime to 
+\begin_inset Formula $m$
+\end_inset
+
+, and so we need to show that in each column there are 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+ entries relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+ and then we will be done.
+ So let us choose such a column with 
+\begin_inset Formula $\gcd\left(r,m\right)=1$
+\end_inset
+
+.
+ The entries of this column are
+\begin_inset Formula 
+\[
+r,m+r,2m+r,\ldots,\left(n-1\right)m+r.
+\]
+
+\end_inset
+
+These are exactly 
+\begin_inset Formula $n$
+\end_inset
+
+ in numbers and are distinct modulo 
+\begin_inset Formula $n$
+\end_inset
+
+ since
+\begin_inset Formula 
+\[
+\left[km+r\right]_{n}=\left[lm+r\right]_{n},\quad0\le k,l<n
+\]
+
+\end_inset
+
+implies 
+\begin_inset Formula $\left[k\right]_{n}=\left[l\right]_{n}$
+\end_inset
+
+, since 
+\begin_inset Formula $\gcd\left(m,n\right)=1$
+\end_inset
+
+, so 
+\begin_inset Formula $l=k$
+\end_inset
+
+ .
+ Therefore the number of them that are relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+ is 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So we have divided the numbers that are relatively prime to 
+\begin_inset Formula $mn$
+\end_inset
+
+ into 
+\begin_inset Formula $\varphi\left(m\right)$
+\end_inset
+
+ columns where in each column there are 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+ such numbers.
+ Thus the total amount of such numbers is 
+\begin_inset Formula $\varphi\left(m\right)\varphi\left(n\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4877,152 +5814,671 @@ Multiplicative property of
 \end_layout
 
 \begin_layout Standard
-So to calculate 
-\begin_inset Formula $\varphi\left(mn\right)$
+We give another proof of Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-phi-is-Multiplicative"
+
 \end_inset
 
- we need to determine how many elements of this array are relatively prime
- with 
-\begin_inset Formula $mn$
-\end_inset
-
-, which are the elements that are relatively prime to both 
-\begin_inset Formula $n$
+ by showing that there is a bijective map between 
+\begin_inset Formula $\mathbf{U}_{mn}$
 \end_inset
 
  and 
-\begin_inset Formula $m$
+\begin_inset Formula $\mathbf{U}_{m}\times\mathbf{U}_{n}$
 \end_inset
 
 .
- So what was the point of us arranging the integers in such an array.
- 
+ In order to understand the proof let us first look at an example.
+ What we’ll do is take a residue class modulo 15 and coprime to 15, and
+ map it to a pair of residue classes mod 3 and mod 5:
 \end_layout
 
 \begin_layout Standard
-We notice that since 
-\begin_inset Formula $\gcd\left(km+r,m\right)=\gcd\left(r,m\right)$
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+sffamily 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arrayrulecolor{white} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arrayrulewidth=1pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.5} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rowcolors[
+\backslash
+hline]{2}{.!50!White}{} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{A|A|C|A|A|C|C|A|C} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+multicolumn{7}{D}{
+\backslash
+bfseries Another proof of $
+\backslash
+varphi $ is multiplicative}
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rowcolor{blue!70!Black} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{Black}
+\backslash
+bfseries 
+\backslash
+arraycolor{White}$a
+\backslash
+,
+\backslash
+mod
+\backslash
+, 15$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[1
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[2
+\backslash
+right]$& 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[4
+\backslash
+right]$& 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[7
+\backslash
+right]$& 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[8
+\backslash
+right]$&
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[11
+\backslash
+right]$&
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[13
+\backslash
+right]$&
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+bfseries $
+\backslash
+left[14
+\backslash
+right]$
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+cellcolor{blue!70!Black}$a
+\backslash
+,
+\backslash
+mod
+\backslash
+,3$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[2
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[2
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[2
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[2
+\backslash
+right]$
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+arraycolor{White}
+\backslash
+cellcolor{blue!70!Black}$a
+\backslash
+,
+\backslash
+mod
+\backslash
+,5$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[2
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[4
+\backslash
+right]$ & 
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[2
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[3
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[1
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[3
+\backslash
+right]$ &
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+left[4
+\backslash
+right]$
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center} 
+\end_layout
+
 \end_inset
 
- we see that an entry in the 
-\begin_inset Formula $r$
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+Another proof of 
+\begin_inset Formula $\varphi$
 \end_inset
 
--th column is relatively prime to 
-\begin_inset Formula $m$
+ is multiplicative
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus we have the following pairs of residue classes modulo 3 and 5:
+\begin_inset Formula 
+\[
+\left(\left[1\right]_{3},\left[1\right]_{5}\right),\left(\left[1\right]_{3},\left[2\right]_{5}\right),\left(\left[1\right]_{3},\left[3\right]_{5}\right),\left(\left[1\right]_{3},\left[4\right]_{5}\right)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\left(\left[2\right]_{3},\left[1\right]_{5}\right),\left(\left[2\right]_{3},\left[2\right]_{5}\right),\left(\left[2\right]_{3},\left[3\right]_{5}\right),\left(\left[2\right]_{3},\left[4\right]_{5}\right).
+\]
+
+\end_inset
+
+In particular, there are 
+\begin_inset Formula $\varphi\left(5\right)=4$
+\end_inset
+
+ pairs with 
+\begin_inset Formula $a\equiv1\left(\mod\,3\right)$
+\end_inset
+
+ and 4 pairs with 
+\begin_inset Formula $a\equiv2\left(\mod\,3\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Alt.
+ proof of Theorem
+\series default
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-phi-is-Multiplicative"
+
+\end_inset
+
+First observe that 
+\begin_inset Formula $\gcd\left(a,mn\right)=1$
 \end_inset
 
  if and only if 
-\begin_inset Formula $r$
+\begin_inset Formula $\gcd\left(a,m\right)=1$
 \end_inset
 
- is relatively prime to 
-\begin_inset Formula $m$
-\end_inset
-
-, and in this case then all of the entries of the column are relatively
- prime to 
-\begin_inset Formula $m$
+ and 
+\begin_inset Formula $\gcd\left(a,n\right)=1$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+Define the map 
+\begin_inset Formula $\psi$
+\end_inset
+
+ by
+\begin_inset Formula 
+\[
+\psi\,\colon\,\mathbf{U}_{mn}\longrightarrow\mathbf{U}_{m}\times\mathbf{U}_{n},\quad\psi\left(\left[a\right]_{mn}\right)=\left(\left[a\right]_{m},\left[a\right]_{n}\right).
+\]
+
+\end_inset
+
+In view of the statement above 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is well defined.
  
 \end_layout
 
 \begin_layout Standard
-So looking at it this way, there are 
-\begin_inset Formula $\varphi\left(m\right)$
+We verify that 
+\begin_inset Formula $\psi$
 \end_inset
 
- columns with 
-\begin_inset Formula $r$
-\end_inset
-
-'s that are relatively prime to 
-\begin_inset Formula $m$
-\end_inset
-
-, and so we need to show that in each column there are 
-\begin_inset Formula $\varphi\left(n\right)$
-\end_inset
-
- entries relatively prime to 
-\begin_inset Formula $n$
-\end_inset
-
- and then we will be done.
- So let us choose such a column with 
-\begin_inset Formula $\gcd\left(r,m\right)=1$
-\end_inset
-
-.
- The entries of this column are
-\begin_inset Formula 
-\[
-r,m+r,2m+r,\ldots,\left(n-1\right)m+r.
-\]
-
-\end_inset
-
-These are exactly 
-\begin_inset Formula $n$
-\end_inset
-
- in numbers and are distinct modulo 
-\begin_inset Formula $n$
-\end_inset
-
- since
-\begin_inset Formula 
-\[
-\left[km+r\right]_{n}=\left[lm+r\right]_{n},\quad0\le k,l<n
-\]
-
-\end_inset
-
-implies 
-\begin_inset Formula $\left[k\right]_{n}=\left[l\right]_{n}$
-\end_inset
-
-, since 
-\begin_inset Formula $\gcd\left(m,n\right)=1$
-\end_inset
-
-, so 
-\begin_inset Formula $l=k$
-\end_inset
-
- .
- Therefore the number of them that are relatively prime to 
-\begin_inset Formula $n$
-\end_inset
-
- is 
-\begin_inset Formula $\varphi\left(n\right)$
-\end_inset
-
-.
+ is surjective and injective.
 \end_layout
 
 \begin_layout Standard
-So we have divided the numbers that are relatively prime to 
-\begin_inset Formula $mn$
+
+\series bold
+Surjectivity: 
+\series default
+Let 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left(\left[r\right]_{m},\left[s\right]_{n}\right)\in\mathbf{U}_{m}\times\mathbf{U}_{n}$
 \end_inset
 
- into 
-\begin_inset Formula $\varphi\left(m\right)$
+ .
+ Since 
+\begin_inset Formula $\gcd\left(m,n\right)=1$
 \end_inset
 
- columns where in each column there are 
-\begin_inset Formula $\varphi\left(n\right)$
+, there exist 
+\begin_inset Formula $x,y\in\mathbf{Z}$
 \end_inset
 
- such numbers.
- Thus the total amount of such numbers is 
-\begin_inset Formula $\varphi\left(m\right)\varphi\left(n\right)$
+ such that 
+\begin_inset Formula $mx+ny=1$
 \end_inset
 
 .
+ Now put 
+\begin_inset Formula $a=smx+rny$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[a\right]_{m} & = & \left[rny\right]_{m}=\left[r-rmx\right]_{m}=\left[r\right]_{m}\\
+\left[a\right]_{n} & = & \left[smx\right]_{n}=\left[s-sny\right]_{n}=\left[s\right]_{n}.
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\left[r\right]_{m}\in\mathbf{U}_{m},\ \gcd\left(r,m\right)=1$
+\end_inset
+
+ so 
+\begin_inset Formula $\gcd\left(a,m\right)=1$
+\end_inset
+
+.
+ Similarly 
+\begin_inset Formula $\gcd\left(a,n\right)=1$
+\end_inset
+
+ so 
+\begin_inset Formula $\left[a\right]_{mn}\in\mathbf{U}_{mn}$
+\end_inset
+
+.
+ Now it is clear that 
+\begin_inset Formula $\psi\left(\left[a\right]_{mn}\right)=\left(\left[r\right]_{m},\left[s\right]_{n}\right)$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Injectivity:
+\series default
+ Assume 
+\begin_inset Formula $\psi\left(\left[a\right]_{mn}\right)=\psi\left(\left[b\right]_{mn}\right)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\left[a\right]_{m}=\left[b\right]_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[a\right]_{n}=\left[b\right]_{n}$
+\end_inset
+
+ so 
+\begin_inset Formula $m\mid b-a$
+\end_inset
+
+ and 
+\begin_inset Formula $n\mid b-a$
+\end_inset
+
+ and since 
+\begin_inset Formula $\gcd\left(m,n\right)=1$
+\end_inset
+
+, it follows that 
+\begin_inset Formula $mn\mid b-a$
+\end_inset
+
+.
+ This implies 
+\begin_inset Formula $\left[a\right]_{mn}=\left[b\right]_{mn}$
+\end_inset
+
+ and proves the injectivity of 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Theorem
@@ -5114,6 +6570,115 @@ List the positive integers less than
  
 \end_layout
 
+\begin_layout Proof
+
+\series bold
+Alt.
+ proof
+\series default
+ Any positive integer 
+\begin_inset Formula $n$
+\end_inset
+
+ less than 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+ can be written in base 
+\begin_inset Formula $p$
+\end_inset
+
+ as
+\begin_inset Formula 
+\[
+n=a_{0}+a_{1}p+a_{2}p^{2}+\cdots+a_{\alpha-1}p^{\alpha-1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a_{i}\in\left\{ 0,1,2,\ldots,p-1\right\} $
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $n$
+\end_inset
+
+ is not relatively prime to 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+ iff 
+\begin_inset Formula $p\mid n$
+\end_inset
+
+ iff 
+\begin_inset Formula $a_{0}=0$
+\end_inset
+
+.
+ Thus if we want 
+\begin_inset Formula $n$
+\end_inset
+
+ to be relatively prime to 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+ we have 
+\begin_inset Formula $p-1$
+\end_inset
+
+ choices for 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $p$
+\end_inset
+
+ choices for each of the other 
+\begin_inset Formula $\alpha−1$
+\end_inset
+
+ coefficients, hence 
+\begin_inset Formula $\varphi\left(p^{\alpha}\right)=\left(p-1\right)p^{\alpha-1}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ If we write 
+\begin_inset Formula $\varphi\left(p^{\alpha}\right)=\left(1-1/p\right)p^{\alpha}$
+\end_inset
+
+then we can interpret this probabilistically: The proportion of positive
+ integers less than or equal to 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+ which are not coprime to 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+ is 
+\begin_inset Formula $1/p$
+\end_inset
+
+ so the proportion which are coprime is 
+\begin_inset Formula $\left(1-1/p\right)p^{\alpha}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Theorem
 Let 
 \begin_inset Formula $n\ge2$
@@ -5144,6 +6709,20 @@ n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdot\cdot\cdot p_{m}^{\alpha_{m}}.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ We can interpret this using ``independence'' and probability where the
+ events being divisible by 
+\begin_inset Formula $p_{r}$
+\end_inset
+
+ are considered independent.
 \end_layout
 
 \begin_layout Proof
@@ -5744,6 +7323,219 @@ Since
 
  is odd we are done.
  
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Alt.
+ proof.
+
+\series default
+ Note that 
+\begin_inset Formula $\gcd\left(k,n\right)=\gcd\left(n-k,n\right)$
+\end_inset
+
+ so the integers in the range 
+\begin_inset Formula $1\le k\le n$
+\end_inset
+
+ which are relatively prime to 
+\begin_inset Formula $n$
+\end_inset
+
+ pair up 
+\begin_inset Formula $\left\{ k,n-k\right\} $
+\end_inset
+
+ so 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+ is even.
+ Note that 
+\begin_inset Formula $k\neq n-k$
+\end_inset
+
+ since 
+\begin_inset Formula $\gcd\left(k,n\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $n\ge1$
+\end_inset
+
+ be an integer, then
+\begin_inset Formula 
+\[
+n=\sum_{d\mid n}\varphi\left(d\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Write the fractions
+\begin_inset Formula 
+\[
+\frac{1}{n},\frac{2}{n},\frac{3}{n},\ldots,\frac{n}{n}
+\]
+
+\end_inset
+
+in their simplest form.
+ If 
+\begin_inset Formula $d\mid n$
+\end_inset
+
+ then so does 
+\begin_inset Formula $n/d$
+\end_inset
+
+.
+ So if we consider all fractions 
+\begin_inset Formula $k/n$
+\end_inset
+
+ where 
+\begin_inset Formula $\gcd\left(k,n\right)=n/d$
+\end_inset
+
+ then these fractions will simplify to 
+\begin_inset Formula $b/d$
+\end_inset
+
+ where 
+\begin_inset Formula $\gcd\left(b,d\right)=1$
+\end_inset
+
+ and 
+\begin_inset Formula $1\le b\le d$
+\end_inset
+
+.
+ Their number is precisely 
+\begin_inset Formula $\varphi\left(d\right)$
+\end_inset
+
+ and the result follows.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ A more formal proof is as follows: Define an equivalence relation on the
+ set
+\begin_inset Formula 
+\[
+S=\left\{ 1,2,3,\ldots,n\right\} 
+\]
+
+\end_inset
+
+by 
+\begin_inset Formula $j\sim k$
+\end_inset
+
+ iff 
+\begin_inset Formula $\gcd\left(j,n\right)=\gcd\left(k,n\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+That this is an equivalence relation should be clear.
+ The equivalence classes are of the form
+\begin_inset Formula 
+\[
+\widehat{m}=\{0<m'\leqslant n\,\colon\,\gcd(m',n)=d\}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $d\mid n$
+\end_inset
+
+.
+ Now, what is the size of this class? It contains all positive elements
+ 
+\begin_inset Formula $m′\le n$
+\end_inset
+
+ such that 
+\begin_inset Formula $\gcd(m′,n)=d$
+\end_inset
+
+, or what is the same, all positive elements 
+\begin_inset Formula 
+\[
+\frac{m'}{d}\leqslant\frac{n}{d}
+\]
+
+\end_inset
+
+such that
+\begin_inset Formula 
+\[
+\gcd\left(\frac{m'}{d},\frac{n}{d}\right)=1.
+\]
+
+\end_inset
+
+This amounts to 
+\begin_inset Formula $\varphi\left(\dfrac{n}{d}\right)$
+\end_inset
+
+ elements.
+ But there is one class for each positive divisor of 
+\begin_inset Formula $n$
+\end_inset
+
+, thus we have paititioned our set 
+\begin_inset Formula $S$
+\end_inset
+
+ giving
+\begin_inset Formula 
+\[
+\left|S\right|=n=\sum_{d\mid n}\varphi\left(\dfrac{n}{d}\right)
+\]
+
+\end_inset
+
+But as 
+\begin_inset Formula $d$
+\end_inset
+
+ runs through all divisors of 
+\begin_inset Formula $n$
+\end_inset
+
+, so does 
+\begin_inset Formula $\dfrac{n}{d}$
+\end_inset
+
+, so that
+\begin_inset Formula 
+\[
+n=\sum_{d\mid n}\varphi(d).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
