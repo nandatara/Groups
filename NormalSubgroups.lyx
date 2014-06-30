@@ -42,11 +42,11 @@ eprint=false,
 \options openany
 \use_default_options true
 \begin_modules
-eqs-within-sections
 theorems-ams-bytype
 theorems-ams-extended-bytype
 enumitem
 theorems-chap-bytype
+eqs-within-sections
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -1073,7 +1073,11 @@ Soln.
 \end_layout
 
 \begin_layout Chapter
-Examples of Groups
+Congruence in 
+\begin_inset Formula $\mathbf{Z}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1100,7 +1104,7 @@ modular arithmetic
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "Proposition-congruence"
+name "Proposition-congruence-equiv-conditions"
 
 \end_inset
 
@@ -1242,7 +1246,7 @@ We will say that two integers
  if any one of the equivalent statements in Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Proposition-congruence"
+reference "Proposition-congruence-equiv-conditions"
 
 \end_inset
 
@@ -1298,7 +1302,7 @@ Suppose
 By Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Proposition-congruence"
+reference "Proposition-congruence-equiv-conditions"
 
 \end_inset
 
@@ -1438,7 +1442,7 @@ congruence class
 By Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Proposition-congruence"
+reference "Proposition-congruence-equiv-conditions"
 
 \end_inset
 
@@ -2408,10 +2412,7 @@ mod
 \end_layout
 
 \begin_layout Example
-\begin_inset Formula $\left[0\right],\left[1\right],\left[2\right],\ldots,\left[n-1\right]$
-\end_inset
-
- is a complete residue system mod 
+An example of a complete residue system mod 
 \begin_inset Formula $n$
 \end_inset
 
@@ -2419,7 +2420,15 @@ mod
 \begin_inset Formula $n$
 \end_inset
 
-.
+ is the set
+\begin_inset Formula 
+\[
+\left[0\right]_{n},\left[a\right]_{n},\left[2a\right]_{n},\ldots,\left[\left(n-1\right)a\right]_{n}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -4316,6 +4325,83 @@ Let
  are all distinct.
 \end_layout
 
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-order-of--product-in-U_n"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\left[a\right]_{n},\left[b\right]_{n}\in\mathbf{U}_{n}$
+\end_inset
+
+ and let 
+\begin_inset Formula $k=o\left(\left[a\right]_{n}\right),\, l=o\left(\left[b\right]_{n}\right)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $o\left(\left[a\right]_{n}\left[b\right]_{n}\right)=\left[k,l\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $m=o\left(\left[a\right]_{n}\left[b\right]_{n}\right)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $k\mid\left[k,l\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $l\mid\left[k,l\right]$
+\end_inset
+
+ it follows
+\begin_inset Formula 
+\[
+\left(\left[a\right]_{n}\left[b\right]_{n}\right)^{\left[k,l\right]}=\left[1\right]_{n}
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $m\mid\left[k,l\right]$
+\end_inset
+
+.
+ If now we write
+\begin_inset Formula 
+\[
+\left[k,l\right]=qm+r,\ 0\le r<m
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $\left(\left[a\right]_{n}\left[b\right]_{n}\right)^{r}=\left[1\right]_{n}$
+\end_inset
+
+ and this implies 
+\begin_inset Formula $r=0$
+\end_inset
+
+ so 
+\begin_inset Formula $\left[k,l\right]\mid m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Primitive Roots
+\end_layout
+
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
@@ -4355,6 +4441,14 @@ if
 .
 \end_layout
 
+\begin_layout Definition
+Primitive roots are generators of 
+\begin_inset Formula $\mathbf{U}_{n}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
@@ -4371,7 +4465,11 @@ Let
 \begin_inset Formula $\left[a\right]_{n}$
 \end_inset
 
- is a primitive root of unity if and only if
+ is a primitive root of unity mod 
+\begin_inset Formula $n$
+\end_inset
+
+ if and only if
 \begin_inset Formula 
 \[
 \mathbf{U}_{n}=\left\{ \left[a\right]_{n},\left[a\right]_{n}^{2},\ldots,\left[a\right]_{n}^{\varphi\left(n\right)}\right\} .
@@ -4426,7 +4524,7 @@ If
 \begin_inset Formula $\left|A\right|=\varphi\left(n\right)$
 \end_inset
 
-then the only element which is 
+ then the only element which is 
 \begin_inset Formula $\left[1\right]_{n}$
 \end_inset
 
@@ -4439,6 +4537,384 @@ then the only element which is
 \end_inset
 
  is primitive.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ The content of Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-Generators-of-U_n"
+
+\end_inset
+
+ is that if 
+\begin_inset Formula $\left[a\right]_{n}$
+\end_inset
+
+ is any primitive root of unity mod 
+\begin_inset Formula $n$
+\end_inset
+
+ then every element of the group 
+\begin_inset Formula $\mathbf{U}_{n}$
+\end_inset
+
+ is a unique power 
+\begin_inset Formula $\left[a\right]_{n}^{k}$
+\end_inset
+
+ where 
+\begin_inset Formula $1\le k\le\varphi\left(n\right)$
+\end_inset
+
+.
+ In the language of groups 
+\begin_inset Formula $\mathbf{U}_{n}$
+\end_inset
+
+ is cyclic.
+ Thus primitive roots exist if and only if 
+\begin_inset Formula $\mathbf{U}_{n}$
+\end_inset
+
+ is cyclic.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-order-of-[a^k]_n"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\left[a\right]_{n}$
+\end_inset
+
+ a primitive root of unity
+\emph on
+ 
+\emph default
+mod
+\emph on
+ 
+\begin_inset Formula $n$
+\end_inset
+
+.
+
+\emph default
+ Then
+\begin_inset Formula 
+\[
+o\left(\left[a^{m}\right]_{n}\right)=\frac{\varphi\left(n\right)}{\gcd\left(m,\varphi\left(n\right)\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $k=o\left(\left[a^{m}\right]_{n}\right)$
+\end_inset
+
+ and suppose 
+\begin_inset Formula $\gcd\left(m,\varphi\left(n\right)\right)=d$
+\end_inset
+
+.
+ Write
+\begin_inset Formula 
+\[
+\varphi\left(n\right)=pd\quad\textrm{and }\quad m=qd,\quad\gcd\left(p,q\right)=1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We wish to prove that 
+\begin_inset Formula $k=p$
+\end_inset
+
+.
+ This will imply 
+\begin_inset Formula 
+\[
+\varphi\left(n\right)=pd=kd=o\left(\left[a^{m}\right]_{n}\right)\gcd\left(m,n\right).
+\]
+
+\end_inset
+
+ This we do by showing that 
+\begin_inset Formula $k\mid p$
+\end_inset
+
+ and 
+\begin_inset Formula $p\mid k.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+First, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\left[a^{m}\right]_{n}\right)^{p} & = & \left[a\right]_{n}^{qdp}\\
+ & = & \left(\left[a\right]_{n}^{\varphi\left(n\right)}\right)^{q}\\
+ & = & \left[1\right]_{n}
+\end{eqnarray*}
+
+\end_inset
+
+so 
+\begin_inset Formula $k\mid p.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Second 
+\begin_inset Formula 
+\[
+\left[1\right]_{n}=\left(\left[a^{m}\right]_{n}\right)^{k}=\left[a\right]_{n}^{mk}
+\]
+
+\end_inset
+
+ implies 
+\begin_inset Formula $\varphi\left(n\right)\mid mk.$
+\end_inset
+
+ Now write 
+\begin_inset Formula $mk=u\varphi\left(n\right).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Substituting 
+\begin_inset Formula 
+\[
+m=qd,\qquad\varphi\left(n\right)=pd,
+\]
+
+\end_inset
+
+ we obtain 
+\begin_inset Formula $qdk=upd$
+\end_inset
+
+ or 
+\begin_inset Formula $qk=up.$
+\end_inset
+
+ Since 
+\begin_inset Formula $\left(p,q\right)=1$
+\end_inset
+
+ we conclude that 
+\begin_inset Formula $p\mid k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+How do we guess this result?
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $o\left(\left[a^{m}\right]_{n}\right)=k$
+\end_inset
+
+ so that 
+\begin_inset Formula $\left(\left[a^{m}\right]_{n}\right)^{k}=\left[1\right]_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ is the smallest such positive integer.
+ We know 
+\begin_inset Formula $\varphi\left(n\right)\mid mk$
+\end_inset
+
+ because 
+\begin_inset Formula $\left[a\right]_{n}$
+\end_inset
+
+ is a primitive root of unity
+\emph on
+ 
+\emph default
+mod
+\emph on
+ 
+\begin_inset Formula $n$
+\end_inset
+
+
+\emph default
+, hence has order 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $mk=\varphi\left(n\right)t$
+\end_inset
+
+ and 
+\begin_inset Formula $t=mk/\varphi\left(n\right)$
+\end_inset
+
+.
+ We want the smallest 
+\begin_inset Formula $k$
+\end_inset
+
+ for which 
+\begin_inset Formula $t$
+\end_inset
+
+ is an integer.
+ Simplify the fraction 
+\begin_inset Formula $m/\varphi\left(n\right)$
+\end_inset
+
+ by cancelling the gcd.
+ More formally write
+\begin_inset Formula 
+\[
+t=k\cdot\left(\frac{{\displaystyle \frac{m}{\gcd\left(m,\varphi\left(n\right)\right)}}}{{\displaystyle \frac{\varphi\left(n\right)}{\gcd\left(m,\varphi\left(n\right)\right)}}}\right).
+\]
+
+\end_inset
+
+Now the numerator and denominator have no common factor so 
+\begin_inset Formula $k$
+\end_inset
+
+ must be a multiple of 
+\begin_inset Formula ${\displaystyle {\displaystyle \frac{\varphi\left(n\right)}{\gcd\left(m,\varphi\left(n\right)\right)}}}$
+\end_inset
+
+.
+ The smallest such 
+\begin_inset Formula $k$
+\end_inset
+
+ is obviously 
+\begin_inset Formula ${\displaystyle {\displaystyle \frac{\varphi\left(n\right)}{\gcd\left(m,\varphi\left(n\right)\right)}}}$
+\end_inset
+
+ so order of 
+\begin_inset Formula $\left[a^{m}\right]_{n}$
+\end_inset
+
+ is 
+\begin_inset Formula ${\displaystyle {\displaystyle \frac{\varphi\left(n\right)}{\gcd\left(m,\varphi\left(n\right)\right)}}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Corollary below shows that there exist elements whose order is 
+\begin_inset Formula $d$
+\end_inset
+
+ for every divisor 
+\begin_inset Formula $d$
+\end_inset
+
+ of 
+\begin_inset Formula $\varphi\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+Let 
+\begin_inset Formula $n$
+\end_inset
+
+ be a positive integer and suppose that 
+\begin_inset Formula $\mathbf{U}_{n}$
+\end_inset
+
+ is cyclic and 
+\begin_inset Formula $d\mid\varphi\left(n\right)$
+\end_inset
+
+.
+ Then there is an element in 
+\begin_inset Formula $\mathbf{U}_{n}$
+\end_inset
+
+ whose order is 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\varphi\left(n\right)=md$
+\end_inset
+
+ and let 
+\begin_inset Formula $\left[a\right]_{n}$
+\end_inset
+
+ be any primitive root of unity mod 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{eqnarray*}
+o\left(\left[a^{m}\right]_{n}\right) & = & \frac{\varphi\left(n\right)}{\gcd\left(m,\varphi\left(n\right)\right)}\\
+ & = & \frac{\varphi\left(n\right)}{m}\\
+ & = & d.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The next result follows immediately from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-order-of-[a^k]_n"
+
+\end_inset
+
+ but we record it separately.
 \end_layout
 
 \begin_layout Theorem
@@ -4462,12 +4938,12 @@ Let
 \end_inset
 
 , and let 
-\begin_inset Formula $k$
+\begin_inset Formula $m$
 \end_inset
 
  be an integer.
  Then 
-\begin_inset Formula $\left[a\right]_{n}^{k}$
+\begin_inset Formula $\left[a^{m}\right]_{n}$
 \end_inset
 
  is a primitive root of unity mod 
@@ -4475,7 +4951,7 @@ Let
 \end_inset
 
  if and only if 
-\begin_inset Formula $k$
+\begin_inset Formula $m$
 \end_inset
 
  is relatively prime to 
@@ -4495,168 +4971,38 @@ Let
 \end_layout
 
 \begin_layout Proof
+From Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-order-of-[a^k]_n"
 
-\series bold
-step 1.
-
-\series default
- If 
-\begin_inset Formula $\varphi\left(n\right)$
 \end_inset
 
- and 
-\begin_inset Formula $k$
-\end_inset
 
- are not relatively prime then 
-\begin_inset Formula $\left[a\right]_{n}^{k}$
-\end_inset
-
- is not primitive.
-\end_layout
-
-\begin_layout Proof
-Assume that 
-\begin_inset Formula $k$
-\end_inset
-
- and 
-\begin_inset Formula $\varphi\left(n\right)$
-\end_inset
-
- have a common factor 
-\begin_inset Formula $d\neq1$
-\end_inset
-
-.
- Then
 \begin_inset Formula 
 \[
-\left(\left[a\right]_{n}^{k}\right)^{\varphi\left(n\right)/d}=\left(\left[a\right]_{n}^{\varphi\left(n\right)}\right)^{k/d}=1.
+o\left(\left[a^{m}\right]_{n}\right)=\frac{\varphi\left(n\right)}{\gcd\left(m,\varphi\left(n\right)\right)}.
 \]
 
 \end_inset
 
-Therefore, the order of 
-\begin_inset Formula $\left[a\right]_{n}^{k}$
+
+\begin_inset Formula $\left[a^{m}\right]_{n}$
 \end_inset
 
- divides 
-\begin_inset Formula $\varphi\left(n\right)/d$
-\end_inset
-
-, hence 
-\begin_inset Formula $\left[a\right]_{n}^{k}$
-\end_inset
-
- is not a primitive root of unity mod 
+ will a primitive root of unity mod 
 \begin_inset Formula $n$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Proof
-
-\series bold
-step 2.
-
-\series default
- If 
-\begin_inset Formula $\left[a\right]_{n}^{k}$
+ if and only if 
+\begin_inset Formula $o\left(\left[a^{m}\right]_{n}\right)=1$
 \end_inset
 
- is not a primitive root of unity mod 
-\begin_inset Formula $n$
-\end_inset
-
- then 
-\begin_inset Formula $\varphi\left(n\right)$
-\end_inset
-
- and 
-\begin_inset Formula $k$
-\end_inset
-
- cannot be relatively prime.
-\end_layout
-
-\begin_layout Proof
-Assume 
-\begin_inset Formula $\left[a\right]_{n}^{k}$
-\end_inset
-
- is not a primitive root of unity mod 
-\begin_inset Formula $n$
-\end_inset
-
-; then there is a positive integer 
-\begin_inset Formula $m<\varphi\left(n\right)$
-\end_inset
-
- such that 
-\begin_inset Formula $\left(\left[a\right]_{n}^{k}\right)^{m}=1$
+ and this will happen if and only if 
+\begin_inset Formula $\gcd\left(m,\varphi\left(n\right)\right)=1$
 \end_inset
 
 .
- Since the order of 
-\begin_inset Formula $\left[a\right]_{n}$
-\end_inset
-
- is 
-\begin_inset Formula $\varphi\left(n\right)$
-\end_inset
-
-, it follows from Theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Theorem-order-of-a-unit-divides-phi_n"
-
-\end_inset
-
- that 
-\begin_inset Formula $\varphi\left(n\right)$
-\end_inset
-
- divides 
-\begin_inset Formula $km$
-\end_inset
-
-.
- If 
-\begin_inset Formula $\varphi\left(n\right)$
-\end_inset
-
- is relatively prime to 
-\begin_inset Formula $k$
-\end_inset
-
-, then 
-\begin_inset Formula $\varphi\left(n\right)$
-\end_inset
-
- must divide 
-\begin_inset Formula $m$
-\end_inset
-
-; but this is impossible since 
-\begin_inset Formula $m<\varphi\left(n\right)$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Proof
-Therefore, 
-\begin_inset Formula $\varphi\left(n\right)$
-\end_inset
-
- and 
-\begin_inset Formula $k$
-\end_inset
-
- are not relatively prime.
 \end_layout
 
 \begin_layout Standard
@@ -4753,7 +5099,30 @@ Therefore, every unit in
 \end_layout
 
 \begin_layout Theorem
-gggg
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Cyclicity-of-U_p^n"
+
+\end_inset
+
+Let 
+\begin_inset Formula $p$
+\end_inset
+
+ be an odd prime.
+ Then for all 
+\begin_inset Formula $n>0$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{U}_{p^{n}}$
+\end_inset
+
+, the group of units in 
+\begin_inset Formula $\mathbf{Z}_{p^{n}}$
+\end_inset
+
+, is cyclic.
 \end_layout
 
 \begin_layout Section
@@ -5161,7 +5530,7 @@ The Euler
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "eulerphifunction"
+name "Definition-Euler-phi-function"
 
 \end_inset
 
@@ -5262,6 +5631,10 @@ Remark.
  will be quite useful.
  The following theorem, which might be quite surprising, facilitates this
  goal.
+\end_layout
+
+\begin_layout Section
+Multiplicative Property of phi
 \end_layout
 
 \begin_layout Theorem
@@ -6481,6 +6854,10 @@ Injectivity:
  
 \end_layout
 
+\begin_layout Section
+Computation of phi
+\end_layout
+
 \begin_layout Theorem
 If 
 \begin_inset Formula $p$
@@ -6680,6 +7057,12 @@ then we can interpret this probabilistically: The proportion of positive
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Explicit-formula-for-phi_n"
+
+\end_inset
+
 Let 
 \begin_inset Formula $n\ge2$
 \end_inset
@@ -6702,9 +7085,9 @@ n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdot\cdot\cdot p_{m}^{\alpha_{m}}.
 
  Then
 \begin_inset Formula 
-\[
-\varphi\left(n\right)=n\prod_{r=1}^{m}\left(1-\frac{1}{p_{r}}\right).
-\]
+\begin{equation}
+\varphi\left(n\right)=n\prod_{r=1}^{m}\left(1-\frac{1}{p_{r}}\right).\label{eq:phi_n}
+\end{equation}
 
 \end_inset
 
@@ -7215,6 +7598,13 @@ end{tabular}
 
 
 \backslash
+arrayrulecolor{black}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 end{center} 
 \end_layout
 
@@ -7249,7 +7639,7 @@ The Group U
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "eulerphiiseven"
+name "Proposition-Euler-phi-is-even"
 
 \end_inset
 
@@ -7364,7 +7754,227 @@ Alt.
 .
 \end_layout
 
+\begin_layout Example
+Solve the equation 
+\begin_inset Formula $\varphi\left(n\right)=12$
+\end_inset
+
+ for 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+
+\series bold
+Soln.
+
+\series default
+ From Eqn.
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:phi_n"
+
+\end_inset
+
+ we observe that if 
+\begin_inset Formula $p\mid n$
+\end_inset
+
+ then 
+\begin_inset Formula $p-1\mid12$
+\end_inset
+
+.
+ This restricts the primes which divide 
+\begin_inset Formula $12$
+\end_inset
+
+ to the list 
+\begin_inset Formula $\left\{ 2,3,5,7,13\right\} $
+\end_inset
+
+.
+ The same equation shows that if 
+\begin_inset Formula $p^{2}\mid12$
+\end_inset
+
+ then 
+\begin_inset Formula $p$
+\end_inset
+
+ must divide 12.
+ This restricts the power of 5,7,13 to atmost 1.
+ Similarly the power of 2 can be atmost 3 and that of 3 can be atmost 2.
+\end_layout
+
+\begin_layout Example
+Next observe that 8 or 5 cannot occur in the factorization of 
+\begin_inset Formula $n$
+\end_inset
+
+ because 
+\begin_inset Formula $\varphi\left(5\right)=\varphi\left(8\right)=4$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ canot take the odd value 3.
+ Thus 
+\begin_inset Formula $n=2^{a}3^{b}7^{c}13^{d}$
+\end_inset
+
+ where 
+\begin_inset Formula $a=0,1,2$
+\end_inset
+
+ 
+\begin_inset Formula $b=0,1$
+\end_inset
+
+ and 
+\begin_inset Formula $b=0,c=0,d=1$
+\end_inset
+
+ or 
+\begin_inset Formula $c=1,d=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+
+\series bold
+case 1:
+\series default
+ 
+\begin_inset Formula $b=0,c=0,d=1$
+\end_inset
+
+ so 
+\begin_inset Formula $n=2^{a}\cdot13$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\varphi\left(2^{a}\right)=1$
+\end_inset
+
+ so 
+\begin_inset Formula $a=0$
+\end_inset
+
+ or 1 and this corresponds to 
+\begin_inset Formula $n=13,26$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+
+\series bold
+case 2:
+\series default
+ 
+\begin_inset Formula $c=1,d=0$
+\end_inset
+
+ so 
+\begin_inset Formula $n=2^{a}\cdot3^{b}\cdot7.$
+\end_inset
+
+ Then 
+\begin_inset Formula $\varphi\left(2^{a}\right)\varphi\left(3^{b}\right)=2$
+\end_inset
+
+ .
+ This has solutions 
+\begin_inset Formula $a=0,b=1$
+\end_inset
+
+, 
+\begin_inset Formula $a=1,b=1$
+\end_inset
+
+ and 
+\begin_inset Formula $a=2,b=0$
+\end_inset
+
+.
+ The corresponding values of 
+\begin_inset Formula $n$
+\end_inset
+
+ are 
+\begin_inset Formula $21,28,42$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Example
+
+\series bold
+case 2:
+\series default
+ 
+\begin_inset Formula $c=0,d=0$
+\end_inset
+
+ so 
+\begin_inset Formula $n=2^{a}3^{b}$
+\end_inset
+
+.
+ Now we must solve
+\begin_inset Formula 
+\[
+\varphi\left(2^{a}\right)\varphi\left(3^{b}\right)=2^{a-1}\cdot3^{b-1}\left(3-1\right)=2^{2}\cdot3
+\]
+
+\end_inset
+
+which has solution 
+\begin_inset Formula $a=2,b=2$
+\end_inset
+
+ and 
+\begin_inset Formula $n=36$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+So the solution set for 
+\begin_inset Formula $n$
+\end_inset
+
+ is 
+\begin_inset Formula $\left\{ 13,21,26,28,36,42\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Euler's Equation
+\end_layout
+
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-Proof-of-Euler-Totient-Basic"
+
+\end_inset
+
 Let 
 \begin_inset Formula $n\ge1$
 \end_inset
@@ -7545,7 +8155,7 @@ Complex Roots of Unity
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "rootsofunitycyclicgroup"
+name "Theorem-roots-of-unity-cyclic-group"
 
 \end_inset
 
@@ -7695,6 +8305,12 @@ Primitive roots
 \end_layout
 
 \begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Definition-Primitive-root-of-unity"
+
+\end_inset
+
 The 
 \emph on
 exponent
@@ -7712,7 +8328,7 @@ exponent
 \end_inset
 
 .
- For instance, thc cxponent of 1 is 1 and the exponent of 
+ For instance, thc exponent of 1 is 1 and the exponent of 
 \begin_inset Formula $-1$
 \end_inset
 
@@ -7777,7 +8393,7 @@ We aim to give a complete description of the primitive
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "rootofunityexponent"
+name "Lemma-exponent-of-root-of-unit-divides-k"
 
 \end_inset
 
@@ -7907,10 +8523,39 @@ Therefore
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ See Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Theorem-order-of-a-unit-divides-phi_n"
+
+\end_inset
+
+.
+ We can simplify this proof a bit by writing
+\begin_inset Formula 
+\[
+k=qm+r
+\]
+
+\end_inset
+
+and showing that 
+\begin_inset Formula $r=0$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "rootsofunityexpofprod"
+name "Proposition-roots-of-unity-exp-of-prod"
 
 \end_inset
 
@@ -7939,7 +8584,7 @@ Let
 \begin_inset Formula $m$
 \end_inset
 
- are relutively prime , then 
+ are relatively prime , then 
 \begin_inset Formula $\zeta\eta$
 \end_inset
 
@@ -7990,12 +8635,36 @@ On the other hand, from
 , it follows that
 \begin_inset Formula 
 \[
-\zeta^{k}=\eta^{-k},and
+\zeta^{k}=\eta^{-k},
 \]
 
 \end_inset
 
-raising each side to the power 
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+and
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ raising each side to the power 
 \begin_inset Formula $m$
 \end_inset
 
@@ -8007,7 +8676,14 @@ raising each side to the power
 
 \end_inset
 
-The preceding lemma then shows that 
+The preceding Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lemma-exponent-of-root-of-unit-divides-k"
+
+\end_inset
+
+ then shows that 
 \begin_inset Formula $l$
 \end_inset
 
@@ -8078,6 +8754,22 @@ Since
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ See Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Proposition-roots-of-unity-exp-of-prod"
+
+\end_inset
+
+ for a shorter proof and more general result.
+\end_layout
+
+\begin_layout Standard
 We now show that the primitive 
 \begin_inset Formula $n$
 \end_inset
@@ -8092,7 +8784,7 @@ We now show that the primitive
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "rootsofunitygenerators"
+name "Proposition-roots-of-unity-generators"
 
 \end_inset
 
@@ -8234,7 +8926,7 @@ Assume on the contrary
 , so, by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "rootofunityexponent"
+reference "Lemma-exponent-of-root-of-unit-divides-k"
 
 \end_inset
 
@@ -8323,7 +9015,7 @@ Conversefy, assume that every
 Remark.
 
 \series default
- The propositionm above shows that the group 
+ The proposition above shows that the group 
 \begin_inset Formula $U_{n}$
 \end_inset
 
@@ -8345,7 +9037,7 @@ A complete description of the primitive
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "primitiverootsofunity"
+name "Proposition-Condition-for-primitive-roots-of-unity"
 
 \end_inset
 
@@ -8497,7 +9189,7 @@ Assume
 , it follows from Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "rootofunityexponent"
+reference "Lemma-exponent-of-root-of-unit-divides-k"
 
 \end_inset
 
@@ -8568,7 +9260,7 @@ Remark.
  Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "primitiverootsofunity"
+reference "Proposition-Condition-for-primitive-roots-of-unity"
 
 \end_inset
 
@@ -8583,7 +9275,7 @@ reference "primitiverootsofunity"
 -th root of unity, hence by Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "rootsofunitygenerators"
+reference "Proposition-roots-of-unity-generators"
 
 \end_inset
 
@@ -8607,7 +9299,11 @@ Therefore, every
 \begin_inset Formula $\eta^{ri}$
 \end_inset
 
-for some (unique) integer between 0 and 
+for some (unique) integer 
+\begin_inset Formula $i$
+\end_inset
+
+ between 0 and 
 \begin_inset Formula $s-1$
 \end_inset
 
@@ -8711,7 +9407,7 @@ U_{n}=\left\{ \zeta^{0},\zeta^{1},\zeta^{2},\ldots,\zeta^{n-1}\right\}
 Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "rootsofunitygenerators"
+reference "Proposition-roots-of-unity-generators"
 
 \end_inset
 
@@ -8726,7 +9422,7 @@ reference "rootsofunitygenerators"
 -th root of unity and it follows from Proposition 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "primitiverootsofunity"
+reference "Proposition-Condition-for-primitive-roots-of-unity"
 
 \end_inset
 
@@ -8774,7 +9470,7 @@ cyclotomic polynomials
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "cyclotomicpolynomial"
+name "Definition-Cyclotomic-Polynomial"
 
 \end_inset
 
@@ -8858,7 +9554,7 @@ a priori
 \begin_layout Proposition
 \begin_inset CommandInset label
 LatexCommand label
-name "cyclotomicform"
+name "Proposition-Cyclotomic-Polynomial"
 
 \end_inset
 
@@ -8907,7 +9603,15 @@ Let
 \end_inset
 
 .
- If 
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Case 1: 
+\series default
+If 
 \begin_inset Formula $G$
 \end_inset
 
@@ -8916,102 +9620,2248 @@ Let
 \end_layout
 
 \begin_layout Standard
-Suppose no element has order 4.
- Then since 
-\begin_inset Formula $ab\neq a,\, ab\neq b$
+
+\series bold
+Case 2:
+\series default
+ Suppose no element has order 4.
+ Then every non-identity element has order 2.
+ The skeleton of Cayley table looks like
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
 \end_inset
 
- we must have 
-\begin_inset Formula $ab=e$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and there is only one way to fill up the table.
+ The group is the Klein-4 Group.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+The Klein-4 Group
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark.
+
+\series default
+ We can in this case avoid Lagrange's Theorem and give a direct proof as
+ follows if we do not assume that all non-identity elements have order 2.
+ The skeleton looks like
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ab$
+\end_inset
+
+ can be either 
+\begin_inset Formula $e$
 \end_inset
 
  or 
-\begin_inset Formula $ab=c$
+\begin_inset Formula $c$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+(i) 
+\begin_inset Formula $ab=e$
+\end_inset
+
+ Let us start filling the table
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We notice that 
+\begin_inset Formula $c^{2}=e$
+\end_inset
+
+ and hence 
+\begin_inset Formula $a^{4}=e$
+\end_inset
+
+ and we are in the cyclic case.
+\end_layout
+
+\begin_layout Standard
+(ii) 
+\begin_inset Formula $ab=c$
+\end_inset
+
+ In this case 
+\begin_inset Formula $ba\neq e$
+\end_inset
+
+ so must be equal to 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Now we may assume 
+\begin_inset Formula $ac\neq e$
+\end_inset
+
+ as well as 
+\begin_inset Formula $bc\neq e$
+\end_inset
+
+ because these are similar to case (i) with 
+\begin_inset Formula $b$
+\end_inset
+
+ replaced by 
+\begin_inset Formula $c$
+\end_inset
+
+ or 
+\begin_inset Formula $a$
+\end_inset
+
+ replaced by 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ The table can now be completed.
  
 \end_layout
 
 \begin_layout Standard
-If 
-\begin_inset Formula $ab=e$
+\noindent
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
 \end_inset
 
- then 
-\begin_inset Formula $c=c^{-1}$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
 \end_inset
 
- so 
-\begin_inset Formula $c^{2}=e$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+The Klein-4 Group
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Groups of order 6
+\end_layout
+
+\begin_layout Theorem
+Prove that every non-abelian group of order 6 has a non-normal subgroup
+ of order 2.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a nonabelian group of order 6.
+\end_layout
+
+\begin_layout Proof
+We claim that if 
+\begin_inset Formula $x$
+\end_inset
+
+ is any element of order 2 and y is any element of order 
+\begin_inset Formula $3$
+\end_inset
+
+, then 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ do not commute.
+ Suppose otherwise that 
+\begin_inset Formula $xy=yx$
+\end_inset
+
+.
+ Then 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $|xy|=6$
+\end_inset
+
+, and we have 
+\begin_inset Formula $G=\langle xy\rangle$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $G$
+\end_inset
+
+ is cyclic, hence abelian, a contradiction.
+\end_layout
+
+\begin_layout Proof
+Now by Cauchy’s Theorem, there exist 
+\begin_inset Formula $x,y\in G$
+\end_inset
+
+ such that 
+\begin_inset Formula $|x|=2$
+\end_inset
+
+ and 
+\begin_inset Formula $|y|=3$
+\end_inset
+
+, and 
+\begin_inset Formula $xy\neq yx$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $y\langle x\rangle=\{y,yx\}\neq\{y,xy\}=\langle x\rangle y$
+\end_inset
+
+, so that 
+\begin_inset Formula $\langle x\rangle$
+\end_inset
+
+ is not normal.
+\end_layout
+
+\begin_layout Example
+Use the theorem above to classify nonabelian groups of order 6.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soln.
+
+\series default
+ 
+\begin_inset Formula $G$
+\end_inset
+
+ acts on the left cosets of 
+\begin_inset Formula $\langle x\rangle$
+\end_inset
+
+ by left multiplication.
+ Let 
+\begin_inset Formula $\phi\,\colon\, G\longrightarrow S_{3}$
+\end_inset
+
+ be the permutation representation induced by this action.
+ Certainly 
+\begin_inset Formula $\langle x\rangle=\mathsf{\textrm{stab}}(\langle x\rangle)$
+\end_inset
+
+, so that 
+\begin_inset Formula $\mathsf{\textrm{ker}}\phi\leq\langle x\rangle$
 \end_inset
 
 .
  Now 
-\begin_inset Formula $a^{2}\neq e,a$
+\begin_inset Formula $\langle x\rangle$
 \end_inset
 
- is obvious while 
-\begin_inset Formula $a^{2}=c$
+ is a non-normal subgroup of prime order and 
+\begin_inset Formula $\mathsf{\textrm{ker}}\phi$
 \end_inset
 
- would give 
-\begin_inset Formula $a^{4}=e$
+ is normal, so that 
+\begin_inset Formula $\textrm{ker}\phi=e$
 \end_inset
 
- which is false.
- So 
-\begin_inset Formula $a^{2}=b$
+.
+ Thus 
+\begin_inset Formula $\phi$
 \end_inset
 
- (hence 
-\begin_inset Formula $a^{3}=ab=e$
+ is injective.
+ Because 
+\begin_inset Formula $|G|=|S_{3}|=6$
 \end_inset
 
-).
- Consider 
+, 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is an isomorphism.
+ Thus 
+\begin_inset Formula $G\simeq S_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Groups of order 9
+\end_layout
+
+\begin_layout Theorem
+All groups of order 9 are abelian.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Brute force.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be of group of order 9.
+ If 
+\begin_inset Formula $G$
+\end_inset
+
+ has an element of order 9 it is clearly abelian.
+\end_layout
+
+\begin_layout Proof
+Suppose no element has order 9.
+ Let 
+\begin_inset Formula $a\neq e$
+\end_inset
+
+ be an element of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Then it has order 3 so 
+\begin_inset Formula $e,a,a^{2}$
+\end_inset
+
+ are distinct.
+ Let 
+\begin_inset Formula $b$
+\end_inset
+
+ be another element different from these 3.
+ Then 
+\begin_inset Formula $b$
+\end_inset
+
+ also has order 3.
+ Now 
+\begin_inset Formula $b^{2}\neq a$
+\end_inset
+
+ for otherwise 
+\begin_inset Formula $b^{4}=b=a^{2}.$
+\end_inset
+
+ Likewise 
+\begin_inset Formula $b^{2}\neq a^{2}$
+\end_inset
+
+ because otherwise 
+\begin_inset Formula $b^{4}=b=a^{4}=a$
+\end_inset
+
+.
+ So now we have 5 distinct elements of 
+\begin_inset Formula $G$
+\end_inset
+
+ viz., 
+\begin_inset Formula $e,a,b,a^{2},b^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We show that 
+\begin_inset Formula $ab,ab^{2},ba^{2},a^{2}b^{2}$
+\end_inset
+
+are the other 4 distinct element.
+ 
 \begin_inset Formula 
 \[
-ac\neq e\left(=ab\right),\ ac\neq b\left(=aa\right),\ ac\neq a,\ ac\neq c.
+ab=e\ \implies b=a^{2},\quad ab=a\ \implies b=e,\quad ab=b\ \implies a=e
 \]
 
 \end_inset
 
-So there is no choice for 
-\begin_inset Formula $ac$
+
+\begin_inset Formula 
+\[
+ab=a^{2}\ \implies b=a,\quad ab=b^{2}\ \implies a=b
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+ab^{2}=e\ \implies ab^{3}=b\ \implies a=b,\quad ab^{2}=a\ \implies b^{2}=e
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+ab^{2}=b\ \implies ab=e,\quad ab^{2}=a^{2}\ \implies b^{2}=a,\quad ab^{2}=b^{2}\ \implies a=e
+\]
+
+\end_inset
+
+Similarly 
+\begin_inset Formula $ba^{2}$
+\end_inset
+
+ is distinct from 
+\begin_inset Formula $e,a,b,a^{2},b^{2}$
 \end_inset
 
 .
- 
+ Finally
+\begin_inset Formula 
+\[
+a^{2}b^{2}=e\ \implies b^{2}=a\quad a^{2}b^{2}=a\ \implies a^{2}=b^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a^{2}b^{2}=b\ \implies a^{2}=b^{2}\quad a^{2}b^{2}=a^{2}\ \implies b^{2}=e
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a^{2}b^{2}=b^{2}\ \implies a^{2}=e.
+\]
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-Hence we must have 
-\begin_inset Formula $ab=c$
+\begin_layout Proof
+These elements are also distinct from one another.
+\begin_inset Formula 
+\[
+ab=ab^{2}\ \implies b=e,\quad ab=a^{2}b^{2}\ \implies ab=e
+\]
+
 \end_inset
 
-.
- By symmetry 
-\begin_inset Formula $bc=a=cb,\, ca=b=ac,\, ba=c$
+
+\begin_inset Formula 
+\[
+ab=ba^{2}\ \implies aba=b
+\]
+
 \end_inset
 
-.
- This gives 
-\begin_inset Formula $a^{2}b=ac=b$
+but 
+\begin_inset Formula $bababa=e$
 \end_inset
 
  so 
-\begin_inset Formula $a^{2}=e$
+\begin_inset Formula $bbba=e\ \implies a=e$
 \end_inset
 
 .
- Similarly 
-\begin_inset Formula $b^{2}=e=c^{2}$
-\end_inset
-
-.
- This gives the Klein-4 group.
  
+\begin_inset Formula 
+\[
+ab^{2}=a^{2}b^{2}\ \implies a=e
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+ab^{2}=ba^{2}\ \implies a=ba^{2}b
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $ba^{2}ba^{2}ba^{2}=e$
+\end_inset
+
+ so 
+\begin_inset Formula $ba^{2}=e\ \implies b=a$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+ab^{2}=a^{2}b^{2}\ \implies a=e
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+ba^{2}=a^{2}b^{2}\ \implies bab=a
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $ababab=e$
+\end_inset
+
+ so 
+\begin_inset Formula $b=e$
+\end_inset
+
+.
+ We now have 9 distinct elements 
+\begin_inset Formula 
+\[
+e,a,b,a^{2},b^{2},ab,ab^{2},ba^{2},a^{2}b^{2}.
+\]
+
+\end_inset
+
+What is 
+\begin_inset Formula $ba$
+\end_inset
+
+? It cannot be 
+\begin_inset Formula $e,a,b,a^{2},b^{2},ba^{2},ab^{2}$
+\end_inset
+
+.
+ It cannot be 
+\begin_inset Formula $a^{2}b^{2}$
+\end_inset
+
+ because then 
+\begin_inset Formula $abab=e$
+\end_inset
+
+ which would imply 
+\begin_inset Formula $ab=e$
+\end_inset
+
+.
+ So finally we conclude that 
+\begin_inset Formula $ab=ba$
+\end_inset
+
+ and now it is easy to show that the group is abelian.
+\end_layout
+
+\begin_layout Proof
+Thus the only groups of orde 9 are 
+\begin_inset Formula $\mathbf{Z}_{9}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{Z}_{3}\times\mathbf{Z}_{3}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
@@ -9025,7 +11875,7 @@ Basic Properties.
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofelement"
+name "Definition-order-of-an-element-in-a-group"
 
 \end_inset
 
@@ -9087,7 +11937,7 @@ order
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "Cauchy"
+name "Theorem-Cauchy-|G|-is odd-if-no-element-has-order-2"
 
 \end_inset
 
@@ -9158,7 +12008,7 @@ The order of an element
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "propertiesoforder"
+name "Lemma-Properties-of-order-of-element"
 
 \end_inset
 
@@ -9305,7 +12155,7 @@ The last assertion is clear
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "elementoforderprime"
+name "Corollary-element-of-order-prime"
 
 \end_inset
 
@@ -9379,7 +12229,7 @@ Soln.
  so the result follows from Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "propertiesoforder"
+reference "Lemma-Properties-of-order-of-element"
 
 \end_inset
 
@@ -9521,7 +12371,7 @@ implies by uniqueness of
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "Lagrangeforcyclicgroup"
+name "Theoem-Lagrange-for-cyclic-group"
 
 \end_inset
 
@@ -9780,7 +12630,7 @@ so
  by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "propertiesoforder"
+reference "Lemma-Properties-of-order-of-element"
 
 \end_inset
 
@@ -9829,7 +12679,7 @@ Remark 2.
  We shall see later that the proof given in Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Lagrangeforcyclicgroup"
+reference "Theoem-Lagrange-for-cyclic-group"
 
 \end_inset
 
@@ -9864,7 +12714,7 @@ gH=\left\{ gh_{1},gh_{2},\ldots,gh_{m}\right\} .
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofg^s"
+name "Lemma-order-of-g^s"
 
 \end_inset
 
@@ -9919,7 +12769,7 @@ Consider
 By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "propertiesoforder"
+reference "Lemma-Properties-of-order-of-element"
 
 \end_inset
 
@@ -9942,14 +12792,14 @@ Order of
 Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofg^s-1"
+reference "Theorem-order-of-g^s"
 
 \end_inset
 
  strengthens Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofg^s"
+reference "Lemma-order-of-g^s"
 
 \end_inset
 
@@ -9959,7 +12809,7 @@ reference "orderofg^s"
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofg^s-1"
+name "Theorem-order-of-g^s"
 
 \end_inset
 
@@ -10211,7 +13061,7 @@ Now the numerator and denominator have no common factor so
 A corollary of Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofg^s-1"
+reference "Theorem-order-of-g^s"
 
 \end_inset
 
@@ -10221,7 +13071,7 @@ reference "orderofg^s-1"
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "eulertotfun"
+name "Corollary-o(g^m)=o(g)-iff-gcd(m,o(g))=1"
 
 \end_inset
 
@@ -10252,7 +13102,7 @@ name "eulertotfun"
 Follows immediately from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofg^s-1"
+reference "Theorem-order-of-g^s"
 
 \end_inset
 
@@ -10290,7 +13140,7 @@ even
  has an even number of solutions (see Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Cauchy"
+reference "Theorem-Cauchy-|G|-is odd-if-no-element-has-order-2"
 
 \end_inset
 
@@ -10310,7 +13160,7 @@ Generalizing this observation, we obtain a simple proof of Cauchy’s theorem
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "Cauchyprime_p"
+name "Theorem-Cauchy-No-of-solns-of-x^p=1-for-prime_p"
 
 \end_inset
 
@@ -11298,7 +14148,7 @@ Index of a Subgroup.
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "indexsubgroup"
+name "Definition-Index-of-a-subgroup"
 
 \end_inset
 
@@ -11330,7 +14180,7 @@ index
 , is equal to the number of left (or right by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "noleftcosetsequalsnorightcosets"
+reference "Lemma-no-of-left-cosets-equals-no-of-right-cosets"
 
 \end_inset
 
@@ -11393,7 +14243,7 @@ textbf{Lagrange's Theorem}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "Lagrange"
+name "Theorem-Lagrange"
 
 \end_inset
 
@@ -11441,7 +14291,7 @@ Lagrange's Theorem is a consequence of:
  is a disjoint union of its left cosets (Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cosetpartition"
+reference "Lemma-Partition-by-Cosets"
 
 \end_inset
 
@@ -11456,7 +14306,7 @@ reference "cosetpartition"
  (by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cardofcoset"
+reference "Lemma-card-of-left-coset=card-of-right-coset"
 
 \end_inset
 
@@ -11501,283 +14351,13 @@ reference "eq:index"
 \end_layout
 
 \begin_layout Section
-Groups of order 9
-\end_layout
-
-\begin_layout Theorem
-All groups of order 9 are abelian.
-\end_layout
-
-\begin_layout Proof
-
-\series bold
-Brute force.
-
-\series default
- 
-\end_layout
-
-\begin_layout Proof
-Let 
-\begin_inset Formula $G$
-\end_inset
-
- be of group of order 9.
- If 
-\begin_inset Formula $G$
-\end_inset
-
- has an element of order 9 it is clearly abelian.
-\end_layout
-
-\begin_layout Proof
-Suppose no element has order 9.
- Let 
-\begin_inset Formula $a\neq e$
-\end_inset
-
- be an element of 
-\begin_inset Formula $G$
-\end_inset
-
-.
- Then it has order 3 so 
-\begin_inset Formula $e,a,a^{2}$
-\end_inset
-
- are distinct.
- Let 
-\begin_inset Formula $b$
-\end_inset
-
- be another element different from these 3.
- Then 
-\begin_inset Formula $b$
-\end_inset
-
- also has order 3.
- Now 
-\begin_inset Formula $b^{2}\neq a$
-\end_inset
-
- for otherwise 
-\begin_inset Formula $b^{4}=b=a^{2}.$
-\end_inset
-
- Likewise 
-\begin_inset Formula $b^{2}\neq a^{2}$
-\end_inset
-
- because otherwise 
-\begin_inset Formula $b^{4}=b=a^{4}=a$
-\end_inset
-
-.
- So now we have 5 distinct elements of 
-\begin_inset Formula $G$
-\end_inset
-
- viz., 
-\begin_inset Formula $e,a,b,a^{2},b^{2}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-We show that 
-\begin_inset Formula $ab,ab^{2},ba^{2},a^{2}b^{2}$
-\end_inset
-
-are the other 4 distinct element.
- 
-\begin_inset Formula 
-\[
-ab=e\ \implies b=a^{2},\quad ab=a\ \implies b=e,\quad ab=b\ \implies a=e
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-ab=a^{2}\ \implies b=a,\quad ab=b^{2}\ \implies a=b
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-ab^{2}=e\ \implies ab^{3}=b\ \implies a=b,\quad ab^{2}=a\ \implies b^{2}=e
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-ab^{2}=b\ \implies ab=e,\quad ab^{2}=a^{2}\ \implies b^{2}=a,\quad ab^{2}=b^{2}\ \implies a=e
-\]
-
-\end_inset
-
-Similarly 
-\begin_inset Formula $ba^{2}$
-\end_inset
-
- is distinct from 
-\begin_inset Formula $e,a,b,a^{2},b^{2}$
-\end_inset
-
-.
- Finally
-\begin_inset Formula 
-\[
-a^{2}b^{2}=e\ \implies b^{2}=a\quad a^{2}b^{2}=a\ \implies a^{2}=b^{2}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-a^{2}b^{2}=b\ \implies a^{2}=b^{2}\quad a^{2}b^{2}=a^{2}\ \implies b^{2}=e
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-a^{2}b^{2}=b^{2}\ \implies a^{2}=e.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-These elements are also distinct from one another.
-\begin_inset Formula 
-\[
-ab=ab^{2}\ \implies b=e,\quad ab=a^{2}b^{2}\ \implies ab=e
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-ab=ba^{2}\ \implies aba=b
-\]
-
-\end_inset
-
-but 
-\begin_inset Formula $bababa=e$
-\end_inset
-
- so 
-\begin_inset Formula $bbba=e\ \implies a=e$
-\end_inset
-
-.
- 
-\begin_inset Formula 
-\[
-ab^{2}=a^{2}b^{2}\ \implies a=e
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-ab^{2}=ba^{2}\ \implies a=ba^{2}b
-\]
-
-\end_inset
-
-but 
-\begin_inset Formula $ba^{2}ba^{2}ba^{2}=e$
-\end_inset
-
- so 
-\begin_inset Formula $ba^{2}=e\ \implies b=a$
-\end_inset
-
-.
-\begin_inset Formula 
-\[
-ab^{2}=a^{2}b^{2}\ \implies a=e
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-ba^{2}=a^{2}b^{2}\ \implies bab=a
-\]
-
-\end_inset
-
-but 
-\begin_inset Formula $ababab=e$
-\end_inset
-
- so 
-\begin_inset Formula $b=e$
-\end_inset
-
-.
- We now have 9 distinct elements 
-\begin_inset Formula 
-\[
-e,a,b,a^{2},b^{2},ab,ab^{2},ba^{2},a^{2}b^{2}.
-\]
-
-\end_inset
-
-What is 
-\begin_inset Formula $ba$
-\end_inset
-
-? It cannot be 
-\begin_inset Formula $e,a,b,a^{2},b^{2},ba^{2},ab^{2}$
-\end_inset
-
-.
- It cannot be 
-\begin_inset Formula $a^{2}b^{2}$
-\end_inset
-
- because then 
-\begin_inset Formula $abab=e$
-\end_inset
-
- which would imply 
-\begin_inset Formula $ab=e$
-\end_inset
-
-.
- So finally we conclude that 
-\begin_inset Formula $ab=ba$
-\end_inset
-
- and now it is easy to show that the group is abelian.
-\end_layout
-
-\begin_layout Section
 Product of Subgroups
 \end_layout
 
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "HKsubgroup"
+name "Theorem-Condition-for-HK-to-be-a-subgroup"
 
 \end_inset
 
@@ -12102,7 +14682,7 @@ Definitions and basic properties
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "cyclicisabelian"
+name "Theorem-Cyclic-Group-is-abelian"
 
 \end_inset
 
@@ -12146,7 +14726,7 @@ The next theorem tells us what the elements of a cyclic group are.
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "structurecyclicgroup"
+name "Theorem-Structureof-a-cyclic-group"
 
 \end_inset
 
@@ -12230,7 +14810,7 @@ implies
  so by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "propertiesoforder"
+reference "Lemma-Properties-of-order-of-element"
 
 \end_inset
 
@@ -12263,7 +14843,7 @@ Now any
  by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "propertiesoforder"
+reference "Lemma-Properties-of-order-of-element"
 
 \end_inset
 
@@ -12302,7 +14882,7 @@ Let
 Follows immediately from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "structurecyclicgroup"
+reference "Theorem-Structureof-a-cyclic-group"
 
 \end_inset
 
@@ -12327,7 +14907,7 @@ The next result tells us that there is essentially only one infinite cyclic
  For another proof see Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "uniquecyclic"
+reference "Theorem-Classification-of-cyclic-groups-using-FIT"
 
 \end_inset
 
@@ -12337,7 +14917,7 @@ reference "uniquecyclic"
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "isomorphisminfinitecyclic"
+name "Theorem-Classification-of-cyclic-groups"
 
 \end_inset
 
@@ -12424,7 +15004,7 @@ Subgroups of a cyclic group
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "subgroupsofcyclicgroups"
+name "Theorem-subgroup-of-a-cyclic-group-is-cyclic"
 
 \end_inset
 
@@ -12612,7 +15192,7 @@ Note that
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofsubgroupsofcyclic"
+name "Corollary-order-of-a-subgroup-of-a-cyclic-group"
 
 \end_inset
 
@@ -12655,7 +15235,7 @@ In particular
  by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofg^s-1"
+reference "Theorem-order-of-g^s"
 
 \end_inset
 
@@ -12665,7 +15245,7 @@ reference "orderofg^s-1"
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "uniquesubgroupofcyclic"
+name "Theorem-unique-subgroup-of-every-order-of-a-cyclic-group"
 
 \end_inset
 
@@ -12711,7 +15291,7 @@ Existence.
  Then by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofg^s-1"
+reference "Theorem-order-of-g^s"
 
 \end_inset
 
@@ -12761,7 +15341,7 @@ Uniqueness.
  Then by Corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofsubgroupsofcyclic"
+reference "Corollary-order-of-a-subgroup-of-a-cyclic-group"
 
 \end_inset
 
@@ -12823,7 +15403,7 @@ Since
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "eulertot"
+name "Corollary-No-of-elem-of-a-given-order-in-a-cyclic-group-is-eulertot"
 
 \end_inset
 
@@ -12888,7 +15468,7 @@ There is a unique subgroup
  by Corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eulertotfun"
+reference "Corollary-o(g^m)=o(g)-iff-gcd(m,o(g))=1"
 
 \end_inset
 
@@ -12984,7 +15564,7 @@ have
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "eulertotient"
+name "Corollary-Proof-of-eulertotient-using-GT"
 
 \end_inset
 
@@ -13051,7 +15631,7 @@ n=\left|G\right|=\sum_{d\mid n}\left|X_{d}\right|=\sum_{d\mid n}\varphi\left(d\r
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "cyclicgeneratedbya^m"
+name "Theorem-cyclic-generated-by-a^m"
 
 \end_inset
 
@@ -13075,14 +15655,14 @@ Let
 Combine Corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofsubgroupsofcyclic"
+reference "Corollary-order-of-a-subgroup-of-a-cyclic-group"
 
 \end_inset
 
  and Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "uniquesubgroupofcyclic"
+reference "Theorem-unique-subgroup-of-every-order-of-a-cyclic-group"
 
 \end_inset
 
@@ -13193,7 +15773,7 @@ Soln.
  hence by Corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofsubgroupsofcyclic"
+reference "Corollary-order-of-a-subgroup-of-a-cyclic-group"
 
 \end_inset
 
@@ -13221,7 +15801,7 @@ Conversely suppose that
  Then by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cyclicgeneratedbya^m"
+reference "Theorem-cyclic-generated-by-a^m"
 
 \end_inset
 
@@ -13302,7 +15882,7 @@ has
  by Corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eulertot"
+reference "Corollary-No-of-elem-of-a-given-order-in-a-cyclic-group-is-eulertot"
 
 \end_inset
 
@@ -13325,7 +15905,7 @@ reference "eulertot"
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "cyclic-1"
+name "Lemma-Condition-for-g^d=e-in-a-cyclic-group"
 
 \end_inset
 
@@ -13414,7 +15994,7 @@ d'=xd+yn
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "cyclic-2"
+name "Theorem-Group-of-elements-satisfying-x^m=e"
 
 \end_inset
 
@@ -13443,7 +16023,7 @@ Let
 \begin_inset Formula $x^{m}=e$
 \end_inset
 
- is a subgroup which has exactly 
+ is a cyclic subgroup which has exactly 
 \begin_inset Formula $m$
 \end_inset
 
@@ -13492,7 +16072,7 @@ Let
  it follows by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "propertiesoforder"
+reference "Lemma-Properties-of-order-of-element"
 
 \end_inset
 
@@ -13548,7 +16128,7 @@ The subgroup
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "cyclicequivcond"
+name "Theorem-cyclic-equiv-conditions"
 
 \end_inset
 
@@ -13666,7 +16246,7 @@ H=\left\{ g\in G\,\colon\: g^{d}=e\right\} .
 By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cyclic-1"
+reference "Lemma-Condition-for-g^d=e-in-a-cyclic-group"
 
 \end_inset
 
@@ -13681,7 +16261,7 @@ H=\left\{ g\in G\,\colon\: g^{d'}=e\right\} .
 By Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cyclic-2"
+reference "Theorem-Group-of-elements-satisfying-x^m=e"
 
 \end_inset
 
@@ -13886,7 +16466,7 @@ Finally assume (iv) holds and suppose that
 Therefore we have by Corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eulertotient"
+reference "Corollary-Proof-of-eulertotient-using-GT"
 
 \end_inset
 
@@ -14030,7 +16610,7 @@ If
  The result follows from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cyclicequivcond"
+reference "Theorem-cyclic-equiv-conditions"
 
 \end_inset
 
@@ -14038,6 +16618,12 @@ reference "cyclicequivcond"
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-When-is-Group-of-order-p^n-cyclic"
+
+\end_inset
+
 Let 
 \begin_inset Formula $p$
 \end_inset
@@ -14078,7 +16664,7 @@ If
  by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "uniquesubgroupofcyclic"
+reference "Theorem-unique-subgroup-of-every-order-of-a-cyclic-group"
 
 \end_inset
 
@@ -14180,7 +16766,7 @@ Thus
  by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "propertiesoforder"
+reference "Lemma-Properties-of-order-of-element"
 
 \end_inset
 
@@ -14210,7 +16796,7 @@ reference "propertiesoforder"
  By Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cyclic-2"
+reference "Theorem-Group-of-elements-satisfying-x^m=e"
 
 \end_inset
 
@@ -14491,7 +17077,7 @@ Basic properties of homomorphisms
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "homo"
+name "Lemma-Properties-of-a-homomorphism"
 
 \end_inset
 
@@ -14757,7 +17343,7 @@ Finally
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "compositionhomo"
+name "Lemma-Composition-of-homomorphisms"
 
 \end_inset
 
@@ -14863,7 +17449,7 @@ kernel
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "kernel"
+name "Definition-kernel-of-a-homomorphism"
 
 \end_inset
 
@@ -14898,7 +17484,7 @@ kernel
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "kernelsubgrp"
+name "Lemma-kernel-and-image-are-subgroups"
 
 \end_inset
 
@@ -14938,7 +17524,7 @@ is a subgroup of
 (i) This is a special case of Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "homo"
+reference "Lemma-Properties-of-a-homomorphism"
 
 \end_inset
 
@@ -14953,7 +17539,7 @@ reference "homo"
 (ii) This is also a special case of Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "homo"
+reference "Lemma-Properties-of-a-homomorphism"
 
 \end_inset
 
@@ -14971,7 +17557,7 @@ Here are some basic results about the kernel.
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "injectivehomo"
+name "Lemma-Injective-homomorphism"
 
 \end_inset
 
@@ -15229,7 +17815,7 @@ Normal Subgroups.
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "normal"
+name "Definition-Normal-subgroup"
 
 \end_inset
 
@@ -15341,7 +17927,7 @@ Now the original question was modified in an obvious way.
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "kernelhomo"
+name "Lemma-kernel-of-a-homomorphosm-is-normal"
 
 \end_inset
 
@@ -15445,7 +18031,7 @@ Thus
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "abeliannormal"
+name "Lemma-subgroup-of-abelian-is-normal"
 
 \end_inset
 
@@ -15492,7 +18078,7 @@ ghg^{-1}=gg^{-1}h=h\in H.
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "prodNH"
+name "Lemma-HN-is-a-subgroup"
 
 \end_inset
 
@@ -15613,7 +18199,7 @@ h_{1}n_{1}h_{2}n_{2} & = & h_{1}\left(n_{1}h_{2}\right)n_{2}=h_{1}h_{3}n_{3}n_{2
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "normalequivdef"
+name "Lemma-Normal-equiv-def"
 
 \end_inset
 
@@ -16082,7 +18668,7 @@ These two observations are incompatible with each other unless
  is closed under conjugation, so by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "normalequivdef"
+reference "Lemma-Normal-equiv-def"
 
 \end_inset
 
@@ -16097,7 +18683,7 @@ We state the above results as:
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "homoconstcosets"
+name "Theorem-Homomorphism-is-constant-on-cosets-by-kernel"
 
 \end_inset
 
@@ -16598,7 +19184,7 @@ In my fictitious world, there was one final stage in the early development
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "quotgroup"
+name "Theorem-Quotient-group-of-a-normal-subgroup"
 
 \end_inset
 
@@ -16827,7 +19413,7 @@ Conversely suppose that
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "normalsubgroup"
+name "Theorem-H-is-kernel-iff-H-is-normal"
 
 \end_inset
 
@@ -16847,7 +19433,7 @@ n.
 The neccessity follows from Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "kernelhomo"
+reference "Lemma-kernel-of-a-homomorphosm-is-normal"
 
 \end_inset
 
@@ -16858,7 +19444,7 @@ reference "kernelhomo"
 The converse follows from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "quotgroup"
+reference "Theorem-Quotient-group-of-a-normal-subgroup"
 
 \end_inset
 
@@ -16996,7 +19582,7 @@ Soln.
 \begin_layout Example
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofaH"
+name "Example-o(aH)-divides-o(a)"
 
 \end_inset
 
@@ -17053,7 +19639,7 @@ which is the identity element of
  by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "propertiesoforder"
+reference "Lemma-Properties-of-order-of-element"
 
 \end_inset
 
@@ -17132,7 +19718,7 @@ Soln.
 Later on it will be shown that (Lagrange's Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Lagrange"
+reference "Theorem-Lagrange"
 
 \end_inset
 
@@ -17185,7 +19771,7 @@ Let
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "permutations"
+name "Lemma-permutations-of-a-set"
 
 \end_inset
 
@@ -17255,7 +19841,7 @@ Follows from the well known results on functions.
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "permutationgroup"
+name "Lemma-permutation-group-of-a-set"
 
 \end_inset
 
@@ -17276,7 +19862,7 @@ Let
 Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "permutations"
+reference "Lemma-permutations-of-a-set"
 
 \end_inset
 
@@ -17354,7 +19940,7 @@ Let
  by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "permutations"
+reference "Lemma-permutations-of-a-set"
 
 \end_inset
 
@@ -17377,7 +19963,7 @@ by definition.
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "cardpermgrp"
+name "Lemma-cardinality-of-permutation-group"
 
 \end_inset
 
@@ -17500,7 +20086,7 @@ The Symmetric Group
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "groupS_n"
+name "Definition-The-Group-S_n"
 
 \end_inset
 
@@ -17648,7 +20234,7 @@ Cycles
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "cycle"
+name "Definition-Cycle"
 
 \end_inset
 
@@ -17802,7 +20388,7 @@ Note that there is some redundancy.
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofcycle"
+name "Lemma-order-of-a-cycle-equals-cycle-length"
 
 \end_inset
 
@@ -17888,7 +20474,7 @@ If
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "disjointcyclescommute"
+name "Lemma-Disjoint-Cycles-Commute"
 
 \end_inset
 
@@ -17947,7 +20533,7 @@ i & \textrm{otherwise.}
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "cycledecomposition"
+name "Lemma-Cycle-Decomposition-of-a-permutation"
 
 \end_inset
 
@@ -18279,7 +20865,7 @@ Let
 Applying the construction in the proof of Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cycledecomposition"
+reference "Lemma-Cycle-Decomposition-of-a-permutation"
 
 \end_inset
 
@@ -18300,7 +20886,7 @@ reference "cycledecomposition"
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "cycletype"
+name "Definition-Cycle-type"
 
 \end_inset
 
@@ -18726,7 +21312,7 @@ Notice that we have listed the cycle types in ``alphabetical'' order, which
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "cardinalityofcycletype"
+name "Lemma-cardinality-of-cycle-type"
 
 \end_inset
 
@@ -19476,7 +22062,7 @@ Counting cycle types in
 \begin_layout Example
 \begin_inset CommandInset label
 LatexCommand label
-name "elementsofA_4"
+name "Example-List-of-elements-of-A_4"
 
 \end_inset
 
@@ -19536,7 +22122,7 @@ It is easy to compute the order of a permutation, given its cycle type.
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofapermutation"
+name "Lemma-o(sigma)=lcm-of-cycle-lengths"
 
 \end_inset
 
@@ -19619,7 +22205,7 @@ be the decomposition of
 's commute by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "disjointcyclescommute"
+reference "Lemma-Disjoint-Cycles-Commute"
 
 \end_inset
 
@@ -19646,7 +22232,7 @@ It follows that for each
 By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofcycle"
+reference "Lemma-order-of-a-cycle-equals-cycle-length"
 
 \end_inset
 
@@ -19732,7 +22318,7 @@ Partitions by cycles
 Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cycledecomposition"
+reference "Lemma-Cycle-Decomposition-of-a-permutation"
 
 \end_inset
 
@@ -19747,7 +22333,7 @@ reference "cycledecomposition"
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "equivclassofpermutation"
+name "Lemma-Equiv-Class-of-a-permutation"
 
 \end_inset
 
@@ -19937,7 +22523,7 @@ Generators of
 Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cycledecomposition"
+reference "Lemma-Cycle-Decomposition-of-a-permutation"
 
 \end_inset
 
@@ -19962,7 +22548,7 @@ reference "cycledecomposition"
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "transpositions"
+name "Lemma-Transpositions-generate-S_n"
 
 \end_inset
 
@@ -20233,7 +22819,7 @@ reference "eq:productoftranspositions"
  in the proof of Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "transpositions"
+reference "Lemma-Transpositions-generate-S_n"
 
 \end_inset
 
@@ -20289,7 +22875,7 @@ parity
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "inversion"
+name "Definition-Inversion-in-a-permutation"
 
 \end_inset
 
@@ -20332,7 +22918,7 @@ For example, the number of inversions in the identity is zero; it is 1 in
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "paritychange"
+name "Theorem-odd-parity-change-in-inversion"
 
 \end_inset
 
@@ -20544,7 +23130,7 @@ We now derive some consequences of this theorem.
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "noevenequalsnoodd"
+name "Corollary-no-of-even-equals-no-of-odd"
 
 \end_inset
 
@@ -20569,7 +23155,7 @@ For, if we write down all
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "evenoddpermutations"
+name "Corollary-evenand-odd-permutations"
 
 \end_inset
 
@@ -20599,7 +23185,7 @@ The number of factors in the 2-cycle decomposition for an even permutation
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "parityofpermutation"
+name "Definition-parity-of-a-permutation"
 
 \end_inset
 
@@ -20637,7 +23223,7 @@ where
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "parityofk-cycle"
+name "Corollary-parity-of-k-cycle"
 
 \end_inset
 
@@ -20679,7 +23265,7 @@ The proof follows from the identity
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "sgnhomomorphism"
+name "Corollary-sgn-homomorphism-of-S_n"
 
 \end_inset
 
@@ -20733,7 +23319,7 @@ alternating group
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "A_nisnormal"
+name "Theorem-A_n-is-Normal"
 
 \end_inset
 
@@ -20759,7 +23345,7 @@ name "A_nisnormal"
  is the kernel of the homomorphism sgn of Corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sgnhomomorphism"
+reference "Corollary-sgn-homomorphism-of-S_n"
 
 \end_inset
 
@@ -20767,7 +23353,7 @@ reference "sgnhomomorphism"
  By Corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "noevenequalsnoodd"
+reference "Corollary-no-of-even-equals-no-of-odd"
 
 \end_inset
 
@@ -20805,7 +23391,7 @@ Galois Theory
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "generatorsofA_n"
+name "Lemma-Generators-of-A_n"
 
 \end_inset
 
@@ -20828,7 +23414,7 @@ For
 3-cycles are even permutations by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "parityofk-cycle"
+reference "Corollary-parity-of-k-cycle"
 
 \end_inset
 
@@ -21088,7 +23674,7 @@ Definitions and properties.
 During the discussion leading to Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "homoconstcosets"
+reference "Theorem-Homomorphism-is-constant-on-cosets-by-kernel"
 
 \end_inset
 
@@ -21132,7 +23718,7 @@ reference "homoconstcosets"
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "coset"
+name "Definition-Cosets"
 
 \end_inset
 
@@ -21194,7 +23780,7 @@ right coset
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "cardofcoset"
+name "Lemma-card-of-left-coset=card-of-right-coset"
 
 \end_inset
 
@@ -21367,7 +23953,7 @@ Similarly
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "cosetpartition"
+name "Lemma-Partition-by-Cosets"
 
 \end_inset
 
@@ -21783,7 +24369,7 @@ We next show that the number of left cosets is equal to the number of right
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "noleftcosetsequalsnorightcosets"
+name "Lemma-no-of-left-cosets-equals-no-of-right-cosets"
 
 \end_inset
 
@@ -21847,7 +24433,7 @@ Normality and cosets.
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "normalequivdef-1"
+name "Lemma-Normal-if-every-left-coset-is-a-right-coset"
 
 \end_inset
 
@@ -21879,7 +24465,7 @@ Suppose that
  Then, by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "normalequivdef"
+reference "Lemma-Normal-equiv-def"
 
 \end_inset
 
@@ -21909,7 +24495,7 @@ Conversely suppose that the set of left cosets is equal to the set of right
  is also a left coset, by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cosetpartition"
+reference "Lemma-Partition-by-Cosets"
 
 \end_inset
 
@@ -21921,7 +24507,7 @@ reference "cosetpartition"
  By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "normalequivdef"
+reference "Lemma-Normal-equiv-def"
 
 \end_inset
 
@@ -21952,7 +24538,7 @@ Earlier we have seen that if
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "normalequivdef-3"
+name "Lemma-Normal-iff-(aH)(bH)=abH-is-well-defined"
 
 \end_inset
 
@@ -22029,7 +24615,7 @@ it follows that
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "index2subgroupisnormal"
+name "Corollar-Index-2-subgroup-is-normal"
 
 \end_inset
 
@@ -22073,7 +24659,7 @@ Let
  is normal by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "normalequivdef"
+reference "Lemma-Normal-equiv-def"
 
 \end_inset
 
@@ -22118,7 +24704,7 @@ Soln.
  have been listed in Example 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "elementsofA_4"
+reference "Example-List-of-elements-of-A_4"
 
 \end_inset
 
@@ -22327,7 +24913,7 @@ Coset inclusion and Intersection of cosets.
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "cosetinclusion"
+name "Theorem-Coset-inclusion-for-subgroups"
 
 \end_inset
 
@@ -22447,7 +25033,7 @@ Converse.
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "cosetintersection"
+name "Theorem-Intersection-of-Cosets"
 
 \end_inset
 
@@ -22672,7 +25258,7 @@ Every coset of
  by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cosetintersection"
+reference "Theorem-Intersection-of-Cosets"
 
 \end_inset
 
@@ -22805,7 +25391,7 @@ are distinct.
 \begin_layout Example
 \begin_inset CommandInset label
 LatexCommand label
-name "indexpowerofprime"
+name "Example-index-of-intersection-is-also-power-of-prime"
 
 \end_inset
 
@@ -22912,7 +25498,7 @@ Multiplicative property of index.
 Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "multpropofindex"
+reference "Theorem-Multiplicative-Property-of-index"
 
 \end_inset
 
@@ -22954,7 +25540,7 @@ reference "multpropofindex"
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "multpropofindex"
+name "Theorem-Multiplicative-Property-of-index"
 
 \end_inset
 
@@ -23145,7 +25731,7 @@ Soln.
  From Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "prodNH"
+reference "Lemma-HN-is-a-subgroup"
 
 \end_inset
 
@@ -23157,7 +25743,7 @@ reference "prodNH"
  By the index formula (Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "multpropofindex"
+reference "Theorem-Multiplicative-Property-of-index"
 
 \end_inset
 
@@ -23203,7 +25789,7 @@ Order of a product of subgroups.
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "orderofHK"
+name "Theorem-Cardinality-of-HK"
 
 \end_inset
 
@@ -23334,7 +25920,7 @@ HK=\bigcup_{h\in H}hK.
 From Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "transferineq"
+reference "Theorem-Transfer-Inequality"
 
 \end_inset
 
@@ -23356,7 +25942,7 @@ Transfer Inequality.
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "transferineq"
+name "Theorem-Transfer-Inequality"
 
 \end_inset
 
@@ -23513,7 +26099,7 @@ If
 , then by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "secondiso"
+reference "Theorem-Second-Isomorphism"
 
 \end_inset
 
@@ -23544,7 +26130,7 @@ reference "secondiso"
 Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "transferineq"
+reference "Theorem-Transfer-Inequality"
 
 \end_inset
 
@@ -23552,7 +26138,7 @@ reference "transferineq"
  By Lagrange's Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Lagrange"
+reference "Theorem-Lagrange"
 
 \end_inset
 
@@ -23589,7 +26175,7 @@ In other words, what it says is that, for a uniform distribution on a finite
 The corollary to Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cosetintersection"
+reference "Theorem-Intersection-of-Cosets"
 
 \end_inset
 
@@ -23598,7 +26184,7 @@ reference "cosetintersection"
  We provide another proof using Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "transferineq"
+reference "Theorem-Transfer-Inequality"
 
 \end_inset
 
@@ -23608,7 +26194,7 @@ reference "transferineq"
 \begin_layout Example
 \begin_inset CommandInset label
 LatexCommand label
-name "indexofintersection"
+name "Example-Index-of-intersection-of-subgroups"
 
 \end_inset
 
@@ -23696,14 +26282,14 @@ Soln.
  The first equality follows from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "multpropofindex"
+reference "Theorem-Multiplicative-Property-of-index"
 
 \end_inset
 
  and the second inequality from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "transferineq"
+reference "Theorem-Transfer-Inequality"
 
 \end_inset
 
@@ -23727,7 +26313,7 @@ thus
  so by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "transferineq"
+reference "Theorem-Transfer-Inequality"
 
 \end_inset
 
@@ -24133,7 +26719,7 @@ Introduction
 In Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "abeliannormal"
+reference "Lemma-subgroup-of-abelian-is-normal"
 
 \end_inset
 
@@ -24278,7 +26864,7 @@ Conjugacy Classes
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "conjugation"
+name "Definition-conjugation"
 
 \end_inset
 
@@ -24371,7 +26957,7 @@ and write
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "conjeqrel"
+name "Lemma-Conjugacy-is-an-equiv-rel"
 
 \end_inset
 
@@ -24533,7 +27119,7 @@ Hence
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "conjugacyclass"
+name "Definition-Conjugacy-Class"
 
 \end_inset
 
@@ -24581,7 +27167,7 @@ Given an aribtrary group
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "conjugacyabelian"
+name "Lemma-Conjugacy-classes-are-singletons-iff-G-is-abelian"
 
 \end_inset
 
@@ -24620,7 +27206,7 @@ Here is another characterization of normality.
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "normalequivdef-2"
+name "Lemma-Normal-iff-Union-of-Conjugacy-Classes"
 
 \end_inset
 
@@ -24675,7 +27261,7 @@ Commutator Subgroup
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "commutatorsubgroup"
+name "Theorem-Commutator-subgroup"
 
 \end_inset
 
@@ -24977,7 +27563,7 @@ Soln.
  subgroup by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "commutatorsubgroup"
+reference "Theorem-Commutator-subgroup"
 
 \end_inset
 
@@ -25111,7 +27697,7 @@ Cayley's Theorem
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "automorphism"
+name "Definition-Automorphism"
 
 \end_inset
 
@@ -25134,7 +27720,7 @@ automorphism
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "innerautomorphism"
+name "Lemma-Inner-Automorphism"
 
 \end_inset
 
@@ -25251,7 +27837,7 @@ The computation of
 By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "innerautomorphism"
+reference "Lemma-Inner-Automorphism"
 
 \end_inset
 
@@ -25585,7 +28171,7 @@ Centre of a Group
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "centralizer"
+name "Definition-Centralizer"
 
 \end_inset
 
@@ -25624,7 +28210,7 @@ C_{G}\left(x\right)=\left\{ g\in G\,\colon\, gx=xg\right\} .
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "centrlizergroup"
+name "Lemma-Centralizer-group-of-an-element"
 
 \end_inset
 
@@ -25718,7 +28304,7 @@ This shows that
 \begin_layout Definition
 \begin_inset CommandInset label
 LatexCommand label
-name "centre"
+name "Definition-Centre-of-a-Group"
 
 \end_inset
 
@@ -25776,7 +28362,7 @@ every
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "abeliancondition"
+name "Theorem-Abelian-condition-G/Z(G)-cyclic"
 
 \end_inset
 
@@ -25831,7 +28417,7 @@ Suppose that
 (Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cosetpartition"
+reference "Lemma-Partition-by-Cosets"
 
 \end_inset
 
@@ -26240,7 +28826,7 @@ This is a nice answer because it tells us that two elements
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "cardconjclass"
+name "Lemma-cardinality-of-conjugacy-class"
 
 \end_inset
 
@@ -26323,7 +28909,7 @@ textbf{Class Equation}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "classeqn"
+name "Theorem-Class-Equation"
 
 \end_inset
 
@@ -26357,7 +28943,7 @@ reference "eq:classeqn"
  from Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cardconjclass"
+reference "Lemma-cardinality-of-conjugacy-class"
 
 \end_inset
 
@@ -26371,7 +28957,7 @@ reference "cardconjclass"
 \begin_layout Example
 \begin_inset CommandInset label
 LatexCommand label
-name "nontrivalcentre"
+name "Example-non-trival-centre-for-a-p-group-with-a-normal-subgroup-of-order-p"
 
 \end_inset
 
@@ -26424,7 +29010,7 @@ Soln.
 , by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "normalequivdef-2"
+reference "Lemma-Normal-iff-Union-of-Conjugacy-Classes"
 
 \end_inset
 
@@ -26487,7 +29073,7 @@ reference "normalequivdef-2"
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "centreofpgroupisnontrival"
+name "Theorem-Center-of-p-group-is-non-trival"
 
 \end_inset
 
@@ -26542,7 +29128,7 @@ An interesting application of the class equation is the following theorem:
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "orderp^2isabelian"
+name "Theorem-Group-of-order-p^-2-is-abelian"
 
 \end_inset
 
@@ -26570,7 +29156,7 @@ Let
 From Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "centreofpgroupisnontrival"
+reference "Theorem-Center-of-p-group-is-non-trival"
 
 \end_inset
 
@@ -26610,7 +29196,7 @@ Now
  is abelian (see Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "abeliancondition"
+reference "Theorem-Abelian-condition-G/Z(G)-cyclic"
 
 \end_inset
 
@@ -26654,7 +29240,7 @@ We generalise the elementary result which says that subgroups of index 2
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "subgroupswithminprimeindex"
+name "Theorem-subgroup-with-min-prime-index-is-normal"
 
 \end_inset
 
@@ -26946,7 +29532,7 @@ Also the equality
  (see Theorem
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "transferineq"
+reference "Theorem-Transfer-Inequality"
 
 \end_inset
 
@@ -26969,7 +29555,7 @@ reference "transferineq"
  is abelian by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderp^2isabelian"
+reference "Theorem-Group-of-order-p^-2-is-abelian"
 
 \end_inset
 
@@ -26997,7 +29583,7 @@ Finally we observe that since
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "latticeisoquot"
+reference "Corollary-Lattice-of-quotients"
 
 \end_inset
 
@@ -27016,7 +29602,7 @@ Group of order 9 is abelian
 We can give another proof of Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderp^2isabelian"
+reference "Theorem-Group-of-order-p^-2-is-abelian"
 
 \end_inset
 
@@ -27039,7 +29625,7 @@ reference "orderp^2isabelian"
  From Example 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "nontrivalcentre"
+reference "Example-non-trival-centre-for-a-p-group-with-a-normal-subgroup-of-order-p"
 
 \end_inset
 
@@ -27082,7 +29668,7 @@ Cauchy's Theorem (non-abelian)
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "cauchynonabelian"
+name "Theorem-Cauchy-non-abelian-case"
 
 \end_inset
 
@@ -27321,7 +29907,7 @@ Introduction
 We have seen (Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "normalequivdef-2"
+reference "Lemma-Normal-iff-Union-of-Conjugacy-Classes"
 
 \end_inset
 
@@ -27386,7 +29972,7 @@ Once you get used to how group actions work, it becomes much easier to see
  (Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cardconjclass"
+reference "Lemma-cardinality-of-conjugacy-class"
 
 \end_inset
 
@@ -27522,7 +30108,7 @@ Conjugation in
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "cycledecompositionofconjugate"
+name "Lemma-Cycle-Decomposition-of-Conjugate"
 
 \end_inset
 
@@ -27729,7 +30315,7 @@ Then the conjugate of
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "conjugationinS_n"
+name "Theorem-Conjugation-in-S_n"
 
 \end_inset
 
@@ -27753,7 +30339,7 @@ Suppose that
  Then by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cycledecompositionofconjugate"
+reference "Lemma-Cycle-Decomposition-of-Conjugate"
 
 \end_inset
 
@@ -27857,7 +30443,7 @@ where
 As an example of the use of Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "conjugationinS_n"
+reference "Theorem-Conjugation-in-S_n"
 
 \end_inset
 
@@ -27885,7 +30471,7 @@ Soln.
  From Example 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "elementsofA_4"
+reference "Example-List-of-elements-of-A_4"
 
 \end_inset
 
@@ -27941,7 +30527,7 @@ Since the size of conjugacy classes is 1,3,4,4 we cannot form a size 6 set
 \begin_layout Example
 \begin_inset CommandInset label
 LatexCommand label
-name "A_5simple"
+name "Example-A_5-is-simple"
 
 \end_inset
 
@@ -28075,7 +30661,7 @@ WLOG assume
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "generatorsofS_n"
+name "Theorem-Generators-of-S_n"
 
 \end_inset
 
@@ -28121,7 +30707,7 @@ We can conjugate
  For by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "cycledecompositionofconjugate"
+reference "Lemma-Cycle-Decomposition-of-Conjugate"
 
 \end_inset
 
@@ -28162,7 +30748,7 @@ By induction it follows that conjugating
 Since every permutation is a product of transpositions, by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "transpositions"
+reference "Lemma-Transpositions-generate-S_n"
 
 \end_inset
 
@@ -28202,7 +30788,7 @@ reference "eq:3cycledecomposition"
  Using Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "orderofcycle"
+reference "Lemma-order-of-a-cycle-equals-cycle-length"
 
 \end_inset
 
@@ -28230,7 +30816,7 @@ If
  are disjoint and by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "disjointcyclescommute"
+reference "Lemma-Disjoint-Cycles-Commute"
 
 \end_inset
 
@@ -28245,7 +30831,7 @@ reference "disjointcyclescommute"
 Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "generatorsofS_n"
+reference "Theorem-Generators-of-S_n"
 
 \end_inset
 
@@ -28268,7 +30854,7 @@ reference "generatorsofS_n"
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "generatorsofS_n-1"
+name "Theorem-Generators-o-f-S_n-1"
 
 \end_inset
 
@@ -28300,7 +30886,7 @@ We will show that every ``adjacent'' transposition belongs to
  Then the result will follow from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "generatorsofS_n"
+reference "Theorem-Generators-of-S_n"
 
 \end_inset
 
@@ -28308,7 +30894,7 @@ reference "generatorsofS_n"
  To this end observe first that
 \begin_inset Formula 
 \[
-\sigma\tau\sigma^{-1}=\left(2,3\right)\qquad\mathrm{(Lemma\ \ref{cycledecompositionofconjugate}}).
+\sigma\tau\sigma^{-1}=\left(2,3\right)\qquad\mathrm{(Lemma\ \ref{Lemma-Cycle-Decomposition-of-Conjugate}}).
 \]
 
 \end_inset
@@ -28381,7 +30967,7 @@ In fact the Cayley table for a finite group
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "leftmult"
+name "Lemma-Left-regular-representation"
 
 \end_inset
 
@@ -28612,7 +31198,7 @@ hence
 Finally by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "leftmult"
+reference "Lemma-Left-regular-representation"
 
 \end_inset
 
@@ -28786,7 +31372,7 @@ First isomorphism theorem.
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "firstisomorphism"
+name "Theorem-First-Isomorphism"
 
 \end_inset
 
@@ -28812,7 +31398,7 @@ If
  by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "normalsubgroup"
+reference "Theorem-H-is-kernel-iff-H-is-normal"
 
 \end_inset
 
@@ -29140,14 +31726,14 @@ Soln.
  Part (a) follows from Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "kernelhomo"
+reference "Lemma-kernel-of-a-homomorphosm-is-normal"
 
 \end_inset
 
  and part (b) from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "firstisomorphism"
+reference "Theorem-First-Isomorphism"
 
 \end_inset
 
@@ -29207,7 +31793,7 @@ Soln.
  By Lagrange's Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Lagrange"
+reference "Theorem-Lagrange"
 
 \end_inset
 
@@ -29215,7 +31801,7 @@ reference "Lagrange"
 \begin_inset Formula 
 \begin{eqnarray*}
 \left|G\right| & = & \left|H\right|\left[G\,\colon\, H\right]=\left|H\right|\left|G/H\right|\\
- & = & \left|H\right|\left|\phi\left(G\right)\right|\qquad(\textrm{Theorem \ref{firstisomorphism}})
+ & = & \left|H\right|\left|\phi\left(G\right)\right|\qquad(\textrm{Theorem \ref{Theorem-First-Isomorphism}})
 \end{eqnarray*}
 
 \end_inset
@@ -29231,7 +31817,7 @@ so
  (by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "homo"
+reference "Lemma-Properties-of-a-homomorphism"
 
 \end_inset
 
@@ -29296,7 +31882,7 @@ Soln.
  By Lagrange's Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Lagrange"
+reference "Theorem-Lagrange"
 
 \end_inset
 
@@ -29304,7 +31890,7 @@ reference "Lagrange"
 \begin_inset Formula 
 \begin{eqnarray*}
 \left|G\right| & = & \left|H\right|\left[G\,\colon\, H\right]\\
- & = & \left|G/N\right|\left[G\,\colon\, H\right]\qquad(\textrm{Theorem \ref{firstisomorphism}})\\
+ & = & \left|G/N\right|\left[G\,\colon\, H\right]\qquad(\textrm{Theorem \ref{Theorem-First-Isomorphism}})\\
  & = & \frac{\left|G\right|\left[G\,\colon\, H\right]}{\left|N\right|}\qquad(\textrm{Lagrange})
 \end{eqnarray*}
 
@@ -29329,7 +31915,7 @@ As an application of the First Isomorphism Theorem we prove that there is
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "uniquecyclic"
+name "Theorem-Classification-of-cyclic-groups-using-FIT"
 
 \end_inset
 
@@ -29369,7 +31955,7 @@ The map
  The result follows from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "firstisomorphism"
+reference "Theorem-First-Isomorphism"
 
 \end_inset
 
@@ -29441,7 +32027,7 @@ Soln.
  by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "homo"
+reference "Lemma-Properties-of-a-homomorphism"
 
 \end_inset
 
@@ -29825,7 +32411,7 @@ The kernel of
  The rest follows from Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "firstisomorphism"
+reference "Theorem-First-Isomorphism"
 
 \end_inset
 
@@ -29863,7 +32449,7 @@ Theorems like this one (and also the Sylow theorems) aren't obvious, but
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "cauchyabelian"
+name "Theorem-Cauchy-abelian-case"
 
 \end_inset
 
@@ -30000,7 +32586,7 @@ H=\bigoplus_{i=1}^{n}\mathbb{Z}/a_{i}\mathbb{Z}.
  by Corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "elementoforderprime"
+reference "Corollary-element-of-order-prime"
 
 \end_inset
 
@@ -30055,7 +32641,7 @@ Lattice of Subgroups
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "latticeiso"
+name "Theorem-Lattice-of-normal-subgroups"
 
 \end_inset
 
@@ -30149,7 +32735,7 @@ by
  By Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "homo"
+reference "Lemma-Properties-of-a-homomorphism"
 
 \end_inset
 
@@ -30219,7 +32805,7 @@ In order to show that
  Then by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "homo"
+reference "Lemma-Properties-of-a-homomorphism"
 
 \end_inset
 
@@ -30343,7 +32929,7 @@ f\left(gf^{-1}\left(L\right)g^{-1}\right)=f\left(g\right)f\left(f^{-1}\left(L\ri
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "latticeisoquot"
+name "Corollary-Lattice-of-quotients"
 
 \end_inset
 
@@ -30383,7 +32969,7 @@ The canonical map
  by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "quotgroup"
+reference "Theorem-Quotient-group-of-a-normal-subgroup"
 
 \end_inset
 
@@ -30621,7 +33207,7 @@ second isomorphism theorem
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "secondiso"
+name "Theorem-Second-Isomorphism"
 
 \end_inset
 
@@ -30678,7 +33264,7 @@ Note first that
  by Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "prodNH"
+reference "Lemma-HN-is-a-subgroup"
 
 \end_inset
 
@@ -30821,7 +33407,7 @@ We can give an alternate proof by defining
 \begin_layout Corollary
 \begin_inset CommandInset label
 LatexCommand label
-name "Cor31"
+name "Corollary-formula-for-|HN|-when-N-is normal"
 
 \end_inset
 
@@ -30898,7 +33484,7 @@ Each coset of
  such cosets and by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "secondiso"
+reference "Theorem-Second-Isomorphism"
 
 \end_inset
 
@@ -30955,7 +33541,7 @@ By Cor.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Cor31"
+reference "Corollary-formula-for-|HN|-when-N-is normal"
 
 \end_inset
 
@@ -31049,7 +33635,7 @@ Soln.
  Hence 
 \begin_inset Formula 
 \[
-2=\left[G\,:\, K\right]=\left[HK\,:\, K\right]=\left[H\,:\, H\cap K\right]\qquad(\textrm{by Theorem \ref{secondiso})}
+2=\left[G\,:\, K\right]=\left[HK\,:\, K\right]=\left[H\,:\, H\cap K\right]\qquad(\textrm{by Theorem \ref{Theorem-Second-Isomorphism})}
 \]
 
 \end_inset
@@ -31057,7 +33643,7 @@ Soln.
 Since (by Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "multpropofindex"
+reference "Theorem-Multiplicative-Property-of-index"
 
 \end_inset
 
@@ -31177,7 +33763,7 @@ Remark.
  See also Example 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "indexpowerofprime"
+reference "Example-index-of-intersection-is-also-power-of-prime"
 
 \end_inset
 
@@ -31291,7 +33877,7 @@ Third Isomorphism Theorem
 \begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "normalityimage"
+name "Lemma-H/N-is-normal-iff-H-is-normal"
 
 \end_inset
 
@@ -31594,7 +34180,7 @@ end{tikzcd}
 \begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "ThirdIsoThm"
+name "Theorem-Third-Isomorphism"
 
 \end_inset
 
@@ -31711,7 +34297,7 @@ Suppose that
  Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "multpropofindex"
+reference "Theorem-Multiplicative-Property-of-index"
 
 \end_inset
 
@@ -31739,7 +34325,7 @@ Soln.
  By Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "ThirdIsoThm"
+reference "Theorem-Third-Isomorphism"
 
 \end_inset
 
@@ -31749,7 +34335,7 @@ reference "ThirdIsoThm"
 [G\,:\, H]\cdot[H\,:\, N] & = & |(G/N)/(H/N)|\cdot[H\,:\, N]\\
  & = & [G/N\,:\, H/N]\cdot[H\,:\, N]\\
  & = & [G/N\,:\, H/N]\cdot|H/N|\\
- & = & |G/N|\qquad(\mathrm{Lagrange's\ Theorem\ \ref{Lagrange})}\\
+ & = & |G/N|\qquad(\mathrm{Lagrange's\ Theorem\ \ref{Theorem-Lagrange})}\\
  & = & [G\,:\, N].
 \end{eqnarray*}
 
@@ -31796,7 +34382,7 @@ Soln.
  By Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "ThirdIsoThm"
+reference "Theorem-Third-Isomorphism"
 
 \end_inset
 
