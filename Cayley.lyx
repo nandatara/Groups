@@ -1,0 +1,2189 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass memoir
+\begin_preamble
+%\renewcommand{\contentsname}{Table of Contents}
+%\renewcommand{\printtoctitle}[1]{\centering\Huge\bfseries #1}
+\usepackage{lmodern}
+ \usepackage{multicol}
+\usepackage[svgnames]{xcolor}
+\usepackage{calc,graphicx,soul}
+\usepackage{wrapfig}
+\usepackage{tikz,float}
+\usepackage[
+  backend=biber,
+  citestyle=alphabetic,
+  bibstyle=numeric,
+ sorting=nyt,
+ url=false, 
+doi=false,
+eprint=false,
+ url=false,
+ isbn=false
+]{biblatex}
+\usepackage[font=small,labelfont=bf,figurename=Fig.]{caption}
+
+%\nocite{*}
+\addbibresource{Z:/Lyx/Docs/analysis.bib}
+%\setsecheadstyle{\phantomsection\Large\scshape\MakeLowercase} 
+%\setsubsecheadstyle{\phantomsection\normalsize\bfseries} 
+%\setsubsubsecheadstyle{\phantomsection\small\bfseries}
+%\setaftersubsubsecskip{-1em}
+%\maxsecnumdepth{subsection}
+%\setsecnumdepth{subsection} 
+%\setsecheadstyle{\phantomsection\Large\scshape\MakeLowercase}
+%\setcounter{tocdepth}{1}
+\end_preamble
+\options openany
+\use_default_options true
+\begin_modules
+eqs-within-sections
+theorems-ams-bytype
+theorems-ams-extended-bytype
+enumitem
+theorems-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format pdf5
+\output_sync 1
+\bibtex_command biber
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_numerical
+\use_bibtopic true
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\backgroundcolor #d9d9ff
+\boxbgcolor #55aaff
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1.875in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{doc}{RGB}{0,60,110}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newlength{
+\backslash
+drop} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*{
+\backslash
+titleLA }
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+begingroup 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+drop=0.2
+\backslash
+textheight 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}[t]{0.05
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{doc!50} 
+\backslash
+rule{6pt}{0.8
+\backslash
+textheight} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{0.05
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}[t]{0.8
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+drop} %
+\backslash
+vspace{3
+\backslash
+baselineskip} 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+noindent
+\backslash
+HUGE
+\backslash
+bfseries LECTURES ON 
+\backslash
+
+\backslash
+[0.1
+\backslash
+baselineskip]
+\backslash
+
+\backslash
+NUMBER SYSTEMS} 
+\backslash
+
+\backslash
+[2
+\backslash
+baselineskip] 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+Huge Tara Nanda}
+\backslash
+
+\backslash
+[
+\backslash
+baselineskip] 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+vspace{2
+\backslash
+baselineskip} 
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{minipage}{0.8
+\backslash
+textwidth} 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+itshape A course given at IISER Thiruvanathapuram in Varsha 2014} 
+\backslash
+end{minipage} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+titleLA
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{companion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypersetup{   colorlinks   = true, %Colours links instead of ugly boxes
+\end_layout
+
+\begin_layout Plain Layout
+
+urlcolor     = blue, %Colour for external hyperlinks   
+\end_layout
+
+\begin_layout Plain Layout
+
+linkcolor    = Fuchsia, %Colour of internal links   
+\end_layout
+
+\begin_layout Plain Layout
+
+citecolor   = red %Colour of citations 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{chapterstyle}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Preface}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*{
+\backslash
+arraycolor}[1]{
+\backslash
+protect
+\backslash
+leavevmode
+\backslash
+color{#1}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcolumntype{A}{>{
+\backslash
+columncolor{blue!30!white}}c} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcolumntype{B}{>{
+\backslash
+columncolor{LightGoldenrod}}c} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcolumntype{C}{>{
+\backslash
+columncolor{FireBrick!50}}c} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcolumntype{D}{>{
+\backslash
+columncolor{Gray!42}}c} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+cc{
+\backslash
+cellcolor{SkyBlue}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+\noindent
+Preface
+\end_layout
+
+\begin_layout Standard
+These lecture notes are organised in the form of a 
+\emph on
+fictitious narrative
+\emph default
+.
+ It is always a pleasant experience when the development of any subject
+ is conveyed in a chronological order.
+ This is seldom feasible since the historical narrative is never linear.
+ There are many detours and many many people have contributed to the subject.
+ Many ideas may not have been ripe at the time of their discovery but over
+ a period of time people may have realized their importance.
+ These ideas then become definitions and Theorems.
+\end_layout
+
+\begin_layout Standard
+Most books these days are written in a 
+\emph on
+linear
+\emph default
+ fashion.
+ While such an approach has its pedagogical value especially for a begining
+ student it tends to become very dry.
+ I wonder as to how many people would love to read a dry and boring novel.
+ I have tried to write an interesting novel with the aim of keeping the
+ reader engrossed.
+ In most lectures a 
+\emph on
+natural question
+\emph default
+ has been asked and the reasoning behind the Theorems and their proofs has
+ been made 
+\emph on
+plausible.
+ 
+\emph default
+Although such a reasoning may not be true in the historical sense it would
+ certainly reveal why a particular idea was discovered and even if it was
+ not discovered that way then sooner or later the discovery would have been
+ imminent.
+\end_layout
+
+\begin_layout Standard
+To give a concrete example, in the chapter on Normal Groups, the notion
+ of 
+\emph on
+kernel
+\emph default
+ arose quite naturally in the context of 
+\emph on
+homomorphisms
+\emph default
+.
+ These in turn arose from the multiplicative property of an 
+\emph on
+isomorphism
+\emph default
+ a topic which originated in the following question: when are two groups
+ ``same''? It was discovered that the kernel of a homomorphism was a subgroup
+ of the original group with many interesting properties.
+ So the natural question was the converse: is every subroup of a group the
+ kernel of a homomorphism? In trying to answer this question we are very
+ naturraly led to the concept of 
+\emph on
+conjugation
+\emph default
+ or 
+\emph on
+normality
+\emph default
+.
+ Having answered this question and reached an important landmark we explore
+ the beauty of the surroundings and are led to motivated proofs of the three
+ 
+\emph on
+Isomorphism Theorems
+\emph default
+ which are the corner stones of Group Theory.
+\end_layout
+
+\begin_layout Standard
+I hope these lectures are useful and make an interesting reading
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align right
+Tara Nanda
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Cayley and the Abstract Group Concept
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "65col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Arthur Cayley (1821-1895) graduated from Cambridge in 1842 as Senior Wrangler
+ and was awarded the prestigious First Smith's Prize.
+ He then served as Fellow and Tutor of Trinity College (Cambridge) for three
+ years.
+ Since there was no prospect of a permanent academic position, he left for
+ London and entered Lincoln's Inn to qualify for the legal profession.
+ He was called to the Bar in 1849 and he practiced in London as a barrister
+ for the next fourteen years until his appointment as the first incumbent
+ of the Sadleirian Professorship of Pure Mathematics at the University of
+ Cambridge.
+ Even during the years of his legal practice, Cayley published a very large
+ number of research papers in diverse areas of mathematics.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\series bold
+Arthur Cayley
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Cayley.jpg
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cayley's work spreads over a very wide range of topics, predominantly in
+ the broad fields of algebra and geometry.
+ He was one of the creators of the theory of algebraic invariants.
+ This elaborate edifice, now almost completely forgotten, reigned supreme
+ during the last quarter of the 19th century, and was the ``modem higher
+ algebra'' of the day.
+ His 
+\emph on
+Collected Mathematical Papers
+\emph default
+ were published by Cambridge University Press in thirteen volumes from 1889
+ to 1897 and contain 966 items ranging from very short notes to lengthy
+ memoirs.
+\end_layout
+
+\begin_layout Standard
+On November 2, 1853 Cayley dashed off two manuscripts to the 
+\emph on
+Philosophical Magazine
+\emph default
+; one was published before the year was out, while the other appeared in
+ the first issue of the 
+\emph on
+Magazine
+\emph default
+ in 1854.
+ The first of these is called
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+On a property of the caustic by refraction of the circle, 
+\emph on
+Phil.
+ Mag.
+
+\emph default
+ 6 (1853), 427-431, reprinted in Collected Papers 124, vol.
+ 2, 118-122.
+ Dated: Nov.
+ 2, 1853
+\end_layout
+
+\end_inset
+
+, ``On a property of the caustic by refraction of the circle''.
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+caustic
+\emph default
+ is a curve that is always tangent to rays of light that proceed from a
+ point to be reflected (or refracted) at a given surface.
+ Readers familiar with envelopes will recognize this description of a caustic
+ as the envelope of the reflected (or refracted) rays.
+ One common way to compute caustics was to use an intermediate curve, the
+ 
+\emph on
+secondary caustic
+\emph default
+ or 
+\emph on
+orthotomic
+\emph default
+ curve, which consists of the reflections of the source point across all
+ lines tangent to the reflecting surface.
+ The caustic is the evolute of the secondary caustic.
+\end_layout
+
+\begin_layout Standard
+St.
+ Laurent, who earlier showed that ``in certain cases the caustic by refraction
+ of a circle is identical with the caustic of reflexion of a circle (the
+ reflecting circle and radiant point being, of course, properlyc hosen).''
+ Cayley proposes
+\end_layout
+
+\begin_layout Quote
+to demonstrate the more general theorem, that the same caustic by refraction
+ of a circle may be considered as arising from 
+\emph on
+six
+\emph default
+ different systems of a radiant point, circle, and index of refraction.
+ The demonstration is obtained by means of the secondary caustic, which
+ is (as is well known) an oval of Descartes.
+ Such oval has three foci, any one of which may be taken for the radiant
+ point: whichever be selected, there can always be found two corresponding
+ circles and indices of refraction.
+\end_layout
+
+\begin_layout Standard
+Cayley derives the equation of the secondary caustic, which contains three
+ parameters: the abscissa 
+\begin_inset Formula $\xi$
+\end_inset
+
+ of the radiant point, the radius 
+\begin_inset Formula $r$
+\end_inset
+
+ of the refracting circle, and the index 
+\begin_inset Formula $\mu$
+\end_inset
+
+ of refraction, and puts it in several equivalent forms of which one is
+ as follows:
+\begin_inset Formula 
+\[
+F\left(\xi,r,\mu\right)=0
+\]
+
+\end_inset
+
+where (we have changed the notation slightly denoting the radius by 
+\begin_inset Formula $r$
+\end_inset
+
+ instead of 
+\begin_inset Formula $c$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}F\left(\xi,r,\mu\right)=\  & r\left(\mu-\frac{1}{\mu}\right)\sqrt{\left(x-\frac{r^{2}}{\xi}\right)^{2}+y^{2}}+\left(\frac{r^{2}}{\xi}-\xi\right)\sqrt{\left(x-\frac{\xi}{\mu^{2}}\right)^{2}+y^{2}}\\
+ & +\left(\frac{\xi}{\mu}-\frac{\mu r^{2}}{\xi}\right)\sqrt{(x-\xi)^{2}+y^{2}}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cayley observes that if
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand*{
+\backslash
+arraystretch}{2.5}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+we write successively,
+\begin_inset Formula 
+\[
+\begin{array}{rclcrclcrclr}
+\zeta & = & \xi & \quad & a & = & r & \quad & \lambda & = & \mu & \qquad\qquad\qquad(1)\\
+\zeta & = & {\displaystyle \frac{r^{2}}{\xi}} & \quad & a & = & {\displaystyle \frac{r}{\mu}} & \quad & \lambda & = & {\displaystyle \frac{r}{\xi}} & \qquad\qquad\qquad(\alpha)\\
+\zeta & = & {\displaystyle \frac{\xi}{\mu^{2}}} & \quad & a & = & {\displaystyle \frac{r}{\mu}} & \quad & \lambda & = & {\displaystyle \frac{1}{\mu}} & \qquad\qquad\qquad(\beta)\\
+\zeta & = & \xi & \quad & a & = & {\displaystyle \frac{\xi}{\mu}} & \quad & \lambda & = & {\displaystyle \frac{\xi}{r}} & \qquad\qquad\qquad(\gamma)\\
+\zeta & = & {\displaystyle \frac{r^{2}}{\xi}} & \quad & a & = & r & \quad & \lambda & = & {\displaystyle \frac{r\mu}{\xi}} & \qquad\qquad\qquad(\delta)\\
+\zeta & = & {\displaystyle \frac{\xi}{\mu^{2}}} & \quad & a & = & {\displaystyle \frac{\xi}{\mu}} & \quad & \lambda & = & {\displaystyle \frac{\xi}{r\mu}} & \qquad\qquad\qquad(\varepsilon)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\ldots$
+\end_inset
+
+ then, whichever system of values of 
+\begin_inset Formula $\zeta,a,\lambda$
+\end_inset
+
+, be substituted for 
+\begin_inset Formula $\xi,r,\mu$
+\end_inset
+
+ we have in each case identically the same secondary caustic, the effect
+ of the substitution being simply to interchange the different forms of
+ the equation; and we have therefore identically the same caustic.
+ By writing
+\begin_inset Formula 
+\[
+\left(\zeta,a,\lambda\right)=\alpha\left(\xi,r,\mu\right),\ \textrm{\&c.,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\alpha,\beta,\gamma,\delta,\varepsilon$
+\end_inset
+
+ will be functional symbols, such as are treated of in my paper ``On the
+ Theory of Groups as depending on the symbolic equation 
+\begin_inset Formula $\theta^{n}=1$
+\end_inset
+
+,'' and it is easy to verify the equations
+\begin_inset Formula 
+\begin{eqnarray*}
+1 & = & \alpha\beta=\beta\alpha=\gamma^{2}=\delta^{2}=\varepsilon^{2},\\
+\alpha & = & \beta^{2}=\delta\gamma=\varepsilon\delta=\gamma\varepsilon,\\
+\beta & = & \alpha^{2}=\varepsilon\gamma=\gamma\delta=\delta\varepsilon,\\
+\gamma & = & \delta\alpha=\varepsilon\beta=\beta\delta=\alpha\varepsilon,\\
+\delta & = & \varepsilon\alpha=\gamma\beta=\alpha\gamma=\beta\varepsilon,\\
+\varepsilon & = & \gamma\alpha=\delta\beta=\beta\gamma=\alpha\delta.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is a difficulty here; these equations do not hold if the substitutions
+ are named as above (for example, 
+\begin_inset Formula $\alpha^{2}=\varepsilon$
+\end_inset
+
+).
+ But they do hold if we interchange 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+, and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta$
+\end_inset
+
+.
+ With these changes the above equations can be correctly written as below
+ and verified using a package like 
+\emph on
+Mathematica
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+1 & = & \alpha\varepsilon=\varepsilon\alpha=\gamma^{2}=\delta^{2}=\beta^{2},\\
+\alpha & = & \varepsilon^{2}=\gamma\delta=\beta\gamma=\delta\beta,\\
+\beta & = & \delta\alpha=\gamma\varepsilon=\varepsilon\delta=\alpha\gamma.\\
+\gamma & = & \beta\alpha=\delta\varepsilon=\alpha\delta=\varepsilon\beta,\\
+\delta & = & \gamma\alpha=\beta\varepsilon=\varepsilon\gamma=\alpha\beta,\\
+\varepsilon & = & \alpha^{2}=\beta\delta=\delta\gamma=\gamma\beta.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand*{
+\backslash
+arraystretch}{1.2}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="7">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule[1.5pt]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\circ$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule[1.5pt]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule[1.5pt]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+Composition Table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We can also check that the equation of the caustic remains invariant by
+ computing the ratios
+\begin_inset Formula 
+\[
+\frac{F\left(\xi,r,\mu\right)}{F\left(\alpha\left(\xi,r,\mu\right)\right)},\ \textrm{\&c.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\series bold
+Mathematica Code
+\end_layout
+
+\begin_layout LyX-Code
+t := {
+\begin_inset Formula $\xi$
+\end_inset
+
+, r, 
+\begin_inset Formula $\mu$
+\end_inset
+
+]}
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $e[\{\xi\_,\, r\_,\,\mu\_\}]$
+\end_inset
+
+:= 
+\begin_inset Formula $\{\xi,\ r,\ \mu$
+\end_inset
+
+}
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\alpha[\{\xi\_,\, r\_,\,\mu\_\}]$
+\end_inset
+
+:= 
+\begin_inset Formula $\{r^{2}/\xi,\ r/\mu,\ r/\xi$
+\end_inset
+
+}
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\beta[\{\xi\_,\, r\_,\,\mu\_\}]$
+\end_inset
+
+:= {
+\begin_inset Formula $\xi/\mu^{2},\ r/\mu,\ 1/\mu$
+\end_inset
+
+}
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\gamma[\{\xi\_,\, r\_,\,\mu\_\}]$
+\end_inset
+
+:= {
+\begin_inset Formula $\xi,\ \xi/\mu,\ \xi/r$
+\end_inset
+
+}
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\delta[\{\xi\_,\, r\_,\,\mu\_\}]$
+\end_inset
+
+:= {
+\begin_inset Formula $r^{2}/\xi,\ r,\ r\mu/\xi$
+\end_inset
+
+}
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\varepsilon[\{\xi\_,\, r\_,\,\mu\_\}]$
+\end_inset
+
+:= {
+\begin_inset Formula $\xi/\mu^{2},\ \xi/\mu,\ \xi/(r\mu)$
+\end_inset
+
+}
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\alpha[\alpha[t]]$
+\end_inset
+
+ 
+\begin_inset Formula $==$
+\end_inset
+
+ 
+\begin_inset Formula $\varepsilon[t]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout LyX-Code
+True 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\alpha[\beta[t]]$
+\end_inset
+
+ 
+\begin_inset Formula $==$
+\end_inset
+
+ 
+\begin_inset Formula $\delta[t]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout LyX-Code
+True 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\alpha[\gamma[t]]$
+\end_inset
+
+ 
+\begin_inset Formula $==$
+\end_inset
+
+ 
+\begin_inset Formula $\beta[t]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout LyX-Code
+True 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\alpha[\delta[t]]$
+\end_inset
+
+ 
+\begin_inset Formula $==$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\gamma[t]$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\end_layout
+
+\begin_layout LyX-Code
+True 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\alpha[\varepsilon[t]]$
+\end_inset
+
+ 
+\begin_inset Formula $==$
+\end_inset
+
+ 
+\begin_inset Formula $e[t]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout LyX-Code
+True
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $F[{\xi\_,\, r\_,\,\mu\_}]$
+\end_inset
+
+ :=  
+\begin_inset Formula 
+\begin{eqnarray*}
+r(\mu-1/\mu)\sqrt{(x-r^{2}/\xi)^{2}+y^{2}}\\
++(-\xi+r^{2}/\xi)\sqrt{(x-\xi/\mu^{2})^{2}+y^{2}}\\
++(\xi/\mu-(r^{2}\mu)/\xi)\sqrt{(x-\xi)^{2}+y^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+        
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $F[t]/F[\alpha[t]]$
+\end_inset
+
+ // Simplify 
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\mu$
+\end_inset
+
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $F[\beta[t]]/F[t]$
+\end_inset
+
+ // Simplify 
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $-(1/\mu)$
+\end_inset
+
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $F[t]/F[\gamma[t]]$
+\end_inset
+
+ // Simplify 
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $-((r\ \mu)/\xi)$
+\end_inset
+
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $F[t]/F[\delta[t]]$
+\end_inset
+
+ // Simplify 
+\end_layout
+
+\begin_layout LyX-Code
+-1 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $F[t]/F[\epsilon[t]]$
+\end_inset
+
+ // Simplify 
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $(r\ \mu)/\xi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}G\left(\alpha,\beta,\gamma\right)=\  & \sqrt{\gamma}(\beta-\alpha)\sqrt{(x-\gamma)^{2}+y^{2}}+\sqrt{\beta}(\alpha-\gamma)\sqrt{(x-\beta)^{2}+y^{2}}\\
+ & +\sqrt{\alpha}(\gamma-\beta)\sqrt{(x-\alpha)^{2}+y^{2}}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
